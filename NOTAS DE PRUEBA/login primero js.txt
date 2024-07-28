@@ -1,0 +1,78 @@
+login primero js:
+
+//LOGIN MODAL
+
+document.addEventListener('DOMContentLoaded', () => {
+    const loginLink = document.querySelector('.login-link');
+    const loginModal = document.getElementById('loginModal');
+    const closeButton = document.querySelector('.close-button');
+
+    loginLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        loginModal.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        loginModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.style.display = 'none';
+        }
+    });
+});
+
+
+//MODAL ENTRAR A MI USUSARIO
+// Obtener el modal
+var loginModal = document.getElementById("loginModal");
+
+// Obtener el botón que abre el modal
+var btnOpenLoginModal = document.getElementById("loginModalOpen");
+
+// Obtener el <span> que cierra el modal
+var spanClose = document.getElementsByClassName("close")[0];
+
+// Cuando el usuario hace clic en el botón, abre el modal
+btnOpenLoginModal.onclick = function() {
+    loginModal.style.display = "block";
+}
+
+// Cuando el usuario hace clic en <span> (x), cierra el modal
+spanClose.onclick = function() {
+    loginModal.style.display = "none";
+}
+
+// Cuando el usuario hace clic en cualquier parte fuera del modal, cierra el modal
+window.onclick = function(event) {
+    if (event.target == loginModal) {
+        loginModal.style.display = "none";
+    }
+}
+
+// Manejar el botón de ingresar y la tecla Enter
+var loginButton = document.getElementById("loginButton");
+var emailInput = document.querySelector('input[type="email"]');
+var passwordInput = document.querySelector('input[type="password"]');
+
+loginButton.onclick = loginUser;
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        loginUser();
+    }
+});
+
+function loginUser() {
+    var email = emailInput.value;
+    var password = passwordInput.value;
+    
+    if (email && password) {
+        // Aquí puedes agregar la lógica para autenticar al usuario
+        alert("Intento de inicio de sesión con:\nCorreo: " + email + "\nContraseña: " + password);
+        loginModal.style.display = "none";
+    } else {
+        alert("Por favor, completa ambos campos.");
+    }
+}
+
