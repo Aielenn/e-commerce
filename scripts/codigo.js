@@ -3,11 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Selecciona el botón de búsqueda y el campo de entrada de búsqueda
     const searchButton = document.querySelector('.search-button');
     const searchInput = document.querySelector('.search-wrapper input');
+    const searchWrapper = document.querySelector('.search-wrapper');
+    const headerIcons = document.querySelector('.header-icons');
+    const logo = document.querySelector('.logo h1');
 
     // Añade un escuchador de eventos al botón de búsqueda
     searchButton.addEventListener('click', function(event) {
         event.preventDefault(); // Previene el envío del formulario
-        search(); // Llama a la función de búsqueda
+        if (window.innerWidth <= 768) {
+            searchWrapper.classList.toggle('active');
+            headerIcons.classList.toggle('hidden');
+        } else {
+            search(); // Llama a la función de búsqueda en pantallas grandes
+        }
     });
 
     // Añade un escuchador de eventos al campo de entrada de búsqueda para detectar la tecla Enter
@@ -29,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Por favor, introduce un término de búsqueda.');
         }
     }
+
+    // Oculta la barra de búsqueda al hacer clic fuera de ella
+    document.addEventListener('click', function(event) {
+        if (!searchWrapper.contains(event.target) && !searchButton.contains(event.target) && searchWrapper.classList.contains('active')) {
+            searchWrapper.classList.remove('active');
+            headerIcons.classList.remove('hidden');
+        }
+    });
 });
 
 
@@ -242,3 +258,231 @@ function registerUser() {
         alert("Por favor, completa todos los campos.");
     }
 }
+
+//CARRUSELL OFERTAS
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    let currentIndex = 0;
+    const totalItems = items.length;
+    const intervalTime = 3000; // Cambia cada 3 segundos
+    let interval;
+
+    function showSlide(index) {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        showSlide(currentIndex);
+    }
+
+    function startAutoSlide() {
+        interval = setInterval(nextSlide, intervalTime);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(interval);
+    }
+
+    prevButton.addEventListener('click', function() {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+
+    nextButton.addEventListener('click', function() {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+
+    startAutoSlide();
+});
+
+
+//MAIN PRODUCTOS
+// botones
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector(".weekly-carousel");
+    const leftBtn = document.getElementById("left-btn");
+    const rightBtn = document.getElementById("right-btn");
+    const items = document.querySelectorAll(".weekly-carousel-item");
+    const itemWidth = 220; // Ancho de cada elemento incluyendo margen
+    let scrollAmount = 0;
+    const visibleItems = 4;
+
+    // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
+    const allItems = [...items, ...items];
+    carousel.innerHTML = ""; // Limpiar el carrusel
+    allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
+
+    const totalItems = allItems.length;
+    const maxScroll = (totalItems - visibleItems) * itemWidth;
+
+    function scrollRight() {
+        if (scrollAmount < maxScroll) {
+            scrollAmount += itemWidth;
+            carousel.style.transition = 'transform 0.5s ease';
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        if (scrollAmount >= maxScroll) {
+            setTimeout(() => {
+                scrollAmount = visibleItems * itemWidth;
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            }, 500); // Tiempo de la transición en ms
+        }
+    }
+
+    function scrollLeft() {
+        if (scrollAmount > 0) {
+            scrollAmount -= itemWidth;
+            carousel.style.transition = 'transform 0.5s ease';
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        if (scrollAmount <= 0) {
+            setTimeout(() => {
+                scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            }, 500); // Tiempo de la transición en ms
+        }
+    }
+
+    rightBtn.addEventListener("click", scrollRight);
+    leftBtn.addEventListener("click", scrollLeft);
+
+    // Auto-desplazamiento cada 4 segundos
+    setInterval(() => {
+        if (scrollAmount < maxScroll) {
+            scrollRight();
+        } else {
+            scrollAmount = 0;
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(0px)`;
+        }
+    }, 4000);
+});
+
+
+
+
+//buscar por marcas
+
+let currentIndex = 0;
+
+function moveLeft() {
+    const brandContainer = document.querySelector('.brand-container');
+    const items = document.querySelectorAll('.brand-item');
+    const itemWidth = items[0].clientWidth + 20; // Ancho del item más margen
+
+    if (currentIndex > 0) {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        brandContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+}
+
+function moveRight() {
+    const brandContainer = document.querySelector('.brand-container');
+    const items = document.querySelectorAll('.brand-item');
+    const itemWidth = items[0].clientWidth + 20; // Ancho del item más margen
+    const maxIndex = items.length - 7; // Mostrar 7 elementos a la vez
+
+    if (currentIndex < maxIndex) {
+        currentIndex = Math.min(currentIndex + 1, maxIndex);
+        brandContainer.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+}
+
+// Desplazamiento automático cada 5 segundos
+const autoScroll = setInterval(() => {
+    const items = document.querySelectorAll('.brand-item');
+    const maxIndex = items.length - 7; // Mostrar 7 elementos a la vez
+
+    if (currentIndex < maxIndex) {
+        moveRight();
+    } else {
+        clearInterval(autoScroll);
+    }
+}, 3000);
+
+
+//MAS VENDIDOS
+// botones
+
+document.addEventListener("DOMContentLoaded", function() {
+    const carousel = document.querySelector(".best-seller-carousel");
+    const leftBtn = document.getElementById("bs-left-btn");
+    const rightBtn = document.getElementById("bs-right-btn");
+    const items = document.querySelectorAll(".best-seller-carousel-item");
+    const itemWidth = 220; // Ancho de cada elemento incluyendo margen
+    let scrollAmount = 0;
+    const visibleItems = 4;
+
+    // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
+    const allItems = [...items, ...items];
+    carousel.innerHTML = ""; // Limpiar el carrusel
+    allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
+
+    const totalItems = allItems.length;
+    const maxScroll = (totalItems - visibleItems) * itemWidth;
+
+    function scrollRight() {
+        if (scrollAmount < maxScroll) {
+            scrollAmount += itemWidth;
+            carousel.style.transition = 'transform 0.5s ease';
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        if (scrollAmount >= maxScroll) {
+            setTimeout(() => {
+                scrollAmount = visibleItems * itemWidth;
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            }, 500); // Tiempo de la transición en ms
+        }
+    }
+
+    function scrollLeft() {
+        if (scrollAmount > 0) {
+            scrollAmount -= itemWidth;
+            carousel.style.transition = 'transform 0.5s ease';
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        if (scrollAmount <= 0) {
+            setTimeout(() => {
+                scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
+                carousel.style.transition = 'none';
+                carousel.style.transform = `translateX(-${scrollAmount}px)`;
+            }, 500); // Tiempo de la transición en ms
+        }
+    }
+
+    rightBtn.addEventListener("click", scrollRight);
+    leftBtn.addEventListener("click", scrollLeft);
+
+    // Auto-desplazamiento cada 4 segundos
+    setInterval(() => {
+        if (scrollAmount < maxScroll) {
+            scrollRight();
+        } else {
+            scrollAmount = 0;
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(0px)`;
+        }
+    }, 4000);
+});
