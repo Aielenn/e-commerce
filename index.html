@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech&Game</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
@@ -21,11 +21,6 @@
     <meta property="og:image" content="images/social-share-image.png">
     <meta property="og:url" content="https://www.tusitioweb.com">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@tuusuario">
-    <meta name="twitter:title" content="Tech&Game">
-    <meta name="twitter:description" content="Tu tienda online de electrónica para teléfonos, computadoras, accesorios gamer y más.">
-    <meta name="twitter:image" content="images/social-share-image.png">
 </head>
 <body>
     <header>
@@ -43,9 +38,9 @@
             </div>
             <div class="header-icons">
                 <a href="#" class="login-link" id="loginModalTrigger">
-                    <img src="images/login-icon.png" alt="Login Icon"><span>Cuenta</span></a>
+                    <img src="images/login-icon.png" alt="Login Icon"><span></span></a>
                 <a href="#cart" class="login-link" id="loginModalTrigger">
-                    <img src="images/cart-icon.png" alt="Cart Icon"><span>Productos</span></a>
+                    <img src="images/cart-icon.png" alt="Cart Icon"><span></span></a>
             </div>
         </div>
     </header>
@@ -127,7 +122,6 @@
     <main>
         <!-- PRODUCTOS. Buscar por Categoría -->
         <section id="search-by-category">
-            <h2>BUSCAR POR CATEGORIA</h2>
             <div class="category-container">
                 <div class="category-item">
                     <img src="images/category/celulares.png" alt="Celulares">
@@ -164,7 +158,7 @@
             <div class="weekly-carousel">
                 <div class="weekly-carousel-item">
                     <div class="product-image">
-                        <img src="images/destacados_semana/destacado1.jpeg" alt="DESTACADO 1">
+                        <img src="images/destacados_semana_LOGOS/destacado1.jpeg" alt="DESTACADO 1">
                     </div>
                         <div class="product-details">
                             <p>Silla gamer Akracing Octane ergonómica</p>
@@ -174,7 +168,7 @@
                 </div>
                 <div class="weekly-carousel-item">
                     <div class="product-image">
-                        <img src="images/destacados_semana/destacado2.png" alt="DESTACADO 2">
+                        <img src="images/destacados_semana_LOGOS/destacado2.png" alt="DESTACADO 2">
                     </div>
                         <div class="product-details">
                             <p>Procesador gamer AMD Ryzen 7 5700X y 3.4GHz</p>
@@ -184,7 +178,7 @@
                 </div>
                 <div class="weekly-carousel-item">
                     <div class="product-image">
-                        <img src="images/destacados_semana/destacado3.jpg" alt="DESTACADO 3">
+                        <img src="images/destacados_semana_LOGOS/destacado3.jpg" alt="DESTACADO 3">
                     </div>
                         <div class="product-details">
                             <p>Samsung Galaxy A35 5G 128GB y 4 GB de Ram</p>
@@ -194,7 +188,7 @@
                 </div>
                 <div class="weekly-carousel-item">
                     <div class="product-image">
-                        <img src="images/destacados_semana/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg" alt="DESTACADO 4">
+                        <img src="images/destacados_semana_LOGOS/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg" alt="DESTACADO 4">
                     </div>
                         <div class="product-details">
                             <p>Lenovo Ideapad3 15" Business AMD HexaCore Ryzen 5 5500U</p>
@@ -204,7 +198,7 @@
                 </div>
                 <div class="weekly-carousel-item">
                      <div class="product-image">
-                        <img src="images/destacados_semana/destacado5 tcl 55 pulg qled770 4k.jpg" alt="DESTACADO 5">
+                        <img src="images/destacados_semana_LOGOS/destacado5 tcl 55 pulg qled770 4k.jpg" alt="DESTACADO 5">
                     </div>
                         <div class="product-details">
                             <p>Smart TCL 55 pulgadas QLed770 4k Google TV</p>
@@ -217,12 +211,6 @@
             </div>
         </section>
 
-        <div class="beneficios">
-            <img src="images/beneficios.png" alt="beneficios">
-        <!-- Botón Flotante para Ver Todos los Productos -->
-            <button id="view-all-products" class="view-all-button"> CLICK AQUI PARA VER TODOS LOS PRODUCTOS</button>
-        </div>
-
         <!-- Encontrá la Marca que Estás Buscando -->
         <section id="search-by-brand">
             <h2>ENCONTRA LA MARCA QUE ESTAS BUSCANDO</h2>
@@ -230,39 +218,66 @@
                 <button class="carousel-control prev" onclick="moveLeft()"><img src="images/arrowPrev.png" alt="Prev"></button>        
                 <div class="brand-container">
                      <div class="brand-item">
-                        <img src="images/destacados_semana/AMD_Logo.png" alt="Marca 1">
+                        <img src="images/destacados_semana_LOGOS/AMD_Logo.png" alt="Marca 1">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/Samsung_Logo.png" alt="Marca 2">
+                        <img src="images/destacados_semana_LOGOS/Samsung_Logo.png" alt="Marca 2">
                      </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/asus_logo.png" alt="Marca 3">
+                        <img src="images/destacados_semana_LOGOS/asus_logo.png" alt="Marca 3">
                     </div>
                     <div class="brand-item">
-                         <img src="images/destacados_semana/razer_LOGO.png" alt="Marca 4">
+                         <img src="images/destacados_semana_LOGOS/razer_LOGO.png" alt="Marca 4">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/aorus-logo.png" alt="Marca 5">
+                        <img src="images/destacados_semana_LOGOS/aorus-logo.png" alt="Marca 5">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/lenovo-logo.png" alt="Marca 6">
+                        <img src="images/destacados_semana_LOGOS/lenovo-logo.png" alt="Marca 6">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/ak_logo.jpg" alt="Marca 7">
+                        <img src="images/destacados_semana_LOGOS/ak_logo.jpg" alt="Marca 7">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/tcl-logo.png" alt="Marca 8">
+                        <img src="images/destacados_semana_LOGOS/tcl-logo.png" alt="Marca 8">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/intel-logo.jpg" alt="Marca 9">
+                        <img src="images/destacados_semana_LOGOS/intel-logo.jpg" alt="Marca 9">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana/iphone-logo.png" alt="Marca 10">
+                        <img src="images/destacados_semana_LOGOS/iphone-logo.png" alt="Marca 10">
                     </div>
-                </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/motorola-logo.jpg" alt="Marca 11">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/philco-logo.png" alt="Marca 12">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/acer-logo.png" alt="Marca 13">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/msi-logo.png" alt="Marca 14">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/gigabyte-logo.png" alt="Marca 15">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/corsair-logo.png" alt="Marca 16">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/kingston-logo.png" alt="Marca 17">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/cooler-master-logo.png" alt="Marca 18">
+                    </div>
+                    <div class="brand-item">
+                        <img src="images/destacados_semana_LOGOS/tp-link-logo.png" alt="Marca 19">
+                    </div>
                 <button class="carousel-control next" onclick="moveRight()"><img src="images/arrowNext.png" alt="Next"></button>
             </div>
         </section>
+
 
         <!-- Lo Más Vendido -->
         <section id="best-sellers">
@@ -324,6 +339,14 @@
                  <button class="carousel-btn right-btn" id="bs-right-btn"><img src="images/arrowNext.png" alt="Next"></button>
             </div>
         </section>
+
+
+        <div class="beneficios">
+            <img src="images/beneficios.png" alt="beneficios">
+        <!-- Botón Flotante para Ver Todos los Productos -->
+            <button id="view-all-products" class="view-all-button"> CLICK AQUI PARA VER TODOS LOS PRODUCTOS</button>
+        </div>
+        
 
         <!-- BANK PROMOTION -->
         <section class="bank-promotions">
@@ -428,7 +451,6 @@
                 <h3>Síguenos</h3>
                 <ul class="social-icons">
                     <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png" alt="Facebook"></a></li>
-                    <li><a href="https://www.twitter.com/techandgame"><img src="images\footer\gorjeo.png" alt="Twitter"></a></li>
                     <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png" alt="Instagram"></a></li>
                     <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png" alt="YouTube"></a></li>
                 </ul>
@@ -440,5 +462,6 @@
     </footer>
             
     <script src="scripts/codigo.js"></script>
+    <script src="scripts/products_grid.js"></script>
 </body>
 </html>

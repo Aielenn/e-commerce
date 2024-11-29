@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+    <meta name="description" content="Tech&Game - Tu tienda online de teléfonos, computadoras, accesorios gamer y más.">
+    <meta name="keywords" content="electrónica, teléfonos, computadoras, accesorios gamer, tablets, Tech&Game">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Tech&Game</h1>
+            </div>
+            <div class="search-bar">
+                <form class="search-wrapper"action="search_results.html" method="GET">
+                    <input type="text" name="query" placeholder="¿Cómo podemos ayudarte?" aria-label="Buscar">
+                    <button type="submit" class="search-button" aria-label="Buscar">
+                        <img src="images/search-icon.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
+            <div class="header-icons">
+                <a href="#" class="login-link" id="loginModalTrigger">
+                    <img src="images/login-icon.png" alt="Login Icon"><span>Cuenta</span></a>
+                <a href="#cart" class="login-link" id="loginModalTrigger">
+                    <img src="images/cart-icon.png" alt="Cart Icon"><span>Productos</span></a>
+            </div>
+        </div>
+    </header>
+
+
+<main id="product-detail-container">
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>Tech&Game</h2>
+        </div>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#support">Soporte</a></li>
+                    <li><a href="#returns">Devoluciones</a></li>
+                    <li><a href="#shipping">Envíos</a></li>
+                    <li><a href="#terms">Términos y Condiciones</a></li>
+                    <li><a href="#privacy">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
+                    <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
+                    <li>Av. Siempre Viva 742, Buenos Aires</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com/techandgame"><img src="images\footer\gorjeo.png" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
+    </div>
+</footer>
+<script src="scripts/products_card.js"></script>
+<script src="scripts/codigo.js"></script>
+</body>
+</html>

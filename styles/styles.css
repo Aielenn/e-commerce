@@ -14,18 +14,18 @@ header {
 
 /* Contenedor del encabezado */
 .header-container {
-    margin: 0px 40px;
+    margin: 0px 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 10px 80px;
     
 }
 
 /* Estilo para el texto del logo */
 .logo h1 {
     font-family: 'Protest Revolution', sans-serif; /* Fuente utilizada */
-    font-size: 24px; /* Tamaño de la fuente */
+    font-size: 32px; /* Tamaño de la fuente */
     font-weight: 400; /* Peso de la fuente */
     color: #209CEE; /* Color del texto */
     margin: 0; /* Elimina el margen por defecto */
@@ -78,14 +78,14 @@ header {
 }
 
 .header-icons img {
-    height: 24px; /* Ajusta el tamaño de los iconos */
+    height: 32px; /* Ajusta el tamaño de los iconos */
     margin-left: 10px;
     vertical-align: middle;
-    width: 24px;
+    width: 32px;
 }
 
 .header-icons a {
-    color: #fff;
+    color: #cacaca;
     text-decoration: none;
     margin-left: 10px;
 }
@@ -390,7 +390,7 @@ header {
 #registerModal .modal-subtitle {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: #555;
+    color: #606060;
     margin-bottom: 20px;
 }
 
@@ -455,15 +455,9 @@ header {
 
 
 
-
-
-
-
-
-
 main {
     padding: 0px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -474,6 +468,7 @@ h2 {
     margin-bottom: 20px;
     color: #333;
     padding: 10px;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Título de Categorías */
@@ -513,6 +508,7 @@ h2 {
 
 #search-by-brand {
     text-align: center;
+    margin:80px 0px;
 }
 
 .brand-carousel {
@@ -521,7 +517,7 @@ h2 {
     align-items: center;
     overflow: hidden;
     width: 100%;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 1200px;
 }
 
@@ -551,7 +547,7 @@ h2 {
 /* Estilos para el contenedor del carrusel ofertas de semana*/
 .weekly-carousel-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1280px;
     overflow: hidden;
     margin: 0 auto; /* Centra el carrusel */
     display: flex;
@@ -630,7 +626,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 0px;
     cursor: pointer;
     z-index: 500;
 }
@@ -644,7 +640,7 @@ h2 {
 }
 
 .left-btn {
-    left: 0;
+    left: 0px;
 }
 
 .right-btn {
@@ -658,7 +654,7 @@ h2 {
 }
 
 .beneficios img {
-    max-width: 100%;
+    max-width: 85%;
     height: auto;
 }
 
@@ -680,9 +676,14 @@ h2 {
 }
 
 /* Estilos para el contenedor del carrusel lo mas vendido*/
+#best-sellers {
+    background-color: #f7f5f5; /* Fondo gris para la sección */
+    border-radius: 8px;
+}
+
 .best-seller-carousel-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1280px;
     overflow: hidden;
     margin: 0 auto; /* Centra el carrusel */
     display: flex;
@@ -709,7 +710,7 @@ h2 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .add-cart {
-    background-color: #007BFF;
+    background-color: #ff9800;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -719,12 +720,12 @@ h2 {
 }
 
 .add-cart:hover {
-    background-color: #0056b3;
+    background-color: #d27e01;
 }
 
 .BS-price {
     font-size: 18px;
-    color: #0056b3;
+    color: #ff9800;
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
@@ -1257,6 +1258,354 @@ footer {
         right: -10px;
     }
 }
+
+
+
+
+/*GRILLA DE PRODUCTOS*/
+.body-grid {
+    background-color: #f0f0f0;
+}
+
+.product-page-layout main {
+    display: flex;
+}
+ 
+.filters h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.filters {
+    width: 200px;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-right: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+  
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 14px;
+    
+}
+  
+.filter-section h4{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+ 
+}
+
+
+/*filtro precio cambio*/
+.filter-price {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+/* Título del filtro */
+.filter-price h4 {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Oculta el checkbox original */
+input[type="checkbox"] {
+    appearance: none; /* Oculta el estilo predeterminado */
+    -webkit-appearance: none; /* Compatibilidad para navegadores WebKit */
+    width: 15px;
+    height: 15px;
+    border: 1px solid #006bdd; /* Color del borde del checkbox */
+    border-radius: 50%; /* Hace el checkbox redondo */
+    background-color: #fafafa; /* Fondo blanco */
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.2s, border-color 0.2s;
+    margin: 6px;
+  }
+  
+  /* Estilo cuando el checkbox está marcado */
+  input[type="checkbox"]:checked {
+    background-color: #007BFF; /* Cambia el fondo al color seleccionado */
+    border-color: #007BFF; /* Borde del color del fondo */
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+/* Contenedor de los inputs de precio */
+.price-range-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* Estilo para cada contenedor de input */
+  .price-range-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  
+  /* Estilo de las etiquetas */
+  .price-range-input label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555; /* Gris oscuro */
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo de los inputs de precio */
+  .price-range-input input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    text-align: center;
+    color: #333; /* Gris más oscuro */
+  }
+  
+  /* Cambios al interactuar con los inputs */
+  .price-range-input input:focus {
+    outline: none;
+    border-color: #007bff; /* Azul más brillante */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+
+
+/* Estructura básica de la grilla de productos */
+.product-grid {
+    border-radius: 8px;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto)); /* Adjust minmax values as needed */
+    gap: 30px;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fondo gris claro */
+}
+
+.product-title {
+    font-size: 2em;
+    font-family: 'roboto-flex-regular', sans-serif;
+    text-align: left;
+    margin-left: 180px;
+} 
+
+
+/* Estilo de las tarjetas de producto */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Imagen del producto */
+.product-card img,
+.product-img-link {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.product-card img:hover {
+    transform: scale(1.05);
+} 
+
+/* Nombre de la marca en mayúsculas y más pequeño */
+.product-card .brand {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+}
+
+/* Nombre del producto */
+.product-card h3,
+.product-name-link {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #333;
+    margin: 20px 0 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+.product-card h3:hover {
+    transform: scale(1.05);
+}
+/* Precio y descuento */
+.product-card .price-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.product-card .original-price {
+    text-decoration: line-through;
+    font-size: 0.9em;
+    color: #999;
+    text-align: center;
+}
+
+.product-card .discount-price {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(233, 140, 0);
+    text-align: center;
+}
+
+/* Descuento */
+.product-card .discount-badge {
+    background-color: rgb(247, 148, 0);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 5px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-align: center;
+}
+
+.product-card .description {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+    margin: 20px 0 0px;
+    justify-content: center;
+}
+
+.product-card .category {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 20px;
+}
+
+.discount-badge.hidden {
+    display: none;
+  }
+
+
+
+
+/*PRODUCT CARD */
+.the-product {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.the-product:hover {
+    transform: scale(1.05);
+}
+
+.the-product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+}
+
+.the-product-info {
+    padding: 16px;
+    text-align: center;
+}
+
+.the-product-info h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.the-product-brand,
+.the-product-category {
+    color: #666;
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+.the-product-pricing {
+    margin: 16px 0;
+}
+
+.the-product-price {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.the-product-original-price {
+    font-size: 0.9em;
+    color: #999;
+    text-decoration: line-through;
+    margin: 8px 0;
+}
+
+.the-product-discount {
+    font-size: 0.9em;
+    color: #ff4444;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+
 
 
 

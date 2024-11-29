@@ -486,3 +486,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 4000);
 });
+
+//PRODUCT CARD//
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById("view-all-products").addEventListener("click", () => {
+        // Redirigir a la página donde se muestra la grilla completa de productos
+        window.location.href = "./product_grid.html";
+    });
+}); 

@@ -76,3 +76,97 @@ function loginUser() {
     }
 }
 
+
+
+
+
+
+
+
+
+filtros js:
+// Código para aplicar los filtros
+document.querySelectorAll(".category-filter, .brand-filter").forEach(button => {
+  button.addEventListener("click", (event) => {
+      const category = event.target.dataset.category;
+      const brand = event.target.dataset.brand;
+
+      fetch('products.json')
+          .then(response => response.json())
+          .then(data => {
+              // Filtrar productos según categoría o marca
+              const filteredProducts = data.filter(product => {
+                  if (category) return product.category === category;
+                  if (brand) return product.brand === brand;
+                  return true;
+              });
+              displayProducts(filteredProducts);
+          })
+          .catch(error => console.error("Error al aplicar el filtro:", error));
+  });
+});
+
+
+
+
+
+
+html filtros: 
+<!-- Ejemplo de botones de filtro en HTML -->
+<div class="filters">
+    <button class="category-filter" data-category="Celulares">Celulares</button>
+    <button class="category-filter" data-category="Smart TV">Smart TV</button>
+    <button class="category-filter" data-category="Computadoras">Computadoras</button>
+    <button class="category-filter" data-category="Arma tu PC">Arma tu PC</button>
+    
+    <button class="brand-filter" data-brand="Samsung">Samsung</button>
+    <button class="brand-filter" data-brand="HYUNDAI">HYUNDAI</button>
+    <button class="brand-filter" data-brand="AMD">AMD</button>
+</div> 
+
+
+
+un JS con await y async
+// Función asíncrona para cargar productos desde el JSON
+async function cargarProductos() {
+    try {
+        const response = await fetch('products.json');
+        if (!response.ok) throw new Error(`Error al cargar el archivo JSON: ${response.status}`);
+        
+        const productos = await response.json();
+        
+        mostrarProductos(productos); // Llama a una función para renderizar los productos en la grilla
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
+    }
+}
+
+// Función para mostrar los productos en la grilla
+function mostrarProductos(productos) {
+    const contenedorGrilla = document.getElementById('product-grid'); // Asegúrate de tener un contenedor con este ID
+    if (!contenedorGrilla) {
+        console.error("El contenedor de la grilla de productos no existe en el DOM.");
+        return;
+    }
+
+    contenedorGrilla.innerHTML = ''; // Limpiar cualquier contenido previo
+
+    productos.forEach(producto => {
+        // Crear el HTML para cada tarjeta de producto
+        const tarjetaProducto = document.createElement('div');
+        tarjetaProducto.className = 'producto-card';
+        tarjetaProducto.innerHTML = `
+            <h3>${producto.name}</h3>
+            <p>${producto.category}</p>
+            <p>${producto.price}</p>
+            <img src="${producto.image}" alt="${producto.name}">
+            <p>${producto.description}</p>
+        `;
+        contenedorGrilla.appendChild(tarjetaProducto);
+    });
+}
+
+// Llamar a la función de carga de productos al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    cargarProductos();
+});
