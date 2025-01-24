@@ -20,7 +20,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <h1>Tech&Game</h1>
+                <h1><a href="index.html">Tech&Game </a></h1>
             </div>
             <div class="search-bar">
                 <form class="search-wrapper"action="search_results.html" method="GET">
@@ -32,17 +32,92 @@
             </div>
             <div class="header-icons">
                 <a href="#" class="login-link" id="loginModalTrigger">
-                    <img src="images/login-icon.png" alt="Login Icon"><span>Cuenta</span></a>
+                    <img src="images/login-icon.png" alt="Login Icon"></a>
                 <a href="#cart" class="login-link" id="loginModalTrigger">
-                    <img src="images/cart-icon.png" alt="Cart Icon"><span>Productos</span></a>
+                    <img src="images/cart-icon.png" alt="Cart Icon"></a>
             </div>
         </div>
     </header>
 
+    <div class="product-card-page">
+    <div class="the-breadcrumb">
+        <ul class="breadcrumb-container">
+            <li><a title="Ir a la pagina de inicio" href="index.html">Inicio</a></li>
+            <li class="separator"> > </li>
+            <li><a href="product_grid.html">Productos</a></li>
+            <li class="separator"> > </li>
+            <li id="product-name"></li>
+        </ul>
+    </div>
 
 <main id="product-detail-container">
 </main>
 
+<hr class="card-divider">
+
+<h2 class="related-products-container-title"> > Productos relacionados</h2>
+<section id="related-products-container">
+    <div class="related-products-grid">
+    </div>
+  </section>
+
+  <hr class="card-divider">
+
+  <section class="bank-promotions">
+    <h2>CONOCE NUESTRAS PROMOCIONES</h2>
+      <div class="promotion-cards">
+          <div class="promotion-card">
+              <div class="promo-header">
+                  <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
+              </div>
+              <div class="promo-body">
+                  <h3>3 cuotas sin interés</h3>
+                  <p class="days">Miércoles y Viernes</p>
+              </div>
+              <div class="promo-footer">
+                  <small>Visa y Mastercard de todos los bancos</small>
+              </div>
+          </div>
+          <div class="promotion-card">
+              <div class="promo-header">
+                  <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
+              </div>
+              <div class="promo-body">
+                  <h3>3 cuotas sin interés</h3>
+                  <p class="days">Jueves</p>
+              </div>
+              <div class="promo-footer">
+                  <small>Pagando con Naranja X</small>
+              </div>
+          </div>
+          <div class="promotion-card">
+              <div class="promo-header">
+                  <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
+                      class="bank-logo">
+              </div>
+              <div class="promo-body">
+                  <h3>12 cuotas fijas</h3>
+                  <p class="days">Todos los días</p>
+              </div>
+              <div class="promo-footer">
+                  <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
+              </div>
+          </div>
+          <div class="promotion-card">
+              <div class="promo-header">
+                  <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
+                      class="bank-logo">
+              </div>
+              <div class="promo-body">
+                  <h3>6 cuotas sin interés</h3>
+                  <p class="days">Lunes y Martes</p>
+              </div>
+              <div class="promo-footer">
+                  <small>Pagando con tarjeta Visa Galicia</small>
+              </div>
+          </div>
+      </div>
+  </section>
 
 <footer>
     <div class="footer-container">
@@ -93,6 +168,7 @@
         <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
     </div>
 </footer>
+</div>
 <script src="scripts/products_card.js"></script>
 <script src="scripts/codigo.js"></script>
 </body>

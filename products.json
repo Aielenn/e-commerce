@@ -3,165 +3,210 @@
       {
         "id": 1,
         "name": "Samsung Galaxy A35 5G",
-        "category": ["Celulares"],
+        "category": ["celulares"],
         "brand": "Samsung",
         "price": 1000,
         "screenSize": 6.6,
         "description": " El diseño icónico del Galaxy A35 5G presenta un diseño de cámara lineal con una parte posterior de vidrio y un marco lateral plano para una apariencia elegante",
         "specs": {
           "ram": "8GB",
-          "storage": "128GB/256GB",
+          "storage": "256GB",
           "battery": "5000 mAh",
           "processor": "Exynos 1380 2.4GHz",
+          "Pulgadas de pantalla": 6.6,
           "camera": "48MP+12MP+12MP"
         },
         "inStock": true,
-        "image": "images/productsjson/a35.5G.jpg",
+        "images": [
+          "images/productsjson/a35.5G.jpg",
+          "images/productsjson/a35.5G.1.jpg",
+          "images/productsjson/a35.5G.2.jpg"
+        ],
         "discount": 10
       },
       {
         "id": 2,
         "name": "Samsung Galaxy S24 ULTRA",
-        "category": ["Celulares"],
+        "category": ["celulares"],
         "brand": "Samsung",
         "price": 3000,
         "screenSize": 6.8,
         "description": "Te presentamos el nuevo Galaxy S24 Ultra, el Galaxy Ultra definitivo, con un novedoso exterior de titanio y una pantalla plana de 6,8 pulgadas.",
         "specs": {
           "ram": "12GB",
-          "storage": "512GB/256GB",
+          "storage": "256GB",
           "battery": "5000 mAh",
           "processor": " Qualcomm Snapdragon 8 Gen 3",
+          "Pulgadas de pantalla": 6.8,
           "camera": "200MP+10MP+12MP"
         },
         "inStock": true,
-        "image": "images/productsjson/s24.ultra.png",
-        "discount": 0
+        "images": [
+          "images/productsjson/s24.ultra.png",
+          "images/productsjson/s24.ultra.1.jpg",
+          "images/productsjson/s24.ultra.2.png"
+        ],
+        "discount": 15
       },
       {
         "id": 3,
         "name": "iPhone 14 Pro",
-        "category": ["Celulares"],
+        "category": ["celulares"],
         "brand": "Apple",
         "price": 1500,
         "screenSize": 6.1,
         "description": "El Apple iPhone 14 Pro debuta este año con una pantalla OLED de 6.1 pulgadas con funcionalidad always-on y un nuevo notch que se integra a las notificaciones llamado Isla Dinámica. El iPhone 14 Pro utiliza el nuevo procesador Apple A16 Bionic",
         "specs": {
           "ram": "6GB",
-          "storage": "128GB/256GB",
+          "storage": "128GB",
           "battery": "5000 mAh",
           "processor": "Apple A16 Bionic",
+          "Pulgadas de pantalla": 6.1,
           "camera": "48MP+12MP+12MP"
         },
         "inStock": true,
-        "image": "images/productsjson/iphone-14-pro.jpg",
+        "images": [
+          "images/productsjson/iphone-14-pro.jpg",
+          "images/productsjson/iphone-14-pro.1.png",
+          "images/productsjson/iphone-14-pro.2.jpg"
+        ],
         "discount": 20
       },
       {
         "id": 4,
         "name": "iPhone 15 Pro Max",
-        "category": ["Celulares"],
+        "category": ["celulares"],
         "brand": "Apple",
         "price": 3500,
         "screenSize": 6.7,
         "description": "El Apple iPhone 15 Pro Max regresa con un mismo diseño pero con chasis de titanio que le otorga mayor resistencia y menor peso.",
         "specs": {
           "ram": "8GB",
-          "storage": "512GB/256GB",
+          "storage": "256GB",
           "battery": "5000 mAh",
           "processor": "Apple A17 Pro",
+          "Pulgadas de pantalla": 6.7,
           "camera": "48MP+12MP+12MP"
         },
         "inStock": true,
-        "image": "images/productsjson/iphone-15.jpg",
+        "images": [
+          "images/productsjson/iphone-15.jpg",
+          "images/productsjson/iphone-15.1.jpg",
+          "images/productsjson/iphone-15.2.jpg"
+        ],
         "discount": 0
       },
       {
         "id": 5,
         "name": "Motorola G24",
-        "category": ["Celulares"],
+        "category": ["celulares"],
         "brand": "Motorola",
-        "price": 6000,
+        "price": 700,
         "screenSize": 6.56,
         "description": "El nuevo Motorola Moto G24 ya está aquí, se renueva con Android 14 y un precio más que conveniente",
         "specs": {
           "ram": "4GB",
           "storage": "128GB",
           "battery": "5000 mAh",
+          "Pulgadas de pantalla": 6.56,
           "processor": "Helio G85"
         },
         "inStock": true,
-        "image": "images/productsjson/moto-g24.jpg",
+        "images": [
+          "images/productsjson/moto-g24.png",
+          "images/productsjson/moto-g24.1.jpg",
+          "images/productsjson/moto-g24.2.jpg"
+        ],
         "discount": 0
       },
       {
-        "id": 5,
+        "id": 6,
         "name": "Smart tv android HYUNDAI 32 pulgadas",
-        "category": ["Smart TV"],
+        "category": ["smart-tv"],
         "brand": "HYUNDAI",
         "price": 5000,
         "screenSize": 32,
         "description": "Descubre la Smart TV Hyundai 32 pulgadas Hyled-32fhd7a, una opción ideal para disfrutar de tus programas y películas favoritas con una calidad de imagen excepcional.",
         "specs": {
+          "pulgadas": "32",
           "resolution": "HD",
           "smart": true
         },
         "inStock": true,
-        "image": "images/productsjson/hyundai-32.png",
+        "images": [
+          "images/productsjson/hyundai-32.png",
+          "images/productsjson/hyundai-32.1.png",
+          "images/productsjson/hyundai-32.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 6,
+        "id": 7,
         "name": "Smart tv android TCL 43 pulgadas",
-        "category": ["Smart TV"],
+        "category": ["smart-tv"],
         "brand": "TCL",
         "price": 8000,
         "screenSize": 43,
         "description": "TELEVISOR SMART TV FULL HD DE 43 pulgadas TCL S5400 ANDROID TV HDR L43S5400. MÁS PANTALLA, MENOS LÍMITES",
         "specs": {
+          "pulgadas": "43",
           "resolution": "Full HD",
           "smart": true
         },
         "inStock": true,
-        "image": "images/productsjson/tcl-43.png",
-        "discount": 0
+        "images": [
+          "images/productsjson/tcl-43.png",
+          "images/productsjson/tcl-43.1.jpg",
+          "images/productsjson/tcl-43.2.jpg"
+        ], 
+        "discount": 10
       },
       {
-       "id": 7,
+       "id": 8,
         "name": "Smart tv android Samsung 43 pulgadas",
-        "category": ["Smart TV"],
+        "category": ["smart-tv"],
         "brand": "Samsung",
         "price": 8500,
         "screenSize": 43,
         "description": "43 pulgadas UHD 4K Smart TV AU7000, con el Crystal UHD 4K va más allá que un FHD convencional, con 4 veces más pixeles",
         "specs": {
+          "pulgadas": "43",
           "resolution": "UHD 4K",
           "smart": true
         },
         "inStock": true,
-        "image": "images/productsjson/samsung-43.jpg",
+        "images": [
+          "images/productsjson/samsung-43.jpg",
+          "images/productsjson/samsung-43.1.jpg",
+          "images/productsjson/samsung-43.2.jpg"
+        ], 
         "discount": 5
       },
       {
-        "id": 8,
+        "id": 9,
         "name": "Smart tv android PHILCO 50 pulgadas",
-        "category": ["Smart TV"],
+        "category": ["smart-tv"],
         "brand": "PHILCO",
-        "price": 1500,
+        "price": 11500,
         "screenSize": 50,
         "description": "Transforma tu hogar en el centro de entretenimiento con la Smart TV Philco de 50 pulgadas. Sistema Operativo Android TV: Navega por un amplio catálogo de aplicaciones",
         "specs": {
+          "pulgadas": "50",
           "resolution": "UHD 4K",
           "smart": true
         },
         "inStock": true,
-        "image": "images/productsjson/philco-50.jpg",
+        "images": [
+          "images/productsjson/philco-50.jpg",
+          "images/productsjson/philco-50.1.jpg",
+          "images/productsjson/philco-50.2.png"
+        ], 
         "discount": 0
       },
       {
-        "id": 9,
+        "id": 10,
         "name": "Notebook Acer Aspire Ryzen 7",
-        "category": ["Computadoras"],
+        "category": ["computadoras"],
         "brand": "Acer",
         "price": 2000,
         "screenSize": 15.6,
@@ -173,13 +218,17 @@
           "processor": "AMD Ryzen 7 5700U"
         },
         "inStock": true,
-        "image": "images/productsjson/acer.jpg",
+       "images": [
+          "images/productsjson/acer.jpg",
+          "images/productsjson/acer.1.jpg",
+          "images/productsjson/acer.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 10,
+        "id": 11,
         "name": "Notebook Samsung Galaxy Book3 Pro i5",
-        "category": ["Computadoras"],
+        "category": ["computadoras"],
         "brand": "Samsung",
         "price": 2800,
         "screenSize": 14,
@@ -191,60 +240,79 @@
           "processor": "Intel Core I5"
         },
         "inStock": true,
-        "image": "images/productsjson/book3.jpeg",
+        "images": [
+          "images/productsjson/book3.jpeg",
+          "images/productsjson/book3.1.png",
+          "images/productsjson/book3.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 11,
+        "id": 12,
         "name": "Mouse Logitech M170 Inalambrico",
-        "category": ["Perifericos"],
+        "category": ["perifericos"],
         "brand": "Logitech",
         "price": 200,
         "description": "Con un diseño ergonómico y slim, este mouse es ligero y fácil de transportar. Descubre el Mouse Inalambrico Logitech M170",
         "specs": {
+          "iluminacion": false,
           "wireless": true,
           "sensor": "optico",
           "battery": "pilas"
         },
         "inStock": true,
-        "image": "images/productsjson/mouse.jpg",
+        "images": [
+          "images/productsjson/mouse.jpg",
+          "images/productsjson/mouse.1.jpg",
+          "images/productsjson/mouse.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 12,
+        "id": 13,
         "name": "Mouse gamer inalámbrico recargable Razer Viper V2 Pro",
-        "category": ["Perifericos"],
+        "category": ["perifericos"],
         "brand": "Razer",
         "price": 200,
         "description": "este mouse cuenta con un sensor óptico Focus Pro 30K de alta precisión y 30000 dpi. incluye un cable USB para que puedas elegir la opción que más te convenga,  y su alcance máximo de 2.1 metros",
         "specs": {
+          "iluminacion": false,
           "wireless": true,
           "sensor": "optico",
           "battery": "recargable"
         },
         "inStock": true,
-        "image": "images/productsjson/mouse-gamer.jpg",
-        "discount":0
+        "images": [
+          "images/productsjson/mouse-gamer.jpg",
+          "images/productsjson/mouse-gamer.1.jpg",
+          "images/productsjson/mouse-gamer.2.jpg"
+        ], 
+        "discount": 5
       },
       {
-        "id": 13,
+        "id": 14,
         "name": "Headset Auricular Gamer Stream Gigabyte Aorus H5- Gp-aorush5",
-        "category": ["Perifericos"],
+        "category": ["perifericos"],
         "brand": "Aorus",
         "price": 300,
         "description": "Al presentar controladores de metal de berilio rígidos y ligeros de 50 mm, permite que el AORUS H5 ofrezca sonidos excelentes, al tiempo que elimina las vibraciones innecesarias. Estilo de juego personalizado con iluminación de color prácticamente ilimitada a través de AORUS Engine.",
         "specs": {
+          "iluminacion": true,
           "wireless": false,
           "microfono": true
         },
         "inStock": true,
-        "image": "images/productsjson/aorus.jpg",
+        "images": [
+          "images/productsjson/aorus.jpg",
+          "images/productsjson/aorus.1.jpg",
+          "images/productsjson/aorus.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 14,
+        "id": 15,
         "name": "Teclado gamer inalámbrico Asus M601 ROG FALCHION QWERTY inglés color negro con luz RGB",
-        "category": ["Perifericos"],
+        "category": ["perifericos"],
         "brand": "Asus",
         "price": 300,
         "description": "Este teclado Asus de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos,  tiene teclas antighosting, si requerís de un uso intensivo, Su retroiluminación le da un toque diferente a tu equipo y resalta su composición.",
@@ -253,13 +321,17 @@
           "iluminacion": true
         },
         "inStock": true,
-        "image": "images/productsjson/teclado-gamer.jpg",
+       "images": [
+          "images/productsjson/teclado-gamer.jpg",
+          "images/productsjson/teclado-gamer.1.jpg",
+          "images/productsjson/teclado-gamer.2.jpg"
+        ], 
         "discount": 0
       },
       {
-        "id": 15,
+        "id": 16,
         "name": "Monitor Gamer Razer 27 pulgadas Raptor",
-        "category": ["Perifericos"],
+        "category": ["perifericos"],
         "brand": "Razer",
         "price": 8000,
         "description": "Pantalla WQHD de 27 pulgadas, grado IPS para increíble detalle. Rápida tasa de 144 Hz. 95% de gama de colores DCI-P3 y soporte HDR400. Base de aluminio sólido con Razer Chroma RGB y gestión de cables integrada, cables de visualización incluidos. Integración Razer Synapse",
@@ -269,24 +341,36 @@
           "iluminacion": true
         },
         "inStock": true,
-        "image": "images/productsjson/monitor.jpg",
-        "discount": 0
-      },
-      {
-        "id": 16,
-        "name": "Silla de escritorio Akracing Octane gamer ergonómica negra y roja con tapizado de cuero sintético",
-        "category": ["Sillas"],
-        "brand": "Akracing",
-        "price": 6000,
-        "description": "Esta silla ergonómica es la indicada para quienes pasan mucho tiempo frente al escritorio, Su respaldo reclinable te permite regular los diferentes puntos de inclinación, Las ruedas te van a permitir moverte y limpiar fácilmente tu espacio.",
-        "inStock": true,
-        "image": "images/productsjson/silla.jpeg",
-        "discount": 0
+       "images": [
+          "images/productsjson/monitor.jpg",
+          "images/productsjson/monitor.1.jpg",
+          "images/productsjson/monitor.2.jpg"
+        ], 
+        "discount": 10
       },
       {
         "id": 17,
+        "name": "Silla de escritorio Akracing Octane gamer ergonómica negra y roja con tapizado de cuero sintético",
+        "category": ["sillas"],
+        "brand": "Akracing",
+        "price": 6000,
+        "description": "Esta silla ergonómica es la indicada para quienes pasan mucho tiempo frente al escritorio, Su respaldo reclinable te permite regular los diferentes puntos de inclinación, Las ruedas te van a permitir moverte y limpiar fácilmente tu espacio.",
+        "specs": {
+          "color": "negro",
+          "material": "cuero sintetico"
+        },
+        "inStock": true,
+        "images": [
+          "images/productsjson/silla.jpeg",
+          "images/productsjson/silla.1.jpg",
+          "images/productsjson/silla.2.jpg"
+        ], 
+        "discount": 20
+      },
+      {
+        "id": 18,
         "name": "AMD Ryzen 5 5600X",
-        "category": ["Procesadores","Arma tu PC"],
+        "category": ["Procesadores","arma-tu-pc"],
         "brand": "AMD",
         "price": 3000,
         "description": "Procesador de alto rendimiento de 6 núcleos y 12 hilos, ideal para gaming y tareas intensivas.",
@@ -300,13 +384,17 @@
           "socket": "AM4"
         },
         "inStock": true,
-        "image": "images/productsjson/AMD Ryzen 5 5600X.jpg",
+        "images": [
+          "images/productsjson/AMD Ryzen 5 5600X.jpg",
+          "images/productsjson/AMD Ryzen 5 5600X.1.jpg",
+          "images/productsjson/AMD Ryzen 5 5600X.2.jpg"
+        ], 
         "discount": 5
       },
       {
-        "id": 18,
+        "id": 19,
         "name": "AMD Ryzen 7 5800X",
-        "category": ["Procesadores","Arma tu PC"],
+        "category": ["Procesadores","arma-tu-pc"],
         "brand": "AMD",
         "price": 4500,
         "description": "Procesador avanzado de 8 núcleos y 16 hilos, diseñado para tareas multitarea y gaming de alto rendimiento.",
@@ -320,13 +408,17 @@
           "socket": "AM4"
         },
         "inStock": true,
-        "image": "images/productsjson/AMD Ryzen 7 5800X.jpg",
-        "discount": 0
+        "images": [
+          "images/productsjson/AMD Ryzen 7 5800X.jpg",
+          "images/productsjson/AMD Ryzen 7 5800X.1.png",
+          "images/productsjson/AMD Ryzen 7 5800X.2.png"
+        ], 
+        "discount": 5
       },
       {
-        "id": 19,
+        "id": 20,
         "name": "Intel Core i5-11600K",
-        "category": ["Procesadores","Arma tu PC"],
+        "category": ["Procesadores","arma-tu-pc"],
         "brand": "Intel",
         "price": 3200,
         "description": "Procesador de 6 núcleos y 12 hilos con arquitectura Rocket Lake, perfecto para gaming y productividad.",
@@ -340,13 +432,17 @@
           "socket": "LGA1200"
         },
         "inStock": true,
-        "image": "images/productsjson/Intel Core i5-11600K.jpeg",
+        "images": [
+          "images/productsjson/Intel Core i5-11600K.jpeg",
+          "images/productsjson/Intel Core i5-11600K.1.jpg",
+          "images/productsjson/Intel Core i5-11600K.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 20,
+        "id": 21,
         "name": "Intel Core i7-11700K",
-        "category": ["Procesadores","Arma tu PC"],
+        "category": ["Procesadores","arma-tu-pc"],
         "brand": "Intel",
         "price": 4000,
         "description": "Procesador de 8 núcleos y 16 hilos, ideal para creadores de contenido y gaming de alto rendimiento.",
@@ -360,13 +456,17 @@
           "socket": "LGA1200"
         },
         "inStock": true,
-        "image": "images/productsjson/Intel Core i7-11700K.png",
+       "images": [
+          "images/productsjson/Intel Core i7-11700K.png",
+          "images/productsjson/Intel Core i7-11700K.1.jpg",
+          "images/productsjson/Intel Core i7-11700K.2.jpg"
+        ], 
         "discount": 15
       },
       {
-        "id": 21,
+        "id": 22,
         "name": "ASUS ROG Strix B550-F Gaming",
-        "category": ["Motherboards","Arma tu PC"],
+        "category": ["Motherboards","arma-tu-pc"],
         "brand": "ASUS",
         "price": 1800,
         "description": "Motherboard gaming compatible con procesadores AMD Ryzen de tercera generación, con soporte PCIe 4.0.",
@@ -377,17 +477,21 @@
           "memorySlots": 4,
           "pcieSlots": "1x PCIe 4.0 x16",
           "sataPorts": 6,
-          "usbPorts": "2x USB 3.2, 4x USB 2.0",
+          "usbPorts": "2x USB 3.2 4x USB 2.0",
           "wifi": true
         },
         "inStock": true,
-        "image": "images/productsjson/ASUS ROG Strix B550-F Gaming.png",
+        "images": [
+          "images/productsjson/ASUS ROG Strix B550-F Gaming.png",
+          "images/productsjson/ASUS ROG Strix B550-F Gaming.1.jpg",
+          "images/productsjson/ASUS ROG Strix B550-F Gaming.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 22,
+        "id": 23,
         "name": "MSI MAG B550 Tomahawk",
-        "category": ["Motherboards","Arma tu PC"],
+        "category": ["Motherboards","arma-tu-pc"],
         "brand": "MSI",
         "price": 1600,
         "description": "Motherboard con chipset B550 compatible con procesadores AMD Ryzen de tercera generación, diseñada para rendimiento gaming.",
@@ -402,13 +506,17 @@
           "wifi": false
         },
         "inStock": true,
-        "image": "images/productsjson/MSI MAG B550 Tomahawk.png",
+        "images": [
+          "images/productsjson/MSI MAG B550 Tomahawk.png",
+          "images/productsjson/MSI MAG B550 Tomahawk.1.png",
+          "images/productsjson/MSI MAG B550 Tomahawk.2.jpg"
+        ], 
         "discount": 5
       },
       {
-        "id": 23,
+        "id": 24,
         "name": "Gigabyte Z590 AORUS Elite",
-        "category": ["Motherboards","Arma tu PC"],
+        "category": ["Motherboards","arma-tu-pc"],
         "brand": "Gigabyte",
         "price": 2000,
         "description": "Motherboard de alto rendimiento con soporte para procesadores Intel de 10ma y 11ma generación, ideal para gamers y creadores.",
@@ -423,13 +531,17 @@
           "wifi": true
         },
         "inStock": true,
-        "image": "images/productsjson/Gigabyte Z590 AORUS Elite.jpg",
+       "images": [
+          "images/productsjson/Gigabyte Z590 AORUS Elite.jpg",
+          "images/productsjson/Gigabyte Z590 AORUS Elite.1.jpg",
+          "images/productsjson/Gigabyte Z590 AORUS Elite.2.jpg"
+        ], 
         "discount": 0
       },
       {
-        "id": 24,
+        "id": 25,
         "name": "ASRock B460M Steel Legend",
-        "category": ["Motherboards","Arma tu PC"],
+        "category": ["Motherboards","arma-tu-pc"],
         "brand": "ASRock",
         "price": 1400,
         "description": "Motherboard robusta compatible con procesadores Intel de 10ma generación, diseñada para rendimiento y durabilidad.",
@@ -444,13 +556,17 @@
           "wifi": false
         },
         "inStock": true,
-        "image": "images/productsjson/ASRock B460M Steel Legend.png",
+        "images": [
+          "images/productsjson/ASRock B460M Steel Legend.png",
+          "images/productsjson/ASRock B460M Steel Legend.1.png",
+          "images/productsjson/ASRock B460M Steel Legend.2.png"
+        ], 
         "discount": 15
       },
       {
-        "id": 25,
+        "id": 26,
         "name": "Corsair Vengeance LPX 16GB",
-        "category": ["Memoria RAM","Arma tu PC"],
+        "category": ["Memoria RAM","arma-tu-pc"],
         "brand": "Corsair",
         "price": 700,
         "description": "Memoria RAM DDR4 de 16GB, diseñada para alto rendimiento en gaming y creación de contenido.",
@@ -462,13 +578,16 @@
           "timing": "16-18-18-36"
         },
         "inStock": true,
-        "image": "images/productsjson/Corsair Vengeance LPX 16GB.jpg",
+        "images": [
+          "images/productsjson/Corsair Vengeance LPX 16GB.jpg",
+          "images/productsjson/Corsair Vengeance LPX 16GB.1.jpg"
+        ], 
         "discount": 5
       },
       {
-        "id": 26,
+        "id": 27,
         "name": "G.Skill Ripjaws V 32GB",
-        "category": ["Memoria RAM","Arma tu PC"],
+        "category": ["Memoria RAM","arma-tu-pc"],
         "brand": "G.Skill",
         "price": 1300,
         "description": "Memoria RAM DDR4 de 32GB, ideal para configuraciones de alto rendimiento y multitarea intensiva.",
@@ -480,13 +599,17 @@
           "timing": "18-22-22-42"
         },
         "inStock": true,
-        "image": "images/productsjson/G.Skill Ripjaws V 32GB.jpg",
+        "images": [
+          "images/productsjson/G.Skill Ripjaws V 32GB.jpg",
+          "images/productsjson/G.Skill Ripjaws V 32GB.1.png",
+          "images/productsjson/G.Skill Ripjaws V 32GB.2.png"
+        ],
         "discount": 10
       },
       {
-        "id": 27,
+        "id": 28,
         "name": "Kingston Fury Beast 16GB DDR5",
-        "category": ["Memoria RAM","Arma tu PC"],
+        "category": ["Memoria RAM","arma-tu-pc"],
         "brand": "Kingston",
         "price": 1500,
         "description": "Memoria RAM DDR5 de 16GB, preparada para equipos de última generación con velocidades superiores.",
@@ -498,13 +621,17 @@
           "timing": "40-40-40-77"
         },
         "inStock": true,
-        "image": "images/productsjson/Kingston Fury Beast 16GB DDR5.jpg",
+        "images": [
+          "images/productsjson/Kingston Fury Beast 16GB DDR5.jpg",
+          "images/productsjson/Kingston Fury Beast 16GB DDR5.1.jpg",
+          "images/productsjson/Kingston Fury Beast 16GB DDR5.2.jpg"
+        ], 
         "discount": 0
       },
       {
-        "id": 28,
+        "id": 29,
         "name": "MSI GeForce GTX 1660 Super",
-        "category": ["Tarjetas Gráficas","Arma tu PC"],
+        "category": ["Tarjetas Gráficas","arma-tu-pc"],
         "brand": "MSI",
         "price": 3000,
         "description": "Tarjeta gráfica MSI GeForce GTX 1660 Super con 6GB de memoria GDDR6, ideal para gaming en 1080p.",
@@ -516,13 +643,17 @@
           "powerConsumption": "125W"
         },
         "inStock": true,
-        "image": "images/productsjson/MSI GeForce GTX 1660 Super.jpg",
+        "images": [
+          "images/productsjson/MSI GeForce GTX 1660 Super.jpg",
+          "images/productsjson/MSI GeForce GTX 1660 Super.1.jpg",
+          "images/productsjson/MSI GeForce GTX 1660 Super.2.jpg"
+        ], 
         "discount": 5
       },
       {
-        "id": 29,
+        "id": 30,
         "name": "ASUS ROG Strix RTX 3060 Ti",
-        "category": ["Tarjetas Gráficas","Arma tu PC"],
+        "category": ["Tarjetas Gráficas","arma-tu-pc"],
         "brand": "ASUS",
         "price": 450,
         "description": "Tarjeta gráfica ASUS ROG Strix RTX 3060 Ti con 8GB de memoria GDDR6, perfecta para juegos en 1440p.",
@@ -534,13 +665,17 @@
           "powerConsumption": "200W"
         },
         "inStock": true,
-        "image": "images/productsjson/ASUS ROG Strix RTX 3060 Ti.jpg",
+        "images": [
+          "images/productsjson/ASUS ROG Strix RTX 3060 Ti.jpg",
+          "images/productsjson/ASUS ROG Strix RTX 3060 Ti.1.jpg",
+          "images/productsjson/ASUS ROG Strix RTX 3060 Ti.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 30,
+        "id": 31,
         "name": "MSI Radeon RX 6700 XT",
-        "category": ["Tarjetas Gráficas","Arma tu PC"],
+        "category": ["Tarjetas Gráficas","arma-tu-pc"],
         "brand": "MSI",
         "price": 500,
         "description": "Tarjeta gráfica MSI Radeon RX 6700 XT con 12GB de memoria GDDR6, ideal para gaming en 1440p y VR.",
@@ -552,13 +687,17 @@
           "powerConsumption": "230W"
         },
         "inStock": true,
-        "image": "images/productsjson/MSI Radeon RX 6700 XT.jpg",
+        "images": [
+          "images/productsjson/MSI Radeon RX 6700 XT.jpg",
+          "images/productsjson/MSI Radeon RX 6700 XT.1.jpg",
+          "images/productsjson/MSI Radeon RX 6700 XT.2.jpg"
+        ], 
         "discount": 15
       },
       {
-        "id": 31,
+        "id": 32,
         "name": "ASUS TUF Gaming RTX 3080",
-        "category": ["Tarjetas Gráficas","Arma tu PC"],
+        "category": ["Tarjetas Gráficas","arma-tu-pc"],
         "brand": "ASUS",
         "price": 700,
         "description": "Tarjeta gráfica ASUS TUF Gaming RTX 3080 con 10GB de memoria GDDR6X, para gaming en 4K de alto rendimiento.",
@@ -570,13 +709,17 @@
           "powerConsumption": "320W"
         },
         "inStock": true,
-        "image": "images/productsjson/ASUS TUF Gaming RTX 3080.png",
+       "images": [
+          "images/productsjson/ASUS TUF Gaming RTX 3080.png",
+          "images/productsjson/ASUS TUF Gaming RTX 3080.1.jpg",
+          "images/productsjson/ASUS TUF Gaming RTX 3080.2.jpg"
+        ],  
         "discount": 20
       },
       {
-        "id": 32,
+        "id": 33,
         "name": "Seagate BarraCuda 1TB",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Seagate",
         "price": 4500,
         "description": "Disco duro interno Seagate BarraCuda de 1TB, 7200RPM, ideal para almacenamiento general.",
@@ -587,13 +730,17 @@
           "interface": "SATA"
         },
         "inStock": true,
-        "image": "images/productsjson/Seagate BarraCuda 1TB.jpg",
+        "images": [
+          "images/productsjson/Seagate BarraCuda 1TB.jpg",
+          "images/productsjson/Seagate BarraCuda 1TB.1.png",
+          "images/productsjson/Seagate BarraCuda 1TB.2.png"
+        ], 
         "discount": 5
       },
       {
-        "id": 33,
+        "id": 34,
         "name": "Western Digital Blue 2TB",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Western Digital",
         "price": 6500,
         "description": "Disco duro interno Western Digital Blue de 2TB, 5400RPM, confiable para almacenar gran cantidad de datos.",
@@ -604,13 +751,17 @@
           "interface": "SATA"
         },
         "inStock": true,
-        "image": "images/productsjson/Western Digital Blue 2TB.jpg",
+        "images": [
+          "images/productsjson/Western Digital Blue 2TB.jpg",
+          "images/productsjson/Western Digital Blue 2TB.1.jpg",
+          "images/productsjson/Western Digital Blue 2TB.2.jpg"
+        ], 
         "discount": 10
       },
       {
-        "id": 34,
+        "id": 35,
         "name": "Kingston A400 240GB SSD",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Kingston",
         "price": 3000,
         "description": "Unidad de estado sólido Kingston A400 de 240GB, mejora notablemente el rendimiento del sistema.",
@@ -620,13 +771,17 @@
           "interface": "SATA"
         },
         "inStock": true,
-        "image": "images/productsjson/Kingston A400 240GB SSD.jpg",
+        "images": [
+          "images/productsjson/Kingston A400 240GB SSD.jpg",
+          "images/productsjson/Kingston A400 240GB SSD.1.png",
+          "images/productsjson/Kingston A400 240GB SSD.2.jpg"
+        ],  
         "discount": 0
       },
       {
-        "id": 35,
+        "id": 36,
         "name": "Samsung 870 EVO 500GB SSD",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Samsung",
         "price": 5500,
         "description": "Disco sólido Samsung 870 EVO de 500GB, alta velocidad y confiabilidad.",
@@ -636,13 +791,17 @@
           "interface": "SATA"
         },
         "inStock": true,
-        "image": "images/productsjson/Samsung 870 EVO 500GB SSD.jpg",
+        "images": [
+          "images/productsjson/Samsung 870 EVO 500GB SSD.jpg",
+          "images/productsjson/Samsung 870 EVO 500GB SSD.1.jpg",
+          "images/productsjson/Samsung 870 EVO 500GB SSD.2.jpg"
+        ], 
         "discount": 7
       },
       {
-        "id": 36,
+        "id": 37,
         "name": "Crucial MX500 1TB SSD",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Crucial",
         "price": 9000,
         "description": "SSD Crucial MX500 de 1TB, para una experiencia de sistema fluida y rápida.",
@@ -652,13 +811,17 @@
           "interface": "SATA"
         },
         "inStock": true,
-        "image": "images/productsjson/th.jpg",
+        "images": [
+          "images/productsjson/th.jpg",
+          "images/productsjson/th.1.jpg",
+          "images/productsjson/th.2.jpg"
+        ],
         "discount": 5
       },
       {
-        "id": 37,
+        "id": 38,
         "name": "Samsung 970 EVO Plus 500GB NVMe M.2",
-        "category": ["Almacenamiento","Arma tu PC"],
+        "category": ["Almacenamiento","arma-tu-pc"],
         "brand": "Samsung",
         "price": 8500,
         "description": "SSD NVMe M.2 Samsung 970 EVO Plus de 500GB, ideal para altas velocidades de transferencia.",
@@ -668,13 +831,17 @@
           "interface": "PCIe 3.0"
         },
         "inStock": true,
-        "image": "images/productsjson/amsung 970 EVO Plus 500GB NVMe M.2.jpg",
+        "images": [
+          "images/productsjson/amsung 970 EVO Plus 500GB NVMe M.2.jpg",
+          "images/productsjson/amsung 970 EVO Plus 500GB NVMe M.2.1.jpg",
+          "images/productsjson/amsung 970 EVO Plus 500GB NVMe M.2.2.jpg"
+        ], 
         "discount": 8
       },
       {
-        "id": 38,
+        "id": 39,
         "name": "Corsair CV450 450W",
-        "category": ["Fuentes de Poder","Arma tu PC"],
+        "category": ["Fuentes de Poder","arma-tu-pc"],
         "brand": "Corsair",
         "price": 4500,
         "description": "Fuente de poder Corsair CV450, 450W de potencia, certificación 80 PLUS Bronze, confiable para equipos básicos.",
@@ -684,13 +851,17 @@
           "modularity": "No modular"
         },
         "inStock": true,
-        "image": "images/productsjson/Corsair CV450 450W.jpg",
-        "discount": 5
+        "images": [
+          "images/productsjson/Corsair CV450 450W.jpg",
+          "images/productsjson/Corsair CV450 450W.1.jpg",
+          "images/productsjson/Corsair CV450 450W.2.jpg"
+        ], 
+        "discount": 15
       },
       {
-        "id": 39,
+        "id": 40,
         "name": "EVGA 600 W1 600W",
-        "category": ["Fuentes de Poder","Arma tu PC"],
+        "category": ["Fuentes de Poder","arma-tu-pc"],
         "brand": "EVGA",
         "price": 6500,
         "description": "Fuente de poder EVGA 600 W1 de 600W, certificación 80 PLUS White, ideal para equipos de gama media.",
@@ -700,29 +871,37 @@
           "modularity": "No modular"
         },
         "inStock": true,
-        "image": "images/productsjson/EVGA 600 W1 600W.jpg",
+        "images": [
+          "images/productsjson/EVGA 600 W1 600W.jpg",
+          "images/productsjson/EVGA 600 W1 600W.1.jpeg",
+          "images/productsjson/EVGA 600 W1 600W.2.jpeg"
+        ], 
         "discount": 10
       },
       {
-        "id": 40,
+        "id": 41,
         "name": "Cooler Master Hyper 212",
-        "category": ["Coolers CPU","Arma tu PC"],
+        "category": ["Coolers CPU","arma-tu-pc"],
         "brand": "Cooler Master",
         "price": 3500,
         "description": "Cooler de aire para CPU Cooler Master Hyper 212, con diseño de ventilador de 120mm y tecnología de tubos de calor.",
         "specs": {
           "type": "Air Cooler",
           "fanSize": "120mm",
-          "compatibleSockets": ["Intel LGA1200", "AMD AM4"]
+          "compatibleSockets": "Intel LGA1200 and AMD AM4"
         },
         "inStock": true,
-        "image": "images/productsjson/Cooler Master Hyper 212.png",
+        "images": [
+          "images/productsjson/Cooler Master Hyper 212.png",
+          "images/productsjson/Cooler Master Hyper 212.1.jpg",
+          "images/productsjson/Cooler Master Hyper 212.2.jpg"
+        ], 
         "discount": 0
       },
       {
-        "id": 41,
+        "id": 42,
         "name": "Cooler Master MasterLiquid ML240L V2",
-        "category": ["Coolers CPU","Arma tu PC"],
+        "category": ["Coolers CPU","arma-tu-pc"],
         "brand": "Cooler Master",
         "price": 2000,
         "description": "Watercooling Cooler Master MasterLiquid ML240L V2, con doble ventilador de 120mm, ideal para overclocking.",
@@ -730,16 +909,20 @@
           "type": "Water Cooler",
           "fanSize": "2x 120mm",
           "radiatorSize": "240mm",
-          "compatibleSockets": ["Intel LGA1200", "AMD AM4"]
+          "compatibleSockets": "Intel LGA1200 and AMD AM4"
         },
         "inStock": true,
-        "image": "images/productsjson/Cooler Master MasterLiquid ML240L V2.jpg",
+        "images": [
+          "images/productsjson/Cooler Master MasterLiquid ML240L V2.jpg",
+          "images/productsjson/Cooler Master MasterLiquid ML240L V2.1.jpg",
+          "images/productsjson/Cooler Master MasterLiquid ML240L V2.2.jpeg"
+        ], 
         "discount": 15
       },
       {
-        "id": 42,
+        "id": 43,
         "name": "Cooler Master SickleFlow 120 ARGB",
-        "category": ["Coolers de Gabinete","Arma tu PC"],
+        "category": ["Coolers de Gabinete","arma-tu-pc"],
         "brand": "Cooler Master",
         "price": 2000,
         "description": "Ventilador de gabinete Cooler Master SickleFlow 120 ARGB de 120mm, para óptimo flujo de aire y efectos de iluminación.",
@@ -749,64 +932,80 @@
           "lighting": "ARGB"
         },
         "inStock": true,
-        "image": "images/productsjson/Cooler Master SickleFlow 120 ARGB.jpg",
-        "discount": 0
+        "images": [
+          "images/productsjson/Cooler Master SickleFlow 120 ARGB.jpg",
+         "images/productsjson/Cooler Master SickleFlow 120 ARGB.1.png",
+         "images/productsjson/Cooler Master SickleFlow 120 ARGB.2.png"
+        ],  
+        "discount": 20
       },
       {
-        "id": 43,
+        "id": 44,
         "name": "TP-Link Archer T4U AC1300",
-        "category": ["Adaptadores de Red","Arma tu PC"],
+        "category": ["Adaptadores de Red","arma-tu-pc"],
         "brand": "TP-Link",
         "price": 2500,
         "description": "Adaptador WiFi USB TP-Link Archer T4U AC1300, de doble banda con velocidad de hasta 1300 Mbps.",
         "specs": {
           "type": "USB",
           "speed": "1300 Mbps",
-          "frequency": ["2.4GHz", "5GHz"],
+          "frequency": "2.4GHz and 5GHz",
           "interface": "USB 3.0"
         },
         "inStock": true,
-        "image": "images/productsjson/TP-Link Archer T4U AC1300.jpg",
-        "discount": 5
+        "images": [
+          "images/productsjson/TP-Link Archer T4U AC1300.jpg",
+          "images/productsjson/TP-Link Archer T4U AC1300.1.jpg",
+          "images/productsjson/TP-Link Archer T4U AC1300.2.jpg"
+        ], 
+        "discount": 15
       },
       {
-        "id": 44,
+        "id": 45,
         "name": "ASUS PCE-AC56 AC1300",
-        "category": ["Adaptadores de Red","Arma tu PC"],
+        "category": ["Adaptadores de Red","arma-tu-pc"],
         "brand": "ASUS",
         "price": 4000,
         "description": "Adaptador WiFi PCIe ASUS PCE-AC56 AC1300, de alta velocidad para conexiones estables.",
         "specs": {
           "type": "PCIe",
           "speed": "1300 Mbps",
-          "frequency": ["2.4GHz", "5GHz"],
+          "frequency": "2.4GHz andv5GHz",
           "interface": "PCIe"
         },
         "inStock": true,
-        "image": "images/productsjson/ASUS PCE-AC56 AC1300.jpg",
+        "images": [
+          "images/productsjson/ASUS PCE-AC56 AC1300.jpg",
+          "images/productsjson/ASUS PCE-AC56 AC1300.1.png",
+          "images/productsjson/ASUS PCE-AC56 AC1300.2.png"
+        ],  
         "discount": 10
       },
       {
-        "id": 45,
+        "id": 46,
         "name": "TP-Link Archer T6E AC1300",
-        "category": ["Adaptadores de Red","Arma tu PC"],
+        "category": ["Adaptadores de Red","arma-tu-pc"],
         "brand": "TP-Link",
         "price": 3500,
         "description": "Adaptador WiFi PCIe TP-Link Archer T6E AC1300, ideal para gaming y streaming en alta calidad.",
         "specs": {
           "type": "PCIe",
           "speed": "1300 Mbps",
-          "frequency": ["2.4GHz", "5GHz"],
+          "frequency": "2.4GHz and 5GHz",
           "interface": "PCIe"
         },
         "inStock": true,
-        "image": "images/productsjson/TP-Link Archer T6E AC1300.jpg",
+        "images": [
+          "images/productsjson/TP-Link Archer T6E AC1300.jpg",
+          "images/productsjson/TP-Link Archer T6E AC1300.1.jpg",
+          "images/productsjson/TP-Link Archer T6E AC1300.2.jpg"
+        ], 
         "discount": 8
       },
       {
-        "id": 46,
+        "id": 47,
         "name": "Corsair iCUE 220T RGB",
-        "category": ["Gabinetes","Arma tu PC"],
+        "category": ["Gabinetes","arma-tu-pc"],
         "brand": "Corsair",
         "price": 9000,
         "description": "Gabinete gamer Corsair iCUE 220T RGB de tamaño Mid Tower con ventiladores RGB y panel lateral de vidrio templado.",
@@ -817,13 +1016,17 @@
           "fanSlots": 6
         },
         "inStock": true,
-        "image": "images/productsjson/Corsair iCUE 220T RGB.jpg",
+        "images": [
+          "images/productsjson/Corsair iCUE 220T RGB.jpg",
+          "images/productsjson/Corsair iCUE 220T RGB.1.jpg",
+          "images/productsjson/Corsair iCUE 220T RGB.2.jpg"
+        ], 
         "discount": 15
       },
       {
-        "id": 47,
+        "id": 48,
         "name": "Corsair Carbide Series 275R",
-        "category": ["Gabinetes","Arma tu PC"],
+        "category": ["Gabinetes","arma-tu-pc"],
         "brand": "Corsair",
         "price": 7000,
         "description": "Gabinete gamer Corsair Carbide Series 275R, diseño minimalista con panel lateral de vidrio templado.",
@@ -834,13 +1037,17 @@
           "fanSlots": 5
         },
         "inStock": true,
-        "image": "images/productsjson/Corsair Carbide Series 275R.jpg",
-        "discount": 0
+        "images": [
+          "images/productsjson/Corsair Carbide Series 275R.jpg",
+          "images/productsjson/Corsair Carbide Series 275R.1.jpg",
+          "images/productsjson/Corsair Carbide Series 275R.2.jpg"
+        ],  
+        "discount": 10
       },
       {
-        "id": 4800,
+        "id": 49,
         "name": "Corsair 4000D Airflow",
-        "category": ["Gabinetes","Arma tu PC"],
+        "category": ["Gabinetes","arma-tu-pc"],
         "brand": "Corsair",
         "price": 8500,
         "description": "Gabinete gamer Corsair 4000D Airflow con excelente flujo de aire, panel lateral de vidrio y compatibilidad ATX.",
@@ -851,8 +1058,12 @@
           "fanSlots": 6
         },
         "inStock": true,
-        "image": "images/productsjson/Corsair 4000D Airflow.jpg",
-        "discount": 5
+        "images": [
+          "images/productsjson/Corsair 4000D Airflow.jpg",
+          "images/productsjson/Corsair 4000D Airflow.1.png",
+          "images/productsjson/Corsair 4000D Airflow.2.png"
+        ], 
+        "discount": 25
       }
     ]
   }
