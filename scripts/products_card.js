@@ -1,4 +1,3 @@
-// Obtén el contenedor para mostrar los detalles 
 const productDetailContainer = document.getElementById('product-detail-container');
 
 // Obtén el ID del producto desde la URL
@@ -12,7 +11,6 @@ function loadProductDetails() {
     return;
   }
 
-  // Carga el JSON de productos
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
@@ -23,7 +21,6 @@ function loadProductDetails() {
         return;
       }
 
-      // Renderiza los detalles del producto
       productDetailContainer.innerHTML = `
         <div class="the-product">
           <div class="the-product-gallery">
@@ -44,7 +41,7 @@ function loadProductDetails() {
             </div>
             <p class="info-promotion">3 cuotas sin interés de $${((product.price - (product.price * product.discount / 100)) / 3).toFixed(0)}</p>
             <div class="the-btn">
-              <button class="add-to-cart-btn">Agregar al Carrito</button>
+              <button class="add-to-cart-btn" data-id="${product.id}">Agregar al Carrito</button>
               <button class="comprar">Comprar</button>
             </div>
             <hr class="divider">
@@ -60,9 +57,9 @@ function loadProductDetails() {
               <img src="images/envio.png" alt="Camión de envío" class="shipping-icon">
               <input type="text" class="postal-code-input" placeholder="Ingresa tu Codigo Postal" maxlength="5">
               <button class="calculate-shipping-btn">></button>
-              <span class="shipping-cost-result"></span>
+              <span class="shipping-cost-result">$00.00</span>
             </div>
-              <a href="https://www.correoargentino.com.ar/formularios/cpa" class="no-postal-code">No sé mi código</a>
+              <a href="https://www.correoargentino.com.ar/formularios/cpa" class="no-postal-code">No sé mi código postal</a>
             </div> 
 
             <hr class="divider">
@@ -83,35 +80,47 @@ function loadProductDetails() {
       `;
 
       const productNameElement = document.getElementById("product-name");
-      productNameElement.textContent = product.name; // Añade el nombre dinámicamente
+      productNameElement.textContent = product.name;
 
-      // Cambiar la imagen principal al hacer clic en una miniatura
+      // Cambiar la miniatura
       window.changeMainImage = (src) => {
         const mainImage = document.querySelector('.the-product-image');
         mainImage.src = src;
       };
 
-// Agrega funcionalidad de cálculo de envío
+
+// Cálculo de envío
 const shippingButton = productDetailContainer.querySelector('.calculate-shipping-btn');
 const postalInput = productDetailContainer.querySelector('.postal-code-input');
 const shippingResult = productDetailContainer.querySelector('.shipping-cost-result');
 
 shippingButton.addEventListener('click', () => {
-  const postalCode = postalInput.value.trim();
+    const postalCode = postalInput.value.trim();
 
-  if (postalCode.length === 4 && /^\d+$/.test(postalCode)) {
-    // Generar un costo de envío aleatorio entre 5000 y 15000
-    const shippingCost = Math.floor(Math.random() * (15000 - 5000 + 1)) + 5000;
-    shippingResult.textContent = `$ ${shippingCost}`;
-  } else {
-    shippingResult.textContent = "Código inválido";
-  }
+    if (postalCode.length === 4 && /^\d+$/.test(postalCode)) { // Asegura que el código postal tenga 4 dígitos
+        let shippingCost;
+
+        if (parseInt(postalCode) >= 75000) {
+            shippingCost = 0; // Envío gratuito para códigos postales >= 75000
+        } else if (postalCode.startsWith("1") || postalCode.startsWith("2")) {
+            shippingCost = 7000; // Zona cercana
+        } else if (postalCode.startsWith("3") || postalCode.startsWith("4")) {
+            shippingCost = 9000; // Zona media
+        } else {
+            shippingCost = 15000; // Zona lejana
+        }
+
+        shippingResult.textContent = `$ ${shippingCost}`;
+    } else {
+        shippingResult.textContent = "Código inválido";
+    }
 });
-    })
-    .catch(error => {
+
+})
+      .catch(error => {
       console.error('Error al cargar los detalles:', error);
       productDetailContainer.innerHTML = '<p>Error al cargar los detalles del producto.</p>';
-    });
+});
 }
 
 // Carga los detalles al iniciar
@@ -124,6 +133,16 @@ window.changeMainImage = (src) => {
 };
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (event) => {
+      if (event.target.classList.contains("add-to-cart-btn") || event.target.classList.contains("add-cart")) {
+          let productId = parseInt(event.target.getAttribute("data-id"));
+          if (!isNaN(productId)) {
+              addToCart(productId);
+          }
+      }
+  });
+});
 
 const relatedProductsContainer = document.querySelector('.related-products-grid');
 

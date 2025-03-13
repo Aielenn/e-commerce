@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Tech&Game</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
@@ -18,31 +18,40 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- ver lo de aca en adelante -->
+    <meta property="og:title" content="Tech&Game">
+    <meta property="og:description"
+        content="Tu tienda online de electrónica para teléfonos, computadoras, accesorios gamer y más.">
+    <meta property="og:image" content="images/social-share-image.png">
+    <meta property="og:url" content="https://www.tusitioweb.com">
+    <meta property="og:type" content="website">
 </head>
 
-<body>
-    <div class="body-grid">
-        <header>
-            <div class="header-container">
-                <div class="logo">
-                    <h1><a href="index.html">Tech&Game </a></h1>
-                </div>
-                <div class="search-bar">
-                    <form class="search-wrapper" action="search_results.html" method="GET">
-                        <input type="text" name="query" placeholder="¿Cómo podemos ayudarte?" aria-label="Buscar">
-                        <button type="submit" class="search-button" aria-label="Buscar">
-                            <img src="images/search-icon.png" alt="Buscar">
-                        </button>
-                    </form>
-                </div>
-                <div class="header-icons">
-                    <a href="#" class="login-link" id="loginModalTrigger">
-                        <img src="images/login-icon.png" alt="Login Icon"><span></span></a>
-                    <a href="#cart" class="login-link" id="loginModalTrigger">
-                        <img src="images/cart-icon.png" alt="Cart Icon"><span></span></a>
-                </div>
+<body class="body-grid">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="index.html">Tech&Game </a></h1>
             </div>
-        </header>
+            <div class="search-bar">
+                <form class="search-wrapper" action="search_results.html" method="GET">
+                    <input type="text" name="query" placeholder="¿Cómo podemos ayudarte?" aria-label="Buscar">
+                    <button type="submit" class="search-button" aria-label="Buscar">
+                        <img src="images/search-icon.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
+            <div class="header-icons">
+                <a href="https://api.whatsapp.com/send/?phone=541112341234" class="whatsapp-link">
+                    <img src="images/whatsapp.png" alt="whatsapp Icon"></a>
+                <a href="#" class="login-link" id="loginModalTrigger">
+                    <img src="images/login-icon.png" alt="Login Icon"></a>
+                <a href="cart.html" class="cart-link" id="loginModalTrigger">
+                    <img src="images/cart-icon.png" alt="Cart Icon">
+                    <span id="cart-count" class="cart-count"></span></a>
+            </div>
+        </div>
+    </header>
 
         <!-- Modal de Login/Registro -->
         <div id="optionsModal" class="modal">
@@ -186,11 +195,6 @@
                 </select>
             </div>
         </div>
-
-
-
-
-
 
         <div class="product-page-layout">
             <main>
@@ -419,6 +423,7 @@
                 <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
             </div>
         </footer>
+        <script src="scripts/cart.js"></script>
         <script src="scripts/products_grid.js"></script>
         <script src="scripts/codigo.js"></script>
         

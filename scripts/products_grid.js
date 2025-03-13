@@ -226,6 +226,7 @@ function getQueryParam(param) {
 }
 
 const selectedCategory = getQueryParam('category');
+const selectedBrand = getQueryParam('brand');
 
 // Si hay una categoría seleccionada, filtrar los productos al cargar
 if (selectedCategory) {
@@ -249,6 +250,45 @@ if (selectedCategory) {
     });
 } else {
   // Si no hay categoría seleccionada, cargar todos los productos
+  fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+      if (Array.isArray(data.products)) {
+        allProducts = data.products;
+        filteredProducts = allProducts;
+        renderProducts(filteredProducts); 
+        setupPaginationControls(); 
+      } else {
+        console.error('Error: Data no es array');
+      }
+    })
+    .catch(error => {
+      console.error('Error extrayendo productos:', error);
+    });
+}
+
+// Si hay una marca seleccionada, filtrar los productos por marca al cargar
+if (selectedBrand) {
+  fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+      if (Array.isArray(data.products)) {
+        allProducts = data.products;
+
+        // Filtrar por marca seleccionada
+        filteredProducts = allProducts.filter(product => product.brand.includes(selectedBrand));
+
+        renderProducts(filteredProducts); 
+        setupPaginationControls(); 
+      } else {
+        console.error('Error: Data no es array');
+      }
+    })
+    .catch(error => {
+      console.error('Error extrayendo productos:', error);
+    });
+} else {
+  // Si no hay marca seleccionada, cargar todos los productos
   fetch('products.json')
     .then(response => response.json())
     .then(data => {

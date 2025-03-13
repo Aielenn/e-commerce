@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //LOGIN
-// Obtener el modal de opciones y el modal de login
-var optionsModal = document.getElementById("optionsModal");
+// Obtener los modales restantes
 var loginModal = document.getElementById("loginModal");
 var recoverPasswordModal = document.getElementById("recoverPasswordModal");
 var resetPasswordPage = document.getElementById("resetPasswordPage");
@@ -58,9 +57,7 @@ var registerModal = document.getElementById("registerModal");
 
 // Obtener los botones que abren los modales
 var loginModalTrigger = document.getElementById("loginModalTrigger");
-var loginModalOpen = document.getElementById("loginModalOpen");
 var openRecoverPasswordModal = document.querySelector("#openRecoverPasswordModal");
-var openRegisterModalFromOptions = document.getElementById("openRegisterModalFromOptions");
 var openRegisterModalFromLogin = document.getElementById("openRegisterModalFromLogin");
 var closeButtons = document.getElementsByClassName("close");
 
@@ -78,7 +75,7 @@ var registerFirstNameInput = document.getElementById("registerFirstName");
 var registerLastNameInput = document.getElementById("registerLastName");
 var registerEmailInput = document.getElementById("registerEmail");
 var registerPasswordInput = document.getElementById("registerPassword");
-var registerConfirmPasswordInput = document.getElementById("registerConfirmPassword")
+var registerConfirmPasswordInput = document.getElementById("registerConfirmPassword");
 var registerSubmitButton = document.getElementById("registerSubmitButton");
 
 // Función para mostrar un modal específico
@@ -88,41 +85,27 @@ function showModal(modal) {
 
 // Función para ocultar todos los modales
 function hideAllModals() {
-    optionsModal.style.display = "none";
     loginModal.style.display = "none";
     recoverPasswordModal.style.display = "none";
     resetPasswordPage.style.display = "none";
     registerModal.style.display = "none";
 }
-// Cuando el usuario hace clic en el botón de login, abre el modal de opciones
-loginModalTrigger.onclick = function(event) {
-    event.preventDefault(); // Prevenir comportamiento por defecto del enlace
-    showModal(optionsModal);
-}
 
-// Cuando el usuario hace clic en el botón "ENTRAR A MI USUARIO", abre el modal de login
-loginModalOpen.onclick = function(event) {
-    event.preventDefault();
-    hideAllModals();
+// Cuando el usuario hace clic en el botón de login, abre directamente el modal de login
+loginModalTrigger.onclick = function (event) {
+    event.preventDefault(); // Prevenir comportamiento por defecto del enlace
     showModal(loginModal);
-}
+};
 
 // Abrir el modal de recuperación de contraseña
-openRecoverPasswordModal.onclick = function(event) {
+openRecoverPasswordModal.onclick = function (event) {
     event.preventDefault();
     hideAllModals();
     showModal(recoverPasswordModal);
 };
 
-// Abrir el modal de registro desde el link en el modal de opciones
-openRegisterModalFromOptions.onclick = function(event) {
-    event.preventDefault();
-    hideAllModals();
-    showModal(registerModal);
-};
-
 // Abrir el modal de registro desde el link en el modal de login
-openRegisterModalFromLogin.onclick = function(event) {
+openRegisterModalFromLogin.onclick = function (event) {
     event.preventDefault();
     hideAllModals();
     showModal(registerModal);
@@ -131,22 +114,22 @@ openRegisterModalFromLogin.onclick = function(event) {
 // Cerrar modales
 function addCloseEventListeners() {
     for (var i = 0; i < closeButtons.length; i++) {
-        closeButtons[i].onclick = function() {
+        closeButtons[i].onclick = function () {
             hideAllModals();
         };
     }
 }
 addCloseEventListeners();
 
-// Cuando el usuario hace clic en cualquier parte fuera del modal, cierra el modal
-window.onclick = function(event) {
-    if (event.target == optionsModal || event.target == loginModal || event.target == recoverPasswordModal || event.target == resetPasswordPage) {
+// Cuando el usuario hace clic fuera del modal, lo cierra
+window.onclick = function (event) {
+    if (event.target == loginModal || event.target == recoverPasswordModal || event.target == resetPasswordPage || event.target == registerModal) {
         hideAllModals();
     }
 };
 
 // Manejar el botón de ingresar y la tecla Enter en el modal de login
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         if (loginModal.style.display === "block") {
             loginUser();
@@ -169,7 +152,7 @@ function loginUser() {
     }
 }
 
-//RECUPERACION DE CONTRASENA
+// RECUPERACIÓN DE CONTRASEÑA
 recoverButton.onclick = recoverPassword;
 
 function recoverPassword() {
@@ -179,14 +162,12 @@ function recoverPassword() {
         // Aquí puedes agregar la lógica para enviar el enlace de recuperación
         alert("Se ha enviado un enlace de recuperación al correo: " + email);
         hideAllModals();
-        // Mostrar el modal de restablecimiento de contraseña si es necesario
-        // showModal(resetPasswordPage); // Descomentar si se quiere mostrar el modal de restablecimiento después
     } else {
         alert("Por favor, ingresa tu correo electrónico.");
     }
 }
-//RESTABLECIMIENTO
 
+// RESTABLECIMIENTO
 resetButton.onclick = resetPassword;
 
 function resetPassword() {
@@ -199,9 +180,10 @@ function resetPassword() {
         // Redirigir al usuario a la página de inicio de sesión
         window.location.href = '/login';
     } else {
-        alert("Por favor, asegúrate de que las contraseñas coincidan.");
+        alert("Las contraseñas no coinciden o están vacías.");
     }
 }
+
 
 // Registro de usuario
 registerSubmitButton.onclick = registerUser;
@@ -309,74 +291,150 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoSlide();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Cargar el JSON desde el archivo products.json
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            // Función para encontrar un producto por su ID
+            function findProductById(id) {
+                return data.products.find(product => product.id === id);
+            }
 
-//MAIN PRODUCTOS
-// botones
+            // Función para generar el HTML de un producto
+            function generateProductHTML(product, isBestSeller = false) {
+                const priceWithDiscount = product.price - (product.price * product.discount / 100);
+                return `
+                    <div class="${isBestSeller ? 'best-seller-carousel-item' : 'weekly-carousel-item'}">
+                        <div class="product-image">
+                            <a href="product_card.html?id=${product.id}" class="product-image"><img src="${product.images[0]}" alt="${product.name}"></a>
+                        </div>
+                        <div class="product-details">
+                            <p class="carousel-category">${product.category[0]}</p>
+                            <a href="product_card.html?id=${product.id}" class="related-product-card-h3"><p>${product.name}</p></a>
+                            <div class="carousel-price">
+                            ${product.discount > 0 ? `<p class="carousel-discount">-${product.discount}%</p>` : ''}
+                            ${product.discount > 0 ? `<p class="carousel-original-price">${product.price}</p>` : ''}
+                            <span class="${isBestSeller ? 'BS-price' : 'price'}">$${priceWithDiscount.toFixed(2)}</span>
+                            </div>
+                            <p class="cuotas">3 cuotas sin interés de $${((priceWithDiscount) / 3).toFixed(0)}</p>
+                            <button class="${isBestSeller ? 'add-cart' : 'add-to-cart'}" data-id="${product.id}">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                `;
+            }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const carousel = document.querySelector(".weekly-carousel");
-    const leftBtn = document.getElementById("left-btn");
-    const rightBtn = document.getElementById("right-btn");
-    const items = document.querySelectorAll(".weekly-carousel-item");
-    const itemWidth = 220; // Ancho de cada elemento incluyendo margen
-    let scrollAmount = 0;
-    const visibleItems = 4;
+            // Función para generar el carrusel
+            function generateCarousel(containerId, productIds, isBestSeller = false) {
+                const container = document.querySelector(`#${containerId} .${isBestSeller ? 'best-seller-carousel' : 'weekly-carousel'}`);
+                container.innerHTML = '';
 
-    // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
-    const allItems = [...items, ...items];
-    carousel.innerHTML = ""; // Limpiar el carrusel
-    allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
+                productIds.forEach(id => {
+                    const product = findProductById(id);
+                    if (product) {
+                        container.innerHTML += generateProductHTML(product, isBestSeller);
+                    }
+                });
+            }
 
-    const totalItems = allItems.length;
-    const maxScroll = (totalItems - visibleItems) * itemWidth;
+            // Generar los carruseles
+            generateCarousel('weekly-featured', data.weekly_featured);
+            generateCarousel('best-sellers', data.best_sellers, true);
 
-    function scrollRight() {
-        if (scrollAmount < maxScroll) {
-            scrollAmount += itemWidth;
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(-${scrollAmount}px)`;
-        }
+            // manejar el desplazamiento del carrusel
+            function setupCarousel(carouselClass, leftBtnId, rightBtnId) {
+                const carousel = document.querySelector(`.${carouselClass}`);
+                const leftBtn = document.getElementById(leftBtnId);
+                const rightBtn = document.getElementById(rightBtnId);
+                const items = document.querySelectorAll(`.${carouselClass}-item`);
+                const itemWidth = 220; // Ancho de cada elemento incluyendo margen
+                let scrollAmount = 0;
+                const visibleItems = 4;
 
-        if (scrollAmount >= maxScroll) {
-            setTimeout(() => {
-                scrollAmount = visibleItems * itemWidth;
-                carousel.style.transition = 'none';
-                carousel.style.transform = `translateX(-${scrollAmount}px)`;
-            }, 500); // Tiempo de la transición en ms
-        }
-    }
+                // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
+                const allItems = [...items, ...items];
+                carousel.innerHTML = ""; // Limpiar el carrusel
+                allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
 
-    function scrollLeft() {
-        if (scrollAmount > 0) {
-            scrollAmount -= itemWidth;
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(-${scrollAmount}px)`;
-        }
+                const totalItems = allItems.length;
+                const maxScroll = (totalItems - visibleItems) * itemWidth;
 
-        if (scrollAmount <= 0) {
-            setTimeout(() => {
-                scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
-                carousel.style.transition = 'none';
-                carousel.style.transform = `translateX(-${scrollAmount}px)`;
-            }, 500); // Tiempo de la transición en ms
-        }
-    }
+                function scrollRight() {
+                    if (scrollAmount < maxScroll) {
+                        scrollAmount += itemWidth;
+                        carousel.style.transition = 'transform 0.5s ease';
+                        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+                    }
 
-    rightBtn.addEventListener("click", scrollRight);
-    leftBtn.addEventListener("click", scrollLeft);
+                    if (scrollAmount >= maxScroll) {
+                        setTimeout(() => {
+                            scrollAmount = visibleItems * itemWidth;
+                            carousel.style.transition = 'none';
+                            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+                        }, 500); // Tiempo de la transición en ms
+                    }
+                }
 
-    // Auto-desplazamiento cada 4 segundos
-    setInterval(() => {
-        if (scrollAmount < maxScroll) {
-            scrollRight();
-        } else {
-            scrollAmount = 0;
-            carousel.style.transition = 'none';
-            carousel.style.transform = `translateX(0px)`;
-        }
-    }, 4000);
+                function scrollLeft() {
+                    if (scrollAmount > 0) {
+                        scrollAmount -= itemWidth;
+                        carousel.style.transition = 'transform 0.5s ease';
+                        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+                    }
+
+                    if (scrollAmount <= 0) {
+                        setTimeout(() => {
+                            scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
+                            carousel.style.transition = 'none';
+                            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+                        }, 500); // Tiempo de la transición en ms
+                    }
+                }
+
+                // Auto-desplazamiento cada 4 segundos
+                let autoScroll;
+
+                function startAutoScroll() {
+                    autoScroll = setInterval(scrollRight, 5000);
+                }
+                
+                function stopAutoScroll() {
+                    clearInterval(autoScroll);
+                }
+                
+                rightBtn.addEventListener("click", () => {
+                    stopAutoScroll();
+                    scrollRight();
+                    startAutoScroll();
+                });
+                
+                leftBtn.addEventListener("click", () => {
+                    stopAutoScroll();
+                    scrollLeft();
+                    startAutoScroll();
+                });
+                
+                startAutoScroll();
+            }
+
+            // Configurar los carruseles
+            setupCarousel('weekly-carousel', 'left-btn', 'right-btn');
+            setupCarousel('best-seller-carousel', 'bs-left-btn', 'bs-right-btn');
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.addEventListener("click", (event) => {
+        if (event.target.classList.contains("add-to-cart") || event.target.classList.contains("add-cart")) {
+            let productId = parseInt(event.target.getAttribute("data-id"));
+            if (!isNaN(productId)) {
+                addToCart(productId);
+            }
+        }
+    });
+});
 
 
 
@@ -420,73 +478,6 @@ const autoScroll = setInterval(() => {
 }, 3000);
 
 
-//MAS VENDIDOS
-// botones
-
-document.addEventListener("DOMContentLoaded", function() {
-    const carousel = document.querySelector(".best-seller-carousel");
-    const leftBtn = document.getElementById("bs-left-btn");
-    const rightBtn = document.getElementById("bs-right-btn");
-    const items = document.querySelectorAll(".best-seller-carousel-item");
-    const itemWidth = 220; // Ancho de cada elemento incluyendo margen
-    let scrollAmount = 0;
-    const visibleItems = 4;
-
-    // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
-    const allItems = [...items, ...items];
-    carousel.innerHTML = ""; // Limpiar el carrusel
-    allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
-
-    const totalItems = allItems.length;
-    const maxScroll = (totalItems - visibleItems) * itemWidth;
-
-    function scrollRight() {
-        if (scrollAmount < maxScroll) {
-            scrollAmount += itemWidth;
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(-${scrollAmount}px)`;
-        }
-
-        if (scrollAmount >= maxScroll) {
-            setTimeout(() => {
-                scrollAmount = visibleItems * itemWidth;
-                carousel.style.transition = 'none';
-                carousel.style.transform = `translateX(-${scrollAmount}px)`;
-            }, 500); // Tiempo de la transición en ms
-        }
-    }
-
-    function scrollLeft() {
-        if (scrollAmount > 0) {
-            scrollAmount -= itemWidth;
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = `translateX(-${scrollAmount}px)`;
-        }
-
-        if (scrollAmount <= 0) {
-            setTimeout(() => {
-                scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
-                carousel.style.transition = 'none';
-                carousel.style.transform = `translateX(-${scrollAmount}px)`;
-            }, 500); // Tiempo de la transición en ms
-        }
-    }
-
-    rightBtn.addEventListener("click", scrollRight);
-    leftBtn.addEventListener("click", scrollLeft);
-
-    // Auto-desplazamiento cada 4 segundos
-    setInterval(() => {
-        if (scrollAmount < maxScroll) {
-            scrollRight();
-        } else {
-            scrollAmount = 0;
-            carousel.style.transition = 'none';
-            carousel.style.transform = `translateX(0px)`;
-        }
-    }, 4000);
-});
-
 //PRODUCT CARD//
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -494,4 +485,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Redirigir a la página donde se muestra la grilla completa de productos
         window.location.href = "./product_grid.html";
     });
-}); 
+});

@@ -42,40 +42,31 @@
                 </form>
             </div>
             <div class="header-icons">
+                <a href="https://api.whatsapp.com/send/?phone=541112341234" class="whatsapp-link">
+                    <img src="images/whatsapp.png" alt="whatsapp Icon"></a>
                 <a href="#" class="login-link" id="loginModalTrigger">
-                    <img src="images/login-icon.png" alt="Login Icon"><span></span></a>
-                <a href="#cart" class="login-link" id="loginModalTrigger">
-                    <img src="images/cart-icon.png" alt="Cart Icon"><span></span></a>
+                    <img src="images/login-icon.png" alt="Login Icon"></a>
+                <a href="cart.html" class="cart-link" id="loginModalTrigger">
+                    <img src="images/cart-icon.png" alt="Cart Icon">
+                    <span id="cart-count" class="cart-count"></span></a>
             </div>
         </div>
     </header>
-    <!-- Modal de Login/Registro -->
-    <div id="optionsModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Bienvenido</h2>
-            <p class="instruction">Ingresa con tu correo y contraseña</p>
-            <a href="#" id="loginModalOpen" class="btn-open-login-modal">ENTRAR A MI USUARIO</a>
-            <div class="divider-block">
-                <hr class="divider-line"><span class="divider-text">o</span>
-            </div>
-            <p class="register-message">Si aún no tienes cuenta, regístrate:</p>
-            <button id="openRegisterModalFromOptions">REGISTRARME</button>
-        </div>
-    </div>
     <!-- Modal de Ingreso de Usuario -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 class="modal-title">Tech&Game</h2>
-            <input type="email" id="loginEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
-            <input type="password" id="loginPassword" placeholder="Contraseña" aria-label="Contraseña">
+            <input type="email" class="loginEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+            <input type="password" class="loginPassword" placeholder="Contraseña" aria-label="Contraseña">
             <button id="loginButton" class="btn-login">Ingresar</button>
             <div class="modal-links">
                 <a href="#" id="openRecoverPasswordModal">RECUPERAR CONTRASEÑA</a>
             </div>
             <div class="divider-block">
-                <hr class="divider-line"><span class="divider-text">o</span>
+                <hr class="divider-line">
+                <span class="divider-text">o</span>
+                <hr class="divider-line">
             </div>
             <div class="modal-register">
                 <p class="register-message">No tengo cuenta y quiero </p> <a href="#"
@@ -85,12 +76,14 @@
     </div>
     <!-- Modal de Recuperación de Contraseña -->
     <div id="recoverPasswordModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-recover">
             <span class="close">&times;</span>
             <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
             <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
-            <input type="email" id="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
-            <button id="recoverButton" class="btn-recover">Enviar código </button>
+            <div class="recover-input">
+                <input type="email" class="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+                <button id="recoverButton" class="btn-recover">Enviar código </button>
+            </div>
         </div>
     </div>
     <!-- Página de Restablecimiento de Contraseña -->
@@ -119,6 +112,7 @@
             <button id="registerSubmitButton" class="btn-register">Registrarme</button>
         </div>
     </div>
+
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-item"><img src="images/OFERTAS1.png" alt="OFERTA 1"></div>
@@ -131,6 +125,7 @@
         <button class="carousel-control prev" id="prevButton"><img src="images/arrowPrev.png" alt="Prev"></button>
         <button class="carousel-control next" id="nextButton"><img src="images/arrowNext.png" alt="Next"></button>
     </div>
+
     <main>
         <!-- PRODUCTOS. Buscar por Categoría -->
         <section id="search-by-category">
@@ -176,129 +171,112 @@
 
         <!-- Destacados de la Semana -->
         <section id="weekly-featured">
-            <h2>DESTACADOS DE LA SEMANA</h2>
+            <h2 class="weekly-featured-title">DESTACADOS DE LA SEMANA</h2>
             <div class="weekly-carousel-container">
                 <button class="carousel-btn left-btn" id="left-btn"><img src="images/arrowPrev.png" alt="Prev"></button>
-                <div class="weekly-carousel">
-                    <div class="weekly-carousel-item">
-                        <div class="product-image">
-                            <img src="images/destacados_semana_LOGOS/destacado1.jpeg" alt="DESTACADO 1">
-                        </div>
-                        <div class="product-details">
-                            <p>Silla gamer Akracing Octane ergonómica</p>
-                            <span class="price">$XX,XXX.XX</span>
-                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="weekly-carousel-item">
-                        <div class="product-image">
-                            <img src="images/destacados_semana_LOGOS/destacado2.png" alt="DESTACADO 2">
-                        </div>
-                        <div class="product-details">
-                            <p>Procesador gamer AMD Ryzen 7 5700X y 3.4GHz</p>
-                            <span class="price">$XX,XXX.XX</span>
-                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="weekly-carousel-item">
-                        <div class="product-image">
-                            <img src="images/destacados_semana_LOGOS/destacado3.jpg" alt="DESTACADO 3">
-                        </div>
-                        <div class="product-details">
-                            <p>Samsung Galaxy A35 5G 128GB y 4 GB de Ram</p>
-                            <span class="price">$XX,XXX.XX</span>
-                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="weekly-carousel-item">
-                        <div class="product-image">
-                            <img src="images/destacados_semana_LOGOS/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg"
-                                alt="DESTACADO 4">
-                        </div>
-                        <div class="product-details">
-                            <p>Lenovo Ideapad3 15" Business AMD HexaCore Ryzen 5 5500U</p>
-                            <span class="price">$XX,XXX.XX</span>
-                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="weekly-carousel-item">
-                        <div class="product-image">
-                            <img src="images/destacados_semana_LOGOS/destacado5 tcl 55 pulg qled770 4k.jpg"
-                                alt="DESTACADO 5">
-                        </div>
-                        <div class="product-details">
-                            <p>Smart TCL 55 pulgadas QLed770 4k Google TV</p>
-                            <span class="price">$XX,XXX.XX</span>
-                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                </div>
+                <div class="weekly-carousel"></div>
                 <button class="carousel-btn right-btn" id="right-btn"><img src="images/arrowNext.png" alt="Next"></button>
             </div>
         </section>
 
         <!-- Encontrá la Marca que Estás Buscando -->
         <section id="search-by-brand">
-            <h2>ENCONTRA LA MARCA QUE ESTAS BUSCANDO</h2>
+            <h2 class="brand-title">ENCONTRA LA MARCA QUE ESTAS BUSCANDO</h2>
             <div class="brand-carousel">
                 <button class="carousel-control prev" onclick="moveLeft()"><img src="images/arrowPrev.png" alt="Prev"></button>
                 <div class="brand-container">
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/AMD_Logo.png" alt="Marca 1">
+                        <a href="product_grid.html?brand=AMD">
+                        <img src="images/destacados_semana_LOGOS/AMD_Logo.png" alt="AMD">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/Samsung_Logo.png" alt="Marca 2">
+                        <a href="product_grid.html?brand=Samsung">
+                        <img src="images/destacados_semana_LOGOS/Samsung_Logo.png" alt="Samsung">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/asus_logo.png" alt="Marca 3">
+                        <a href="product_grid.html?brand=Asus">
+                        <img src="images/destacados_semana_LOGOS/asus_logo.png" alt="Asus">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/razer_LOGO.png" alt="Marca 4">
+                        <a href="product_grid.html?brand=Razer">
+                        <img src="images/destacados_semana_LOGOS/razer_LOGO.png" alt="Razer">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/aorus-logo.png" alt="Marca 5">
+                        <a href="product_grid.html?brand=Aorus">
+                        <img src="images/destacados_semana_LOGOS/aorus-logo.png" alt="Aorus">
+                    </a>
                     </div>
                     <div class="brand-item">
                         <img src="images/destacados_semana_LOGOS/lenovo-logo.png" alt="Marca 6">
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/ak_logo.jpg" alt="Marca 7">
+                        <a href="product_grid.html?brand=Akracing">
+                        <img src="images/destacados_semana_LOGOS/ak_logo.jpg" alt="Akracing">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/tcl-logo.png" alt="Marca 8">
+                        <a href="product_grid.html?brand=TCL">
+                        <img src="images/destacados_semana_LOGOS/tcl-logo.png" alt="TCL">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/intel-logo.jpg" alt="Marca 9">
+                        <a href="product_grid.html?brand=Intel">
+                        <img src="images/destacados_semana_LOGOS/intel-logo.jpg" alt="Intel">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/iphone-logo.png" alt="Marca 10">
+                        <a href="product_grid.html?brand=Apple">
+                        <img src="images/destacados_semana_LOGOS/iphone-logo.png" alt="Apple">
+                    </a>
+                </div>
+                    <div class="brand-item">
+                        <a href="product_grid.html?brand=Motorola">
+                        <img src="images/destacados_semana_LOGOS/motorola-logo.jpg" alt="Motorola">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/motorola-logo.jpg" alt="Marca 11">
+                        <a href="product_grid.html?brand=PHILCO">
+                        <img src="images/destacados_semana_LOGOS/philco-logo.png" alt="PHILCO">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/philco-logo.png" alt="Marca 12">
+                        <a href="product_grid.html?brand=Acer">
+                        <img src="images/destacados_semana_LOGOS/acer-logo.png" alt="Acer">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/acer-logo.png" alt="Marca 13">
+                        <a href="product_grid.html?brand=MSI">
+                        <img src="images/destacados_semana_LOGOS/msi-logo.png" alt="MSI">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/msi-logo.png" alt="Marca 14">
+                        <a href="product_grid.html?brand=Gigabyte">
+                        <img src="images/destacados_semana_LOGOS/gigabyte-logo.png" alt="Gigabyte">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/gigabyte-logo.png" alt="Marca 15">
+                        <a href="product_grid.html?brand=Corsair">
+                        <img src="images/destacados_semana_LOGOS/corsair-logo.png" alt="Corsair">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/corsair-logo.png" alt="Marca 16">
+                        <a href="product_grid.html?brand=Kingston">
+                        <img src="images/destacados_semana_LOGOS/kingston-logo.png" alt="Kingston">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/kingston-logo.png" alt="Marca 17">
+                        <a href="product_grid.html?brand=Cooler Master">
+                        <img src="images/destacados_semana_LOGOS/cooler-master-logo.png" alt="Cooler Master">
+                    </a>
                     </div>
                     <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/cooler-master-logo.png" alt="Marca 18">
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/tp-link-logo.png" alt="Marca 19">
+                        <a href="product_grid.html?brand=TP-Link">
+                        <img src="images/destacados_semana_LOGOS/tp-link-logo.png" alt="TP-Link">
+                    </a>
                     </div>
                 </div>
                 <button class="carousel-control next" onclick="moveRight()"><img src="images/arrowNext.png" alt="Next"></button>
@@ -308,63 +286,10 @@
 
         <!-- Lo Más Vendido -->
         <section id="best-sellers">
-            <h2>LO MAS VENDIDO</h2>
+            <h2 class="best-seller-title">LO MAS VENDIDO</h2>
             <div class="best-seller-carousel-container">
-                <button class="carousel-btn left-btn" id="bs-left-btn"><img src="images/arrowPrev.png"
-                        alt="Prev"></button>
-                <div class="best-seller-carousel">
-                    <div class="best-seller-carousel-item">
-                        <div class="product-image">
-                            <img src="images/lo_mas_vendido/destacado1.jpeg" alt="DESTACADO 1">
-                        </div>
-                        <div class="product-details">
-                            <p>Silla gamer Akracing Octane ergonómica</p>
-                            <span class="BS-price">$XX,XXX.XX</span>
-                            <button class="add-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="best-seller-carousel-item">
-                        <div class="product-image">
-                            <img src="images/lo_mas_vendido/destacado2.png" alt="DESTACADO 2">
-                        </div>
-                        <div class="product-details">
-                            <p>Procesador gamer AMD Ryzen 7 5700X y 3.4GHz</p>
-                            <span class="BS-price">$XX,XXX.XX</span>
-                            <button class="add-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="best-seller-carousel-item">
-                        <div class="product-image">
-                            <img src="images/lo_mas_vendido/destacado3.jpg" alt="DESTACADO 3">
-                        </div>
-                        <div class="product-details">
-                            <p>Samsung Galaxy A35 5G 128GB y 4 GB de Ram</p>
-                            <span class="BS-price">$XX,XXX.XX</span>
-                            <button class="add-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="best-seller-carousel-item">
-                        <div class="product-image">
-                            <img src="images/lo_mas_vendido/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg"
-                                alt="DESTACADO 4">
-                        </div>
-                        <div class="product-details">
-                            <p>Lenovo Ideapad3 15" Business AMD HexaCore Ryzen 5 5500U</p>
-                            <span class="BS-price">$XX,XXX.XX</span>
-                            <button class="add-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                    <div class="best-seller-carousel-item">
-                        <div class="product-image">
-                            <img src="images/lo_mas_vendido/destacado5 tcl 55 pulg qled770 4k.jpg" alt="DESTACADO 5">
-                        </div>
-                        <div class="product-details">
-                            <p>Smart TCL 55 pulgadas QLed770 4k Google TV</p>
-                            <span class="BS-price">$XX,XXX.XX</span>
-                            <button class="add-cart">AÑADIR AL CARRITO</button>
-                        </div>
-                    </div>
-                </div>
+                <button class="carousel-btn left-btn" id="bs-left-btn"><img src="images/arrowPrev.png" alt="Prev"></button>
+                <div class="best-seller-carousel"></div>
                 <button class="carousel-btn right-btn" id="bs-right-btn"><img src="images/arrowNext.png"
                         alt="Next"></button>
             </div>
@@ -374,13 +299,13 @@
         <div class="beneficios">
             <img src="images/beneficios.png" alt="beneficios">
             <!-- Botón Flotante para Ver Todos los Productos -->
-            <button id="view-all-products" class="view-all-button"> CLICK AQUI PARA VER TODOS LOS PRODUCTOS</button>
+            <button id="view-all-products" class="view-all-button"> DESCUBRE TODOS LOS PRODUCTOS</button>
         </div>
 
 
         <!-- BANK PROMOTION -->
         <section class="bank-promotions">
-            <h2>CONOCE NUESTRAS PROMOCIONES</h2>
+            <h2 class="bank-promotions-title">CONOCE NUESTRAS PROMOCIONES</h2>
             <div class="promotion-cards">
                 <div class="promotion-card">
                     <div class="promo-header">
@@ -496,6 +421,7 @@
         </div>
     </footer>
 
+    <script src="scripts/cart.js"></script>
     <script src="scripts/codigo.js"></script>
     <script src="scripts/products_grid.js"></script>
 </body>

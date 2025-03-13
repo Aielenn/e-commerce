@@ -170,3 +170,115 @@ function mostrarProductos(productos) {
 document.addEventListener("DOMContentLoaded", () => {
     cargarProductos();
 });
+
+
+
+
+carruseles
+weekly
+<div class="weekly-carousel-item">
+                        <div class="product-image">
+                            <img src="images/destacados_semana_LOGOS/destacado1.jpeg" alt="DESTACADO 1">
+                        </div>
+                        <div class="product-details">
+                            <p>Silla gamer Akracing Octane ergonómica</p>
+                            <span class="price">$XX,XXX.XX</span>
+                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="weekly-carousel-item">
+                        <div class="product-image">
+                            <img src="images/destacados_semana_LOGOS/destacado2.png" alt="DESTACADO 2">
+                        </div>
+                        <div class="product-details">
+                            <p>Procesador gamer AMD Ryzen 7 5700X y 3.4GHz</p>
+                            <span class="price">$XX,XXX.XX</span>
+                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="weekly-carousel-item">
+                        <div class="product-image">
+                            <img src="images/destacados_semana_LOGOS/destacado3.jpg" alt="DESTACADO 3">
+                        </div>
+                        <div class="product-details">
+                            <p>Samsung Galaxy A35 5G 128GB y 4 GB de Ram</p>
+                            <span class="price">$XX,XXX.XX</span>
+                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="weekly-carousel-item">
+                        <div class="product-image">
+                            <img src="images/destacados_semana_LOGOS/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg"
+                                alt="DESTACADO 4">
+                        </div>
+                        <div class="product-details">
+                            <p>Lenovo Ideapad3 15" Business AMD HexaCore Ryzen 5 5500U</p>
+                            <span class="price">$XX,XXX.XX</span>
+                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="weekly-carousel-item">
+                        <div class="product-image">
+                            <img src="images/destacados_semana_LOGOS/destacado5 tcl 55 pulg qled770 4k.jpg"
+                                alt="DESTACADO 5">
+                        </div>
+                        <div class="product-details">
+                            <p>Smart TCL 55 pulgadas QLed770 4k Google TV</p>
+                            <span class="price">$XX,XXX.XX</span>
+                            <button class="add-to-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+
+
+best seller
+<div class="best-seller-carousel-item">
+                        <div class="product-image">
+                            <img src="images/lo_mas_vendido/destacado1.jpeg" alt="DESTACADO 1">
+                        </div>
+                        <div class="product-details">
+                            <p>Silla gamer Akracing Octane ergonómica</p>
+                            <span class="BS-price">$XX,XXX.XX</span>
+                            <button class="add-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="best-seller-carousel-item">
+                        <div class="product-image">
+                            <img src="images/lo_mas_vendido/destacado2.png" alt="DESTACADO 2">
+                        </div>
+                        <div class="product-details">
+                            <p>Procesador gamer AMD Ryzen 7 5700X y 3.4GHz</p>
+                            <span class="BS-price">$XX,XXX.XX</span>
+                            <button class="add-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="best-seller-carousel-item">
+                        <div class="product-image">
+                            <img src="images/lo_mas_vendido/destacado3.jpg" alt="DESTACADO 3">
+                        </div>
+                        <div class="product-details">
+                            <p>Samsung Galaxy A35 5G 128GB y 4 GB de Ram</p>
+                            <span class="BS-price">$XX,XXX.XX</span>
+                            <button class="add-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="best-seller-carousel-item">
+                        <div class="product-image">
+                            <img src="images/lo_mas_vendido/destacado4(Lenovo Ideapad 3 15 BusinessAMD HexaCore Ryzen 5 5500UTecl retroilum con reconocimiento de huella dactilar USB-C).jpg"
+                                alt="DESTACADO 4">
+                        </div>
+                        <div class="product-details">
+                            <p>Lenovo Ideapad3 15" Business AMD HexaCore Ryzen 5 5500U</p>
+                            <span class="BS-price">$XX,XXX.XX</span>
+                            <button class="add-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                    <div class="best-seller-carousel-item">
+                        <div class="product-image">
+                            <img src="images/lo_mas_vendido/destacado5 tcl 55 pulg qled770 4k.jpg" alt="DESTACADO 5">
+                        </div>
+                        <div class="product-details">
+                            <p>Smart TCL 55 pulgadas QLed770 4k Google TV</p>
+                            <span class="BS-price">$XX,XXX.XX</span>
+                            <button class="add-cart">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
