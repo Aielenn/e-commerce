@@ -312,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="product-details">
                             <p class="carousel-category">${product.category[0]}</p>
                             <a href="product_card.html?id=${product.id}" class="related-product-card-h3"><p>${product.name}</p></a>
+                            <hr class="divider-block">
                             <div class="carousel-price">
                             ${product.discount > 0 ? `<p class="carousel-discount">-${product.discount}%</p>` : ''}
                             ${product.discount > 0 ? `<p class="carousel-original-price">${product.price}</p>` : ''}

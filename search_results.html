@@ -35,7 +35,7 @@
             </div>
             <div class="search-bar">
                 <form class="search-wrapper" action="search_results.html" method="GET">
-                    <input type="text" name="query" placeholder="¿Cómo podemos ayudarte?" aria-label="Buscar">
+                    <input type="text" name="query" placeholder="¿¿Que producto estas buscando??" aria-label="Buscar">
                     <button type="submit" class="search-button" aria-label="Buscar">
                         <img src="images/search-icon.png" alt="Buscar">
                     </button>
@@ -114,10 +114,169 @@
     </div>
 
     <main>
-        <h2>Resultados de Búsqueda</h2>
-        <a href="index.html">Volver al inicio</a>
-        <div id="search-results"></div>
-    </main>
+        <div class="search-main1">
+
+            <div class="search-main2">
+
+                <div class="the-breadcrumb">
+                    <ul class="breadcrumb-container">
+                        <li><a title="Ir a la pagina de inicio" href="index.html">Inicio</a></li>
+                        <li class="separator"> > </li>
+                        <li><a href="product_grid.html">Productos</a></li>
+                        <li class="separator"> > </li>
+                        <li>PRODUCTOS QUE PODRIAN INTERESARTE</li>
+                    </ul>
+                </div>
+            
+                <div class="search-main3">
+                    <aside id="search-filters">
+                        <h3>Filtros</h3>
+                        <hr class="divider-block">
+                        <!-- Filtro por marca -->
+                        <div class="search-filter-section">
+                            <h4>Marca</h4>
+                            <div id="search-brand-filter"></div>
+                        </div>
+                        <hr class="divider-block">
+                        <!-- Filtro por precio -->
+                        <div class="search-filter-price">
+                            <h4>Precio</h4>
+                                <div class="price-range-container">
+                                    <div class="price-range-input">
+                                        <input type="number" id="search-min-price" placeholder="Mínimo">
+                                        <input type="number" id="search-max-price" placeholder="Máximo">
+                                        <button id="search-apply-price-filter">Aplicar</button>
+                                    </div>
+                                </div>
+                        </div>
+                        <hr class="divider-block">
+                        <!-- Filtro por categoría -->
+                        <div class="search-filter-section">
+                            <h4>Categoría</h4>
+                            <div id="search-category-filter"></div>
+                        </div>
+                    </aside>
+
+                    <div class="search-main4">
+                        <div id="search-results" class="search-product-grid"></div>
+
+                        <section id="suggested-products" class="hidden">
+                            <h3>También te podría interesar</h3>
+                            <div id="suggestions" class="search-product-grid"></div>
+                        </section>
+                    </div>
+                </div>
+            
+        
+                <section class="bank-promotions">
+                    <div class="promotion-cards">
+                        <div class="promotion-card">
+                            <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>3 cuotas sin interés</h3>
+                            <p class="days">Miércoles y Viernes</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Visa y Mastercard de todos los bancos</small>
+                        </div>
+                    </div>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>3 cuotas sin interés</h3>
+                            <p class="days">Jueves</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Pagando con Naranja X</small>
+                        </div>
+                    </div>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
+                                class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>12 cuotas fijas</h3>
+                            <p class="days">Todos los días</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
+                        </div>
+                    </div>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
+                                class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>6 cuotas sin interés</h3>
+                            <p class="days">Lunes y Martes</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Pagando con tarjeta Visa Galicia</small>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+    </div>
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Tech&Game</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#support">Soporte</a></li>
+                        <li><a href="#returns">Devoluciones</a></li>
+                        <li><a href="#shipping">Envíos</a></li>
+                        <li><a href="#terms">Términos y Condiciones</a></li>
+                        <li><a href="#privacy">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
+                        <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
+                        <li>Av. Siempre Viva 742, Buenos Aires</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png"
+                                alt="YouTube"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script src="scripts/search_results.js"></script>
     <script src="scripts/codigo.js"></script>

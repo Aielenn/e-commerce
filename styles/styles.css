@@ -64,28 +64,46 @@ header {
     justify-content: center;
 }
 
-/* Estilo para el icono de búsqueda */
+
 .search-button img {
     height: 18px;
-    /* Ajusta el tamaño del icono */
     width: 18px;
 }
 
-/* Contenedor de la grilla de productos */
-.search-grid {
+
+/*pagina de search*/
+
+
+.search-main1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 10%;
+    background-color: #f5f5f5;
+}
+
+.search-main3{
+    display: flex;
+    margin-top: 3%;
+}
+
+.search-product-grid {
+    border-radius: 8px;
+    margin-bottom: 40px;
+    flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 /* Tarjeta de producto */
 .search-product-card {
+    display: flex;
+    flex-direction: column;
     background: #fff;
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 10px;
+    padding: 7% 13%;
     text-align: center;
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -93,7 +111,36 @@ header {
 
 .search-product-card:hover {
     transform: scale(1.03);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#search-filters {
+    width: 260px;
+    padding: 25px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-product-controls {
+    position: left;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.search-product-controls select{
+    padding: 0.5%;
+    border-radius: 10px;
 }
 
 /* Imagen del producto */
@@ -104,14 +151,14 @@ header {
     border-radius: 8px;
 }
 
-/* Marca del producto */
-.search-brand {
+.search-brand,
+.search-category {
     font-size: 14px;
     color: #666;
     margin-top: 5px;
+    text-transform: uppercase;
 }
 
-/* Nombre del producto */
 .search-product-name-link {
     text-decoration: none;
     color: #333;
@@ -123,7 +170,6 @@ header {
     margin: 5px 0;
 }
 
-/* Contenedor de precios */
 .search-price-container {
     margin: 10px 0;
 }
@@ -138,51 +184,15 @@ header {
 .search-discount-price {
     font-size: 18px;
     font-weight: bold;
-    color: #e44d26;
+    color: #333;
 }
 
-/* Descripción del producto */
-.search-description {
-    font-size: 14px;
-    color: #555;
-    margin: 5px 0;
-}
 
-/* Categoría */
-.search-category {
-    font-size: 12px;
-    color: #fff;
-    background: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* Botón Añadir al carrito */
-.add-to-cart {
-    display: block;
-    width: 100%;
-    background: #28a745;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.add-to-cart:hover {
-    background: #218838;
-}
-
-/* Etiqueta de descuento */
 .search-discount-badge {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: #e44d26;
+    background: #f90;
     color: #fff;
     padding: 5px 10px;
     font-size: 14px;
@@ -193,6 +203,76 @@ header {
 .hidden {
     display: none;
 }
+
+#search-filters h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.search-filter-section {
+    margin-bottom: 15px;
+}
+
+.search-filter-section h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+}
+
+#search-brand-filter,
+#search-category-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+#search-brand-filter input,
+#search-category-filter input {
+    margin-right: 5px;
+}
+
+#search-min-price,
+#search-max-price {
+    margin: 3%;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-apply-price-filter {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#search-apply-price-filter:hover {
+    background: #0056b3;
+}
+
+/* Sección de productos sugeridos */
+#suggested-products {
+    margin-top: 30px;
+}
+
+#suggested-products h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
 
 
 
@@ -205,7 +285,6 @@ header {
 
 .header-icons img {
     height: 24px;
-    /* Ajusta el tamaño de los iconos */
     margin: 10px;
     vertical-align: middle;
     width: 24px;
@@ -216,25 +295,18 @@ header {
     text-decoration: none;
 }
 
-
-
-
-/* Estilo para el enlace de "Mi Cuenta" */
 .login-link {
     display: flex;
     align-items: center;
     color: #808080;
-    /* Color gris */
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
 
 .login-link img {
     margin-right: 5px;
-    /* Espacio entre el icono y el texto */
 }
 
-/* Estilos para el modal MI CUENTA*/
 .modal {
     z-index: 1000;
     display: none;
@@ -246,7 +318,6 @@ header {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo oscuro con transparencia */
 }
 
 .modal-content {
@@ -388,7 +459,7 @@ margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     margin: 10px 0;
 }
 
@@ -407,9 +478,6 @@ margin-top: 10%;
     font-weight: bold;
 }
 
-
-
-/* Estilos del botón de apertura del modal INGRESAR A MI USUARIO*/
 .btn-open-login-modal {
     display: block;
     width: 320px;
@@ -428,7 +496,6 @@ margin-top: 10%;
     justify-content: center;
 }
 
-/* Estilos del modal INGRESAR A MI USUARIO*/
 #loginModal .modal-content,
 #recoverPasswordModal .modal-content {
     background-color: #fefefe;
@@ -440,8 +507,6 @@ margin-top: 10%;
     border-radius: 10px;
     text-align: center;
 }
-
-
 
 .loginEmail,
 .loginPassword {
@@ -532,18 +597,14 @@ margin-top: 10%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Modal de Registro */
 #registerModal .modal-content {
     z-index: 101;
     background-color: #fefefe;
     margin: 6% auto;
-    /* Centrado */
     padding: 10px 30px;
     border: 1px solid #888;
     width: 80%;
     max-width: 400px;
-    /* Ancho máximo */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align: center;
@@ -573,6 +634,7 @@ margin-top: 10%;
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 
 /* imagenes ofertas carrusel*/
 .carousel-container {
@@ -958,9 +1020,13 @@ margin-top: 10%;
 
 main {
     padding: 0px;
-    max-width: 1300px;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+}
+
+.index-main{
+    max-width: 1380px;
+    padding: 0 6%;
 }
 
 /* Títulos de secciones */
@@ -1027,7 +1093,7 @@ main {
 
 #search-by-brand {
     text-align: center;
-    margin: 5% 0px;
+    margin: 8% 0px;
 }
 
 .brand-carousel {
@@ -1070,7 +1136,6 @@ main {
     max-width: 1280px;
     overflow: hidden;
     margin: 0 auto;
-    /* Centra el carrusel */
     display: flex;
     align-items: center;
 }
@@ -1090,7 +1155,7 @@ main {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 1% 1.5%;
     text-align: center;
     flex: 0 0 auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1196,7 +1261,7 @@ font-size: 12px;
 /* Beneficios */
 .beneficios {
     text-align: center;
-    margin: 40px 0;
+    margin: 3% 0;
 }
 
 .beneficios img {
@@ -1210,16 +1275,18 @@ font-size: 12px;
     background-color: #ff9800;
     color: #fff;
     border: none;
-    font-size: 16PX;
-    padding: 20px 35px;
+    font-size: 1.3em;
+    padding: 1.5% 6%;
     border-radius: 50px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 3%;
     /* Espacio entre la imagen y el botón */
 }
 
 .view-all-button:hover {
-    background-color: #e67e22;
+    background-color: #fff;
+    color: #ff9800;
+    border: 3px solid #ff9800;
 }
 
 
@@ -1620,10 +1687,6 @@ footer {
         height: auto;
     }
 
-    main {
-        padding: 10px;
-    }
-
     .view-all-button {
         padding: 10px 20px;
         font-size: 14px;
@@ -1788,6 +1851,7 @@ footer {
 
 .product-page-layout main {
     display: flex;
+    max-width: 1300px;
 }
 
 .breadcrumb {
@@ -1796,11 +1860,11 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #f0f0f0;
+    background-color: #f3f3f3;
 }
 
 .breadcrumb-container {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin: auto 6%;
     text-transform: uppercase;
@@ -1864,6 +1928,7 @@ footer {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filter-section {
@@ -1933,14 +1998,16 @@ footer {
 }
 
 /*filtro precio cambio*/
-.filter-price {
+.filter-price,
+.search-filter-price {
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
 /* Título del filtro */
-.filter-price h4 {
+.filter-price h4,
+.search-filter-price h4 {
     color: #333;
     font-size: 16px;
     margin-bottom: 10px;
@@ -2049,14 +2116,11 @@ input[type="checkbox"]:checked::after {
 }
 
 
-
-
 /* Estilo de las tarjetas de producto */
 .product-card {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2064,6 +2128,11 @@ input[type="checkbox"]:checked::after {
     padding: 30px;
     position: relative;
     font-family: 'Roboto', sans-serif;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Imagen del producto */
