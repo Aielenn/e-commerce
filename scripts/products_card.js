@@ -1,10 +1,10 @@
 const productDetailContainer = document.getElementById('product-detail-container');
 
-// Obtén el ID del producto desde la URL
+
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 
-// Carga los detalles del producto
+
 function loadProductDetails() {
   if (!productId) {
     productDetailContainer.innerHTML = '<p>Producto no encontrado.</p>';
@@ -69,7 +69,6 @@ function loadProductDetails() {
             <ul class="specs">
               ${Object.entries(product.specs)
           .map(([key, value]) => {
-            // Convierte los valores booleanos en "Sí" o "No"
             const displayValue = value === true ? "Sí" : value === false ? "No" : value;
             return `<li><strong>${key}:</strong> ${displayValue}</li>`;
           })
@@ -82,51 +81,50 @@ function loadProductDetails() {
       const productNameElement = document.getElementById("product-name");
       productNameElement.textContent = product.name;
 
-      // Cambiar la miniatura
       window.changeMainImage = (src) => {
         const mainImage = document.querySelector('.the-product-image');
         mainImage.src = src;
       };
 
 
-// Cálculo de envío
-const shippingButton = productDetailContainer.querySelector('.calculate-shipping-btn');
-const postalInput = productDetailContainer.querySelector('.postal-code-input');
-const shippingResult = productDetailContainer.querySelector('.shipping-cost-result');
 
-shippingButton.addEventListener('click', () => {
-    const postalCode = postalInput.value.trim();
+      const shippingButton = productDetailContainer.querySelector('.calculate-shipping-btn');
+      const postalInput = productDetailContainer.querySelector('.postal-code-input');
+      const shippingResult = productDetailContainer.querySelector('.shipping-cost-result');
 
-    if (postalCode.length === 4 && /^\d+$/.test(postalCode)) { // Asegura que el código postal tenga 4 dígitos
-        let shippingCost;
+      shippingButton.addEventListener('click', () => {
+        const postalCode = postalInput.value.trim();
 
-        if (parseInt(postalCode) >= 75000) {
-            shippingCost = 0; // Envío gratuito para códigos postales >= 75000
-        } else if (postalCode.startsWith("1") || postalCode.startsWith("2")) {
-            shippingCost = 7000; // Zona cercana
-        } else if (postalCode.startsWith("3") || postalCode.startsWith("4")) {
-            shippingCost = 9000; // Zona media
+        if (postalCode.length === 4 && /^\d+$/.test(postalCode)) { 
+          let shippingCost;
+
+          if (parseInt(postalCode) >= 75000) {
+            shippingCost = 0; 
+          } else if (postalCode.startsWith("1") || postalCode.startsWith("2")) {
+            shippingCost = 7000; 
+          } else if (postalCode.startsWith("3") || postalCode.startsWith("4")) {
+            shippingCost = 9000;
+          } else {
+            shippingCost = 15000;
+          }
+
+          shippingResult.textContent = `$ ${shippingCost}`;
         } else {
-            shippingCost = 15000; // Zona lejana
+          shippingResult.textContent = "Código inválido";
         }
+      });
 
-        shippingResult.textContent = `$ ${shippingCost}`;
-    } else {
-        shippingResult.textContent = "Código inválido";
-    }
-});
-
-})
-      .catch(error => {
+    })
+    .catch(error => {
       console.error('Error al cargar los detalles:', error);
       productDetailContainer.innerHTML = '<p>Error al cargar los detalles del producto.</p>';
-});
+    });
 }
 
-// Carga los detalles al iniciar
+
 loadProductDetails();
 
-// Cambiar la imagen principal al hacer clic en una miniatura
+
 window.changeMainImage = (src) => {
   const mainImage = document.querySelector('.the-product-image');
   mainImage.src = src;
@@ -135,12 +133,12 @@ window.changeMainImage = (src) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (event) => {
-      if (event.target.classList.contains("add-to-cart-btn") || event.target.classList.contains("add-cart")) {
-          let productId = parseInt(event.target.getAttribute("data-id"));
-          if (!isNaN(productId)) {
-              addToCart(productId);
-          }
+    if (event.target.classList.contains("add-to-cart-btn") || event.target.classList.contains("add-cart")) {
+      let productId = parseInt(event.target.getAttribute("data-id"));
+      if (!isNaN(productId)) {
+        addToCart(productId);
       }
+    }
   });
 });
 
@@ -150,12 +148,10 @@ function loadRelatedProducts(category) {
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
-      // Filtra productos relacionados según la categoría, excluyendo el producto actual
       const relatedProducts = data.products.filter(
         product => product.category.includes(category) && product.id != productId
       );
 
-      // Limita los productos relacionados a un máximo de 4
       const productsToShow = relatedProducts.slice(0, 4);
 
       if (productsToShow.length === 0) {
@@ -163,7 +159,7 @@ function loadRelatedProducts(category) {
         return;
       }
 
-      // Renderiza las tarjetas de productos relacionados
+
       relatedProductsContainer.innerHTML = productsToShow
         .map(
           product => `
@@ -189,7 +185,7 @@ function loadRelatedProducts(category) {
     });
 }
 
-// Llama a la función después de cargar los detalles del producto
+
 fetch('products.json')
   .then(response => response.json())
   .then(data => {

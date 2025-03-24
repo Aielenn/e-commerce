@@ -81,7 +81,8 @@
             <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
             <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
             <div class="recover-input">
-                <input type="email" class="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+                <input type="email" class="recoverEmail" placeholder="Correo electrónico"
+                    aria-label="Correo electrónico">
                 <button id="recoverButton" class="btn-recover">Enviar código </button>
             </div>
         </div>
@@ -128,247 +129,253 @@
 
     <main>
         <div class="index-main">
-        <!-- PRODUCTOS. Buscar por Categoría -->
-        <section id="search-by-category">
-            <div class="category-container">
-                <div class="category-item" data-category="celulares">
-                    <a href="product_grid.html?category=celulares">
-                        <img src="images/category/celulares.png" alt="celulares">
-                        <p>Celulares</p>
-                    </a>
+            <!-- PRODUCTOS. Buscar por Categoría -->
+            <section id="search-by-category">
+                <div class="category-container">
+                    <div class="category-item" data-category="celulares">
+                        <a href="product_grid.html?category=celulares">
+                            <img src="images/category/celulares.png" alt="celulares">
+                            <p>Celulares</p>
+                        </a>
+                    </div>
+                    <div class="category-item" data-category="smart-tv">
+                        <a href="product_grid.html?category=smart-tv">
+                            <img src="images/category/smart_tv.png" alt="smart-tv">
+                            <p>Smart TV</p>
+                        </a>
+                    </div>
+                    <div class="category-item" data-category="computadoras">
+                        <a href="product_grid.html?category=computadoras">
+                            <img src="images/category/computadoras.png" alt="Computadoras">
+                            <p>Computadoras</p>
+                        </a>
+                    </div>
+                    <div class="category-item" data-category="perifericos">
+                        <a href="product_grid.html?category=perifericos">
+                            <img src="images/category/perifericos.png" alt="perifericos">
+                            <p>Perifericos</p>
+                        </a>
+                    </div>
+                    <div class="category-item" data-category="sillas">
+                        <a href="product_grid.html?category=sillas">
+                            <img src="images/category/sillas.png" alt="sillas">
+                            <p>Sillas</p>
+                        </a>
+                    </div>
+                    <div class="category-item" data-category="arma-tu-pc">
+                        <a href="product_grid.html?category=arma-tu-pc">
+                            <img src="images/category/arma_tu_pc.png" alt="Arma tu PC">
+                            <p>Arma tu PC</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="category-item" data-category="smart-tv">
-                    <a href="product_grid.html?category=smart-tv">
-                        <img src="images/category/smart_tv.png" alt="smart-tv">
-                        <p>Smart TV</p>
-                    </a>
+            </section>
+
+            <!-- Destacados de la Semana -->
+            <section id="weekly-featured">
+                <h2 class="weekly-featured-title">DESTACADOS DE LA SEMANA</h2>
+                <div class="weekly-carousel-container">
+                    <button class="carousel-btn left-btn" id="left-btn"><img src="images/arrowPrev.png"
+                            alt="Prev"></button>
+                    <div class="weekly-carousel"></div>
+                    <button class="carousel-btn right-btn" id="right-btn"><img src="images/arrowNext.png"
+                            alt="Next"></button>
                 </div>
-                <div class="category-item" data-category="computadoras">
-                    <a href="product_grid.html?category=computadoras">
-                        <img src="images/category/computadoras.png" alt="Computadoras">
-                        <p>Computadoras</p>
-                    </a>
+            </section>
+
+            <!-- Encontrá la Marca que Estás Buscando -->
+            <section id="search-by-brand">
+                <h2 class="brand-title">ENCONTRA LA MARCA QUE ESTAS BUSCANDO</h2>
+                <div class="brand-carousel">
+                    <button class="carousel-control prev" onclick="moveLeft()"><img src="images/arrowPrev.png"
+                            alt="Prev"></button>
+                    <div class="brand-container">
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=AMD">
+                                <img src="images/destacados_semana_LOGOS/AMD_Logo.png" alt="AMD">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Samsung">
+                                <img src="images/destacados_semana_LOGOS/Samsung_Logo.png" alt="Samsung">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Asus">
+                                <img src="images/destacados_semana_LOGOS/asus_logo.png" alt="Asus">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Razer">
+                                <img src="images/destacados_semana_LOGOS/razer_LOGO.png" alt="Razer">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Aorus">
+                                <img src="images/destacados_semana_LOGOS/aorus-logo.png" alt="Aorus">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <img src="images/destacados_semana_LOGOS/lenovo-logo.png" alt="Marca 6">
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Akracing">
+                                <img src="images/destacados_semana_LOGOS/ak_logo.jpg" alt="Akracing">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=TCL">
+                                <img src="images/destacados_semana_LOGOS/tcl-logo.png" alt="TCL">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Intel">
+                                <img src="images/destacados_semana_LOGOS/intel-logo.jpg" alt="Intel">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Apple">
+                                <img src="images/destacados_semana_LOGOS/iphone-logo.png" alt="Apple">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Motorola">
+                                <img src="images/destacados_semana_LOGOS/motorola-logo.jpg" alt="Motorola">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=PHILCO">
+                                <img src="images/destacados_semana_LOGOS/philco-logo.png" alt="PHILCO">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Acer">
+                                <img src="images/destacados_semana_LOGOS/acer-logo.png" alt="Acer">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=MSI">
+                                <img src="images/destacados_semana_LOGOS/msi-logo.png" alt="MSI">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Gigabyte">
+                                <img src="images/destacados_semana_LOGOS/gigabyte-logo.png" alt="Gigabyte">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Corsair">
+                                <img src="images/destacados_semana_LOGOS/corsair-logo.png" alt="Corsair">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Kingston">
+                                <img src="images/destacados_semana_LOGOS/kingston-logo.png" alt="Kingston">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=Cooler Master">
+                                <img src="images/destacados_semana_LOGOS/cooler-master-logo.png" alt="Cooler Master">
+                            </a>
+                        </div>
+                        <div class="brand-item">
+                            <a href="product_grid.html?brand=TP-Link">
+                                <img src="images/destacados_semana_LOGOS/tp-link-logo.png" alt="TP-Link">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control next" onclick="moveRight()"><img src="images/arrowNext.png"
+                            alt="Next"></button>
                 </div>
-                <div class="category-item" data-category="perifericos">
-                    <a href="product_grid.html?category=perifericos">
-                        <img src="images/category/perifericos.png" alt="perifericos">
-                        <p>Perifericos</p>
-                    </a>
+            </section>
+
+
+            <!-- Lo Más Vendido -->
+            <section id="best-sellers">
+                <h2 class="best-seller-title">LO MAS VENDIDO</h2>
+                <div class="best-seller-carousel-container">
+                    <button class="carousel-btn left-btn" id="bs-left-btn"><img src="images/arrowPrev.png"
+                            alt="Prev"></button>
+                    <div class="best-seller-carousel"></div>
+                    <button class="carousel-btn right-btn" id="bs-right-btn"><img src="images/arrowNext.png"
+                            alt="Next"></button>
                 </div>
-                <div class="category-item" data-category="sillas">
-                    <a href="product_grid.html?category=sillas">
-                        <img src="images/category/sillas.png" alt="sillas">
-                        <p>Sillas</p>
-                    </a>
-                </div>
-                <div class="category-item" data-category="arma-tu-pc">
-                    <a href="product_grid.html?category=arma-tu-pc">
-                        <img src="images/category/arma_tu_pc.png" alt="Arma tu PC">
-                        <p>Arma tu PC</p>
-                    </a>
-                </div>
+            </section>
+
+
+            <div class="beneficios">
+                <img src="images/beneficios.png" alt="beneficios">
+                <!-- Botón Flotante para Ver Todos los Productos -->
+                <button id="view-all-products" class="view-all-button"> DESCUBRE TODOS LOS PRODUCTOS</button>
             </div>
-        </section>
 
-        <!-- Destacados de la Semana -->
-        <section id="weekly-featured">
-            <h2 class="weekly-featured-title">DESTACADOS DE LA SEMANA</h2>
-            <div class="weekly-carousel-container">
-                <button class="carousel-btn left-btn" id="left-btn"><img src="images/arrowPrev.png" alt="Prev"></button>
-                <div class="weekly-carousel"></div>
-                <button class="carousel-btn right-btn" id="right-btn"><img src="images/arrowNext.png" alt="Next"></button>
-            </div>
-        </section>
 
-        <!-- Encontrá la Marca que Estás Buscando -->
-        <section id="search-by-brand">
-            <h2 class="brand-title">ENCONTRA LA MARCA QUE ESTAS BUSCANDO</h2>
-            <div class="brand-carousel">
-                <button class="carousel-control prev" onclick="moveLeft()"><img src="images/arrowPrev.png" alt="Prev"></button>
-                <div class="brand-container">
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=AMD">
-                        <img src="images/destacados_semana_LOGOS/AMD_Logo.png" alt="AMD">
-                    </a>
+            <!-- BANK PROMOTION -->
+            <section class="bank-promotions">
+                <h2 class="bank-promotions-title">CONOCE NUESTRAS PROMOCIONES</h2>
+                <div class="promotion-cards">
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>3 cuotas</h3>
+                            <p class="interest">sin interés</p>
+                            <p class="cft">CFT: 0%</p>
+                            <p class="days">Miércoles y Viernes</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>MODO con Visa y Mastercard de todos los bancos</small>
+                        </div>
                     </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Samsung">
-                        <img src="images/destacados_semana_LOGOS/Samsung_Logo.png" alt="Samsung">
-                    </a>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet"
+                                class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>3 cuotas</h3>
+                            <p class="interest">sin interés</p>
+                            <p class="cft">CFT: 0%</p>
+                            <p class="days">Jueves</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Pagando con Naranja X</small>
+                        </div>
                     </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Asus">
-                        <img src="images/destacados_semana_LOGOS/asus_logo.png" alt="Asus">
-                    </a>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
+                                class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>12 cuotas</h3>
+                            <p class="interest">fijas</p>
+                            <p class="cft">CFT: 55%</p>
+                            <p class="days">Todos los días</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
+                        </div>
                     </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Razer">
-                        <img src="images/destacados_semana_LOGOS/razer_LOGO.png" alt="Razer">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Aorus">
-                        <img src="images/destacados_semana_LOGOS/aorus-logo.png" alt="Aorus">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <img src="images/destacados_semana_LOGOS/lenovo-logo.png" alt="Marca 6">
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Akracing">
-                        <img src="images/destacados_semana_LOGOS/ak_logo.jpg" alt="Akracing">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=TCL">
-                        <img src="images/destacados_semana_LOGOS/tcl-logo.png" alt="TCL">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Intel">
-                        <img src="images/destacados_semana_LOGOS/intel-logo.jpg" alt="Intel">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Apple">
-                        <img src="images/destacados_semana_LOGOS/iphone-logo.png" alt="Apple">
-                    </a>
-                </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Motorola">
-                        <img src="images/destacados_semana_LOGOS/motorola-logo.jpg" alt="Motorola">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=PHILCO">
-                        <img src="images/destacados_semana_LOGOS/philco-logo.png" alt="PHILCO">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Acer">
-                        <img src="images/destacados_semana_LOGOS/acer-logo.png" alt="Acer">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=MSI">
-                        <img src="images/destacados_semana_LOGOS/msi-logo.png" alt="MSI">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Gigabyte">
-                        <img src="images/destacados_semana_LOGOS/gigabyte-logo.png" alt="Gigabyte">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Corsair">
-                        <img src="images/destacados_semana_LOGOS/corsair-logo.png" alt="Corsair">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Kingston">
-                        <img src="images/destacados_semana_LOGOS/kingston-logo.png" alt="Kingston">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=Cooler Master">
-                        <img src="images/destacados_semana_LOGOS/cooler-master-logo.png" alt="Cooler Master">
-                    </a>
-                    </div>
-                    <div class="brand-item">
-                        <a href="product_grid.html?brand=TP-Link">
-                        <img src="images/destacados_semana_LOGOS/tp-link-logo.png" alt="TP-Link">
-                    </a>
+                    <div class="promotion-card">
+                        <div class="promo-header">
+                            <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
+                                class="bank-logo">
+                        </div>
+                        <div class="promo-body">
+                            <h3>6 cuotas</h3>
+                            <p class="interest">sin interés</p>
+                            <p class="cft">CFT: 0%</p>
+                            <p class="days">Lunes y Martes</p>
+                        </div>
+                        <div class="promo-footer">
+                            <small>Pagando con tarjeta Visa Galicia</small>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control next" onclick="moveRight()"><img src="images/arrowNext.png" alt="Next"></button>
-            </div>
-        </section>
-
-
-        <!-- Lo Más Vendido -->
-        <section id="best-sellers">
-            <h2 class="best-seller-title">LO MAS VENDIDO</h2>
-            <div class="best-seller-carousel-container">
-                <button class="carousel-btn left-btn" id="bs-left-btn"><img src="images/arrowPrev.png" alt="Prev"></button>
-                <div class="best-seller-carousel"></div>
-                <button class="carousel-btn right-btn" id="bs-right-btn"><img src="images/arrowNext.png"
-                        alt="Next"></button>
-            </div>
-        </section>
-
-
-        <div class="beneficios">
-            <img src="images/beneficios.png" alt="beneficios">
-            <!-- Botón Flotante para Ver Todos los Productos -->
-            <button id="view-all-products" class="view-all-button"> DESCUBRE TODOS LOS PRODUCTOS</button>
+            </section>
         </div>
-
-
-        <!-- BANK PROMOTION -->
-        <section class="bank-promotions">
-            <h2 class="bank-promotions-title">CONOCE NUESTRAS PROMOCIONES</h2>
-            <div class="promotion-cards">
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>3 cuotas</h3>
-                        <p class="interest">sin interés</p>
-                        <p class="cft">CFT: 0%</p>
-                        <p class="days">Miércoles y Viernes</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>MODO con Visa y Mastercard de todos los bancos</small>
-                    </div>
-                </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>3 cuotas</h3>
-                        <p class="interest">sin interés</p>
-                        <p class="cft">CFT: 0%</p>
-                        <p class="days">Jueves</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Pagando con Naranja X</small>
-                    </div>
-                </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
-                            class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>12 cuotas</h3>
-                        <p class="interest">fijas</p>
-                        <p class="cft">CFT: 55%</p>
-                        <p class="days">Todos los días</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
-                    </div>
-                </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
-                            class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>6 cuotas</h3>
-                        <p class="interest">sin interés</p>
-                        <p class="cft">CFT: 0%</p>
-                        <p class="days">Lunes y Martes</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Pagando con tarjeta Visa Galicia</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
     </main>
     <footer>
         <div class="footer-container">

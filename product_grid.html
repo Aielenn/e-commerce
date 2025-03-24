@@ -53,298 +53,294 @@
         </div>
     </header>
 
-        <!-- Modal de Login/Registro -->
-        <div id="optionsModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Bienvenido</h2>
-                <p class="instruction">Ingresa con tu correo y contraseña</p>
-                <a href="#" id="loginModalOpen" class="btn-open-login-modal">ENTRAR A MI USUARIO</a>
-                <div class="divider-block">
-                    <hr class="divider-line"><span class="divider-text">o</span>
-                </div>
-                <p class="register-message">Si aún no tienes cuenta, regístrate:</p>
-                <button id="openRegisterModalFromOptions">REGISTRARME</button>
+    <div id="optionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bienvenido</h2>
+            <p class="instruction">Ingresa con tu correo y contraseña</p>
+            <a href="#" id="loginModalOpen" class="btn-open-login-modal">ENTRAR A MI USUARIO</a>
+            <div class="divider-block">
+                <hr class="divider-line"><span class="divider-text">o</span>
+            </div>
+            <p class="register-message">Si aún no tienes cuenta, regístrate:</p>
+            <button id="openRegisterModalFromOptions">REGISTRARME</button>
+        </div>
+    </div>
+   
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Tech&Game</h2>
+            <input type="email" id="loginEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+            <input type="password" id="loginPassword" placeholder="Contraseña" aria-label="Contraseña">
+            <button id="loginButton" class="btn-login">Ingresar</button>
+            <div class="modal-links">
+                <a href="#" id="openRecoverPasswordModal">RECUPERAR CONTRASEÑA</a>
+            </div>
+            <div class="divider-block">
+                <hr class="divider-line"><span class="divider-text">o</span>
+            </div>
+            <div class="modal-register">
+                <p class="register-message">No tengo cuenta y quiero </p> <a href="#"
+                    id="openRegisterModalFromLogin">REGISTRARME</a>
             </div>
         </div>
-        <!-- Modal de Ingreso de Usuario -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">Tech&Game</h2>
-                <input type="email" id="loginEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
-                <input type="password" id="loginPassword" placeholder="Contraseña" aria-label="Contraseña">
-                <button id="loginButton" class="btn-login">Ingresar</button>
-                <div class="modal-links">
-                    <a href="#" id="openRecoverPasswordModal">RECUPERAR CONTRASEÑA</a>
+    </div>
+   
+    <div id="recoverPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
+            <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
+            <input type="email" id="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+            <button id="recoverButton" class="btn-recover">Enviar código </button>
+        </div>
+    </div>
+    
+    <div id="resetPasswordPage" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Restablecer Contraseña</h2>
+            <input type="password" id="newPassword" placeholder="Nueva contraseña" aria-label="Nueva contraseña">
+            <input type="password" id="confirmPassword" placeholder="Confirmar contraseña"
+                aria-label="Confirmar contraseña">
+            <button id="resetButton" class="btn-reset">Restablecer Contraseña</button>
+        </div>
+    </div>
+   
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">CREA TU CUENTA Y COMPRA DESDE LA COMODIDAD DE TU HOGAR</h2>
+            <h3 class="modal-subtitle">Para crear tu cuenta precisamos algunos datos:</h3>
+            <input type="text" id="registerFirstName" placeholder="Nombre" aria-label="Nombre">
+            <input type="text" id="registerLastName" placeholder="Apellido" aria-label="Apellido">
+            <input type="email" id="registerEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+            <input type="password" id="registerPassword" placeholder="Contraseña" aria-label="Contraseña">
+            <input type="password" id="registerConfirmPassword" placeholder="Confirmar contraseña"
+                aria-label="Confirmar contraseña">
+            <button id="registerSubmitButton" class="btn-register">Registrarme</button>
+        </div>
+    </div>
+
+    <section class="bank-promotions">
+        <div class="promotion-cards">
+            <div class="promotion-card">
+                <div class="promo-header">
+                    <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
                 </div>
-                <div class="divider-block">
-                    <hr class="divider-line"><span class="divider-text">o</span>
+                <div class="promo-body">
+                    <h3>3 cuotas sin interés</h3>
+                    <p class="days">Miércoles y Viernes</p>
                 </div>
-                <div class="modal-register">
-                    <p class="register-message">No tengo cuenta y quiero </p> <a href="#"
-                        id="openRegisterModalFromLogin">REGISTRARME</a>
+                <div class="promo-footer">
+                    <small>Visa y Mastercard de todos los bancos</small>
+                </div>
+            </div>
+            <div class="promotion-card">
+                <div class="promo-header">
+                    <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
+                </div>
+                <div class="promo-body">
+                    <h3>3 cuotas sin interés</h3>
+                    <p class="days">Jueves</p>
+                </div>
+                <div class="promo-footer">
+                    <small>Pagando con Naranja X</small>
+                </div>
+            </div>
+            <div class="promotion-card">
+                <div class="promo-header">
+                    <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
+                        class="bank-logo">
+                </div>
+                <div class="promo-body">
+                    <h3>12 cuotas fijas</h3>
+                    <p class="days">Todos los días</p>
+                </div>
+                <div class="promo-footer">
+                    <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
+                </div>
+            </div>
+            <div class="promotion-card">
+                <div class="promo-header">
+                    <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo" class="bank-logo">
+                </div>
+                <div class="promo-body">
+                    <h3>6 cuotas sin interés</h3>
+                    <p class="days">Lunes y Martes</p>
+                </div>
+                <div class="promo-footer">
+                    <small>Pagando con tarjeta Visa Galicia</small>
                 </div>
             </div>
         </div>
-        <!-- Modal de Recuperación de Contraseña -->
-        <div id="recoverPasswordModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
-                <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
-                <input type="email" id="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
-                <button id="recoverButton" class="btn-recover">Enviar código </button>
-            </div>
+    </section>
+
+    <div class="breadcrumb">
+        <ul class="breadcrumb-container">
+            <li><a title="Ir a la pagina de inicio" href="index.html">Inicio</a></li>
+            <li class="separator"> > </li>
+            <li><a href="product_grid.html">Productos</a></li>
+        </ul>
+
+        <div class="product-controls">
+            <label for="sort">Ordenar por:</label>
+            <select id="sort" onchange="filterProducts()">
+                <option value="default">Relevancia</option>
+                <option value="price-asc">Precio ascendente</option>
+                <option value="price-desc">Precio descendente</option>
+            </select>
         </div>
-        <!-- Página de Restablecimiento de Contraseña -->
-        <div id="resetPasswordPage" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Restablecer Contraseña</h2>
-                <input type="password" id="newPassword" placeholder="Nueva contraseña" aria-label="Nueva contraseña">
-                <input type="password" id="confirmPassword" placeholder="Confirmar contraseña"
-                    aria-label="Confirmar contraseña">
-                <button id="resetButton" class="btn-reset">Restablecer Contraseña</button>
-            </div>
-        </div>
-        <!-- Modal de Registro -->
-        <div id="registerModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 class="modal-title">CREA TU CUENTA Y COMPRA DESDE LA COMODIDAD DE TU HOGAR</h2>
-                <h3 class="modal-subtitle">Para crear tu cuenta precisamos algunos datos:</h3>
-                <input type="text" id="registerFirstName" placeholder="Nombre" aria-label="Nombre">
-                <input type="text" id="registerLastName" placeholder="Apellido" aria-label="Apellido">
-                <input type="email" id="registerEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
-                <input type="password" id="registerPassword" placeholder="Contraseña" aria-label="Contraseña">
-                <input type="password" id="registerConfirmPassword" placeholder="Confirmar contraseña"
-                    aria-label="Confirmar contraseña">
-                <button id="registerSubmitButton" class="btn-register">Registrarme</button>
-            </div>
-        </div>
+    </div>
 
-        <section class="bank-promotions">
-            <div class="promotion-cards">
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>3 cuotas sin interés</h3>
-                        <p class="days">Miércoles y Viernes</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Visa y Mastercard de todos los bancos</small>
-                    </div>
+    <div class="product-page-layout">
+        <main>
+            <div class="filters">
+                <h3>Filtrar busqueda</h3>
+                <hr class="divider-block">
+                <div class="filter-section">
+                    <h4>Categoría</h4>
+                    <label><input type="checkbox" value="celulares" class="filter-category"> Celulares</label>
+                    <label><input type="checkbox" value="smart-tv" class="filter-category"> Smart TV</label>
+                    <label><input type="checkbox" value="computadoras" class="filter-category"> Computadoras</label>
+                    <label><input type="checkbox" value="perifericos" class="filter-category"> Perifericos</label>
+                    <label><input type="checkbox" value="sillas" class="filter-category"> Sillas </label>
+                    <label><input type="checkbox" value="arma-tu-pc" class="filter-category"> Armar tu PC</label>
                 </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>3 cuotas sin interés</h3>
-                        <p class="days">Jueves</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Pagando con Naranja X</small>
-                    </div>
+
+                <hr class="divider-block">
+                <div class="filter-section">
+                    <h4>Marca</h4>
+                    <label><input type="checkbox" value="Apple" class="filter-brand"> APPLE </label>
+                    <label><input type="checkbox" value="Motorola" class="filter-brand"> MOTOROLA </label>
+                    <label><input type="checkbox" value="Hyundai" class="filter-brand"> HYUNDAI </label>
+                    <label><input type="checkbox" value="AMD" class="filter-brand"> AMD </label>
+                    <label><input type="checkbox" value="Samsung" class="filter-brand"> SAMSUNG </label>
+                    <label><input type="checkbox" value="ASUS" class="filter-brand"> ASUS </label>
+                    <label><input type="checkbox" value="Razer" class="filter-brand"> RAZER </label>
+                    <label><input type="checkbox" value="Aorus" class="filter-brand"> AORUS </label>
+                    <label><input type="checkbox" value="Lenovo" class="filter-brand"> LENOVO </label>
+                    <label><input type="checkbox" value="Akracing" class="filter-brand"> AKRACING </label>
+                    <label><input type="checkbox" value="TCL" class="filter-brand"> TCL </label>
+                    <label><input type="checkbox" value="Intel" class="filter-brand"> INTEL </label>
+                    <label><input type="checkbox" value="PHILCO" class="filter-brand"> PHILCO </label>
+                    <label><input type="checkbox" value="Acer" class="filter-brand"> ACER </label>
+                    <label><input type="checkbox" value="MSI" class="filter-brand"> MSI </label>
+                    <label><input type="checkbox" value="Gigabyte" class="filter-brand"> GIGABYTE </label>
+                    <label><input type="checkbox" value="Corsair" class="filter-brand"> CORSAIR </label>
+                    <label><input type="checkbox" value="Kingston" class="filter-brand"> KINGSTON </label>
+                    <label><input type="checkbox" value="Cooler Master" class="filter-brand"> COOLER MASTER </label>
+                    <label><input type="checkbox" value="TP-Link" class="filter-brand"> TP LINK </label>
                 </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
-                            class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>12 cuotas fijas</h3>
-                        <p class="days">Todos los días</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
-                    </div>
+
+
+                <hr class="divider-block">
+                <!-- Filtros avanzados -->
+                <div class="filter-group" id="filter-celulares" style="display: none;">
+                    <label for="filter-ram">RAM:</label>
+                    <select id="filter-ram">
+                        <option value="">Cualquier RAM</option>
+                        <option value="4GB">4GB</option>
+                        <option value="8GB">8GB</option>
+                        <option value="16GB">16GB</option>
+                    </select>
+                    <label for="filter-storage">Almacenamiento:</label>
+                    <select id="filter-storage">
+                        <option value="">Cualquier almacenamiento</option>
+                        <option value="64GB">64GB</option>
+                        <option value="128GB">128GB</option>
+                        <option value="256GB">256GB</option>
+                    </select>
                 </div>
-                <div class="promotion-card">
-                    <div class="promo-header">
-                        <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
-                            class="bank-logo">
-                    </div>
-                    <div class="promo-body">
-                        <h3>6 cuotas sin interés</h3>
-                        <p class="days">Lunes y Martes</p>
-                    </div>
-                    <div class="promo-footer">
-                        <small>Pagando con tarjeta Visa Galicia</small>
-                    </div>
+
+                <div class="filter-group" id="filter-smart-tv" style="display: none;">
+                    <label for="filter-screen-size">Pulgadas:</label>
+                    <select id="filter-screen-size">
+                        <option value="">Cualquier tamaño</option>
+                        <option value="32">32"</option>
+                        <option value="42">43"</option>
+                        <option value="55">50"</option>
+                    </select>
+                    <label for="filter-resolution">Resolución:</label>
+                    <select id="filter-resolution">
+                        <option value="">Cualquier resolución</option>
+                        <option value="HD">HD</option>
+                        <option value="Full HD">Full HD</option>
+                        <option value="UHD 4K"> Ultra HD 4K</option>
+                    </select>
                 </div>
-            </div>
-        </section>
 
-        <div class="breadcrumb">
-            <ul class="breadcrumb-container">
-                <li><a title="Ir a la pagina de inicio" href="index.html">Inicio</a></li>
-                <li class="separator"> > </li>
-                <li><a href="product_grid.html">Productos</a></li>
-            </ul>
+                <div class="filter-group" id="filter-perifericos" style="display: none;">
+                    <label for="filter-lighting">Iluminación:</label>
+                    <select id="filter-lighting">
+                        <option value="">Cualquier opción</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <label for="filter-wireless">Inalámbrico:</label>
+                    <select id="filter-wireless">
+                        <option value="">Cualquier opción</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
 
-            <div class="product-controls">
-                <label for="sort">Ordenar por:</label>
-                <select id="sort" onchange="filterProducts()">
-                    <option value="default">Relevancia</option>
-                    <option value="price-asc">Precio ascendente</option>
-                    <option value="price-desc">Precio descendente</option>
-                </select>
-            </div>
-        </div>
+                <div class="filter-group" id="filter-sillas" style="display: none;">
+                    <label for="filter-material">Material:</label>
+                    <select id="filter-material">
+                        <option value="">Cualquier material</option>
+                        <option value="Cuero">Cuero sintetico</option>
+                        <option value="Tela">Tela</option>
+                    </select>
+                    <label for="filter-color">Color:</label>
+                    <select id="filter-color">
+                        <option value="">Cualquier color</option>
+                        <option value="Negro">Negro</option>
+                        <option value="Blanco">Blanco</option>
+                    </select>
+                </div>
 
-        <div class="product-page-layout">
-            <main>
-                <div class="filters">
-                    <h3>Filtrar busqueda</h3>
-                    <hr class="divider-block">
-                    <!-- Filtro de Categoría -->
-                    <div class="filter-section">
-                        <h4>Categoría</h4>
-                        <label><input type="checkbox" value="celulares" class="filter-category"> Celulares</label>
-                        <label><input type="checkbox" value="smart-tv" class="filter-category"> Smart TV</label>
-                        <label><input type="checkbox" value="computadoras" class="filter-category"> Computadoras</label>
-                        <label><input type="checkbox" value="perifericos" class="filter-category"> Perifericos</label>
-                        <label><input type="checkbox" value="sillas" class="filter-category"> Sillas </label>
-                        <label><input type="checkbox" value="arma-tu-pc" class="filter-category"> Armar tu PC</label>
-                    </div>
-                    <hr class="divider-block">
-                    <!-- Filtro de Marca -->
-                    <div class="filter-section">
-                        <h4>Marca</h4>
-                        <label><input type="checkbox" value="Apple" class="filter-brand"> APPLE </label>
-                        <label><input type="checkbox" value="Motorola" class="filter-brand"> MOTOROLA </label>
-                        <label><input type="checkbox" value="Hyundai" class="filter-brand"> HYUNDAI </label>
-                        <label><input type="checkbox" value="AMD" class="filter-brand"> AMD </label>
-                        <label><input type="checkbox" value="Samsung" class="filter-brand"> SAMSUNG </label>
-                        <label><input type="checkbox" value="ASUS" class="filter-brand"> ASUS </label>
-                        <label><input type="checkbox" value="Razer" class="filter-brand"> RAZER </label>
-                        <label><input type="checkbox" value="Aorus" class="filter-brand"> AORUS </label>
-                        <label><input type="checkbox" value="Lenovo" class="filter-brand"> LENOVO </label>
-                        <label><input type="checkbox" value="Akracing" class="filter-brand"> AKRACING </label>
-                        <label><input type="checkbox" value="TCL" class="filter-brand"> TCL </label>
-                        <label><input type="checkbox" value="Intel" class="filter-brand"> INTEL </label>
-                        <label><input type="checkbox" value="PHILCO" class="filter-brand"> PHILCO </label>
-                        <label><input type="checkbox" value="Acer" class="filter-brand"> ACER </label>
-                        <label><input type="checkbox" value="MSI" class="filter-brand"> MSI </label>
-                        <label><input type="checkbox" value="Gigabyte" class="filter-brand"> GIGABYTE </label>
-                        <label><input type="checkbox" value="Corsair" class="filter-brand"> CORSAIR </label>
-                        <label><input type="checkbox" value="Kingston" class="filter-brand"> KINGSTON </label>
-                        <label><input type="checkbox" value="Cooler Master" class="filter-brand"> COOLER MASTER </label>
-                        <label><input type="checkbox" value="TP-Link" class="filter-brand"> TP LINK </label>
-                    </div>
+                <div class="filter-group" id="filter-computadoras" style="display: none;">
+                    <label for="filter-processor">Procesador:</label>
+                    <select id="filter-processor">
+                        <option value="">Cualquier procesador</option>
+                        <option value="Intel i5">Intel i5</option>
+                        <option value="Intel i7">Intel i7</option>
+                        <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                    </select>
+                    <label for="filter-computer-storage">Storage:</label>
+                    <select id="filter-computer-processor">
+                        <option value="">Cualquier almacenamiento</option>
+                        <option value="512GB">512 GB</option>
+                    </select>
+                    <label for="filter-ram">RAM:</label>
+                    <select id="filter-computer-ram">
+                        <option value="">Cualquier RAM</option>
+                        <option value="8GB">8GB</option>
+                        <option value="16GB">16GB</option>
+                        <option value="32GB">32GB</option>
+                    </select>
+                </div>
 
-                    
-                    <hr class="divider-block">
-                    <!-- Filtros avanzados -->
-                    <div class="filter-group" id="filter-celulares" style="display: none;">
-                        <label for="filter-ram">RAM:</label>
-                        <select id="filter-ram">
-                            <option value="">Cualquier RAM</option>
-                            <option value="4GB">4GB</option>
-                            <option value="8GB">8GB</option>
-                            <option value="16GB">16GB</option>
-                        </select>
-                        <label for="filter-storage">Almacenamiento:</label>
-                        <select id="filter-storage">
-                            <option value="">Cualquier almacenamiento</option>
-                            <option value="64GB">64GB</option>
-                            <option value="128GB">128GB</option>
-                            <option value="256GB">256GB</option>
-                        </select>
-                    </div>
+                <div class="filter-group" id="filter-arma-tu-pc" style="display: none;">
+                    <label for="filter-component">Componente:</label>
+                    <select id="filter-component">
+                        <option value="">Cualquier componente</option>
+                        <option value="Gabinetes">Gabinetes</option>
+                        <option value="Adaptadores de Red">Adaptadores de Red</option>
+                        <option value="Coolers de Gabinete">Coolers de Gabinete</option>
+                        <option value="Coolers de CPU">Coolers de CPU</option>
+                        <option value="Fuentes de poder">Fuentes</option>
+                        <option value="Almacenamiento">Almacenamiento</option>
+                        <option value="Tarjetas Graficas">Tarjetas Graficas</option>
+                        <option value="Mmeoria RAM">Memoria RAM</option>
+                        <option value="Motherboards">Motherboards</option>
+                        <option value="Procesadores">Procesadores</option>
+                    </select>
+                </div>
 
-                    <div class="filter-group" id="filter-smart-tv" style="display: none;">
-                        <label for="filter-screen-size">Pulgadas:</label>
-                        <select id="filter-screen-size">
-                            <option value="">Cualquier tamaño</option>
-                            <option value="32">32"</option>
-                            <option value="42">43"</option>
-                            <option value="55">50"</option>
-                        </select>
-                        <label for="filter-resolution">Resolución:</label>
-                        <select id="filter-resolution">
-                            <option value="">Cualquier resolución</option>
-                            <option value="HD">HD</option>
-                            <option value="Full HD">Full HD</option>
-                            <option value="UHD 4K"> Ultra HD 4K</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group" id="filter-perifericos" style="display: none;">
-                        <label for="filter-lighting">Iluminación:</label>
-                        <select id="filter-lighting">
-                            <option value="">Cualquier opción</option>
-                            <option value="true">Sí</option>
-                            <option value="false">No</option>
-                        </select>
-                        <label for="filter-wireless">Inalámbrico:</label>
-                        <select id="filter-wireless">
-                            <option value="">Cualquier opción</option>
-                            <option value="true">Sí</option>
-                            <option value="false">No</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group" id="filter-sillas" style="display: none;">
-                        <label for="filter-material">Material:</label>
-                        <select id="filter-material">
-                            <option value="">Cualquier material</option>
-                            <option value="Cuero">Cuero sintetico</option>
-                            <option value="Tela">Tela</option>
-                        </select>
-                        <label for="filter-color">Color:</label>
-                        <select id="filter-color">
-                            <option value="">Cualquier color</option>
-                            <option value="Negro">Negro</option>
-                            <option value="Blanco">Blanco</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group" id="filter-computadoras" style="display: none;">
-                        <label for="filter-processor">Procesador:</label>
-                        <select id="filter-processor">
-                            <option value="">Cualquier procesador</option>
-                            <option value="Intel i5">Intel i5</option>
-                            <option value="Intel i7">Intel i7</option>
-                            <option value="AMD Ryzen 5">AMD Ryzen 5</option>
-                        </select>
-                        <label for="filter-computer-storage">Storage:</label>
-                        <select id="filter-computer-processor">
-                            <option value="">Cualquier almacenamiento</option>
-                            <option value="512GB">512 GB</option>
-                        </select>
-                        <label for="filter-ram">RAM:</label>
-                        <select id="filter-computer-ram">
-                            <option value="">Cualquier RAM</option>
-                            <option value="8GB">8GB</option>
-                            <option value="16GB">16GB</option>
-                            <option value="32GB">32GB</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group" id="filter-arma-tu-pc" style="display: none;">
-                        <label for="filter-component">Componente:</label>
-                        <select id="filter-component">
-                            <option value="">Cualquier componente</option>
-                            <option value="Gabinetes">Gabinetes</option>
-                            <option value="Adaptadores de Red">Adaptadores de Red</option>
-                            <option value="Coolers de Gabinete">Coolers de Gabinete</option>
-                            <option value="Coolers de CPU">Coolers de CPU</option>
-                            <option value="Fuentes de poder">Fuentes</option>
-                            <option value="Almacenamiento">Almacenamiento</option>
-                            <option value="Tarjetas Graficas">Tarjetas Graficas</option>
-                            <option value="Mmeoria RAM">Memoria RAM</option>
-                            <option value="Motherboards">Motherboards</option>
-                            <option value="Procesadores">Procesadores</option>
-                        </select>
-                    </div>
-
-                    <hr class="divider-block">
-                <!-- Filtro de Precio -->
+                <hr class="divider-block">
                 <div class="filter-price">
                     <h4>Precio</h4>
                     <div class="price-range-container">
@@ -359,75 +355,75 @@
                     </div>
                 </div>
             </div>
-                
-                <div id="product-grid" class="product-grid">
-                    <!-- Aquí se cargará la grilla de productos con JavaScript -->
-                </div>
 
-
-            </main>
-
-            <div class="pagination-controls" id="pagination-controls">
+            <div id="product-grid" class="product-grid">
+                <!-- Aquí se cargará la grilla de productos -->
             </div>
-        </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <h2>Tech&Game</h2>
+
+        </main>
+
+        <div class="pagination-controls" id="pagination-controls">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Tech&Game</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h3>Enlaces rápidos</h3>
-                        <ul>
-                            <li><a href="#home">Inicio</a></li>
-                            <li><a href="#products">Productos</a></li>
-                            <li><a href="#about">Sobre Nosotros</a></li>
-                            <li><a href="#contact">Contacto</a></li>
-                            <li><a href="#faq">FAQ</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Ayuda</h3>
-                        <ul>
-                            <li><a href="#support">Soporte</a></li>
-                            <li><a href="#returns">Devoluciones</a></li>
-                            <li><a href="#shipping">Envíos</a></li>
-                            <li><a href="#terms">Términos y Condiciones</a></li>
-                            <li><a href="#privacy">Política de Privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
-                            <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
-                            <li>Av. Siempre Viva 742, Buenos Aires</li>
-                        </ul>
-                    </div>
+                <div class="footer-section">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#support">Soporte</a></li>
+                        <li><a href="#returns">Devoluciones</a></li>
+                        <li><a href="#shipping">Envíos</a></li>
+                        <li><a href="#terms">Términos y Condiciones</a></li>
+                        <li><a href="#privacy">Política de Privacidad</a></li>
+                    </ul>
                 </div>
-                <div class="footer-social">
-                    <h3>Síguenos</h3>
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png"
-                                    alt="Facebook"></a></li>
-                        <li><a href="https://www.twitter.com/techandgame"><img src="images\footer\gorjeo.png"
-                                    alt="Twitter"></a></li>
-                        <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png"
-                                    alt="Instagram"></a></li>
-                        <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png"
-                                    alt="YouTube"></a></li>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
+                        <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
+                        <li>Av. Siempre Viva 742, Buenos Aires</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.twitter.com/techandgame"><img src="images\footer\gorjeo.png"
+                                alt="Twitter"></a></li>
+                    <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png"
+                                alt="YouTube"></a></li>
+                </ul>
             </div>
-        </footer>
-        <script src="scripts/cart.js"></script>
-        <script src="scripts/products_grid.js"></script>
-        <script src="scripts/codigo.js"></script>
-        
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/products_grid.js"></script>
+    <script src="scripts/codigo.js"></script>
+    <script src="scripts/search_results.js"></script>
     </div>
 </body>
 

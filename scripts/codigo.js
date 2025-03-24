@@ -1,45 +1,42 @@
 //search
-document.addEventListener('DOMContentLoaded', function() {
-    // Selecciona el botón de búsqueda y el campo de entrada de búsqueda
+document.addEventListener('DOMContentLoaded', function () {
     const searchButton = document.querySelector('.search-button');
     const searchInput = document.querySelector('.search-wrapper input');
     const searchWrapper = document.querySelector('.search-wrapper');
     const headerIcons = document.querySelector('.header-icons');
     const logo = document.querySelector('.logo h1');
 
-    // Añade un escuchador de eventos al botón de búsqueda
-    searchButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Previene el envío del formulario
+
+    searchButton.addEventListener('click', function (event) {
+        event.preventDefault(); 
         if (window.innerWidth <= 768) {
             searchWrapper.classList.toggle('active');
             headerIcons.classList.toggle('hidden');
         } else {
-            search(); // Llama a la función de búsqueda en pantallas grandes
+            search(); 
         }
     });
 
-    // Añade un escuchador de eventos al campo de entrada de búsqueda para detectar la tecla Enter
-    searchInput.addEventListener('keypress', function(event) {
+
+    searchInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Previene el envío del formulario al presionar Enter
-            search(); // Llama a la función de búsqueda
+            event.preventDefault(); 
+            search();
         }
     });
 
-    // Función de búsqueda
+
     function search() {
-        // Obtiene el valor del campo de búsqueda y elimina espacios en blanco
         const query = searchInput.value.trim();
         if (query) {
-            // Redirige a la página de resultados de búsqueda con la consulta como parámetro de la URL
             window.location.href = `search_results.html?query=${encodeURIComponent(query)}`;
         } else {
             alert('Por favor, introduce un término de búsqueda.');
         }
     }
 
-    // Oculta la barra de búsqueda al hacer clic fuera de ella
-    document.addEventListener('click', function(event) {
+
+    document.addEventListener('click', function (event) {
         if (!searchWrapper.contains(event.target) && !searchButton.contains(event.target) && searchWrapper.classList.contains('active')) {
             searchWrapper.classList.remove('active');
             headerIcons.classList.remove('hidden');
@@ -49,19 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //LOGIN
-// Obtener los modales restantes
+
 var loginModal = document.getElementById("loginModal");
 var recoverPasswordModal = document.getElementById("recoverPasswordModal");
 var resetPasswordPage = document.getElementById("resetPasswordPage");
 var registerModal = document.getElementById("registerModal");
 
-// Obtener los botones que abren los modales
+
 var loginModalTrigger = document.getElementById("loginModalTrigger");
 var openRecoverPasswordModal = document.querySelector("#openRecoverPasswordModal");
 var openRegisterModalFromLogin = document.getElementById("openRegisterModalFromLogin");
 var closeButtons = document.getElementsByClassName("close");
 
-// Obtener los campos de entrada y botones
+
 var loginButton = document.getElementById("loginButton");
 var emailInput = document.getElementById("loginEmail");
 var passwordInput = document.getElementById("loginPassword");
@@ -78,12 +75,11 @@ var registerPasswordInput = document.getElementById("registerPassword");
 var registerConfirmPasswordInput = document.getElementById("registerConfirmPassword");
 var registerSubmitButton = document.getElementById("registerSubmitButton");
 
-// Función para mostrar un modal específico
 function showModal(modal) {
     modal.style.display = "block";
 }
 
-// Función para ocultar todos los modales
+
 function hideAllModals() {
     loginModal.style.display = "none";
     recoverPasswordModal.style.display = "none";
@@ -91,27 +87,27 @@ function hideAllModals() {
     registerModal.style.display = "none";
 }
 
-// Cuando el usuario hace clic en el botón de login, abre directamente el modal de login
+
 loginModalTrigger.onclick = function (event) {
-    event.preventDefault(); // Prevenir comportamiento por defecto del enlace
+    event.preventDefault();
     showModal(loginModal);
 };
 
-// Abrir el modal de recuperación de contraseña
+
 openRecoverPasswordModal.onclick = function (event) {
     event.preventDefault();
     hideAllModals();
     showModal(recoverPasswordModal);
 };
 
-// Abrir el modal de registro desde el link en el modal de login
+
 openRegisterModalFromLogin.onclick = function (event) {
     event.preventDefault();
     hideAllModals();
     showModal(registerModal);
 };
 
-// Cerrar modales
+
 function addCloseEventListeners() {
     for (var i = 0; i < closeButtons.length; i++) {
         closeButtons[i].onclick = function () {
@@ -121,14 +117,14 @@ function addCloseEventListeners() {
 }
 addCloseEventListeners();
 
-// Cuando el usuario hace clic fuera del modal, lo cierra
+
 window.onclick = function (event) {
     if (event.target == loginModal || event.target == recoverPasswordModal || event.target == resetPasswordPage || event.target == registerModal) {
         hideAllModals();
     }
 };
 
-// Manejar el botón de ingresar y la tecla Enter en el modal de login
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         if (loginModal.style.display === "block") {
@@ -177,18 +173,16 @@ function resetPassword() {
     if (newPassword && confirmPassword && newPassword === confirmPassword) {
         // Aquí puedes agregar la lógica para restablecer la contraseña
         alert("Contraseña restablecida exitosamente.");
-        // Redirigir al usuario a la página de inicio de sesión
-        window.location.href = '/login';
+        window.location.href = 'index.html';
     } else {
         alert("Las contraseñas no coinciden o están vacías.");
     }
 }
 
 
-// Registro de usuario
 registerSubmitButton.onclick = registerUser;
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         registerUser();
     }
@@ -211,7 +205,6 @@ function registerUser() {
                 password: password
             };
 
-            // Ejemplo de envío de datos al servidor usando Fetch API
             fetch('https://TU_SERVIDOR/register', {
                 method: 'POST',
                 headers: {
@@ -219,19 +212,19 @@ function registerUser() {
                 },
                 body: JSON.stringify(userData)
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert("Registro exitoso. Por favor, inicia sesión.");
-                    hideAllModals();
-                } else {
-                    alert("Error en el registro: " + data.message);
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("Hubo un error en el registro. Por favor, intenta nuevamente.");
-            });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Registro exitoso. Por favor, inicia sesión.");
+                        hideAllModals();
+                    } else {
+                        alert("Error en el registro: " + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("Hubo un error en el registro. Por favor, intenta nuevamente.");
+                });
 
         } else {
             alert("Las contraseñas no coinciden.");
@@ -243,7 +236,7 @@ function registerUser() {
 
 //CARRUSELL OFERTAS
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
     const prevButton = document.getElementById('prevButton');
@@ -251,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     const totalItems = items.length;
-    const intervalTime = 3000; // Cambia cada 3 segundos
+    const intervalTime = 3000;
     let interval;
 
     function showSlide(index) {
@@ -276,13 +269,13 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(interval);
     }
 
-    prevButton.addEventListener('click', function() {
+    prevButton.addEventListener('click', function () {
         stopAutoSlide();
         prevSlide();
         startAutoSlide();
     });
 
-    nextButton.addEventListener('click', function() {
+    nextButton.addEventListener('click', function () {
         stopAutoSlide();
         nextSlide();
         startAutoSlide();
@@ -292,16 +285,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Cargar el JSON desde el archivo products.json
     fetch('products.json')
         .then(response => response.json())
         .then(data => {
-            // Función para encontrar un producto por su ID
             function findProductById(id) {
                 return data.products.find(product => product.id === id);
             }
 
-            // Función para generar el HTML de un producto
             function generateProductHTML(product, isBestSeller = false) {
                 const priceWithDiscount = product.price - (product.price * product.discount / 100);
                 return `
@@ -325,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             }
 
-            // Función para generar el carrusel
+            // Función p generar el carrusel
             function generateCarousel(containerId, productIds, isBestSeller = false) {
                 const container = document.querySelector(`#${containerId} .${isBestSeller ? 'best-seller-carousel' : 'weekly-carousel'}`);
                 container.innerHTML = '';
@@ -338,23 +328,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            // Generar los carruseles
+
             generateCarousel('weekly-featured', data.weekly_featured);
             generateCarousel('best-sellers', data.best_sellers, true);
 
-            // manejar el desplazamiento del carrusel
             function setupCarousel(carouselClass, leftBtnId, rightBtnId) {
                 const carousel = document.querySelector(`.${carouselClass}`);
                 const leftBtn = document.getElementById(leftBtnId);
                 const rightBtn = document.getElementById(rightBtnId);
                 const items = document.querySelectorAll(`.${carouselClass}-item`);
-                const itemWidth = 220; // Ancho de cada elemento incluyendo margen
+                const itemWidth = 220;
                 let scrollAmount = 0;
                 const visibleItems = 4;
 
-                // Duplicar los elementos al inicio y al final para lograr el efecto de bucle
                 const allItems = [...items, ...items];
-                carousel.innerHTML = ""; // Limpiar el carrusel
+                carousel.innerHTML = ""; 
                 allItems.forEach(item => carousel.appendChild(item.cloneNode(true)));
 
                 const totalItems = allItems.length;
@@ -372,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             scrollAmount = visibleItems * itemWidth;
                             carousel.style.transition = 'none';
                             carousel.style.transform = `translateX(-${scrollAmount}px)`;
-                        }, 500); // Tiempo de la transición en ms
+                        }, 500); 
                     }
                 }
 
@@ -388,37 +376,35 @@ document.addEventListener("DOMContentLoaded", function () {
                             scrollAmount = (maxScroll - (totalItems - visibleItems) * itemWidth);
                             carousel.style.transition = 'none';
                             carousel.style.transform = `translateX(-${scrollAmount}px)`;
-                        }, 500); // Tiempo de la transición en ms
+                        }, 500); 
                     }
                 }
 
-                // Auto-desplazamiento cada 4 segundos
                 let autoScroll;
 
                 function startAutoScroll() {
                     autoScroll = setInterval(scrollRight, 5000);
                 }
-                
+
                 function stopAutoScroll() {
                     clearInterval(autoScroll);
                 }
-                
+
                 rightBtn.addEventListener("click", () => {
                     stopAutoScroll();
                     scrollRight();
                     startAutoScroll();
                 });
-                
+
                 leftBtn.addEventListener("click", () => {
                     stopAutoScroll();
                     scrollLeft();
                     startAutoScroll();
                 });
-                
+
                 startAutoScroll();
             }
 
-            // Configurar los carruseles
             setupCarousel('weekly-carousel', 'left-btn', 'right-btn');
             setupCarousel('best-seller-carousel', 'bs-left-btn', 'bs-right-btn');
         })
@@ -437,16 +423,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-
-//buscar por marcas
+//marcas
 
 let currentIndex = 0;
 
 function moveLeft() {
     const brandContainer = document.querySelector('.brand-container');
     const items = document.querySelectorAll('.brand-item');
-    const itemWidth = items[0].clientWidth + 20; // Ancho del item más margen
+    const itemWidth = items[0].clientWidth + 20;
 
     if (currentIndex > 0) {
         currentIndex = Math.max(currentIndex - 1, 0);
@@ -457,8 +441,8 @@ function moveLeft() {
 function moveRight() {
     const brandContainer = document.querySelector('.brand-container');
     const items = document.querySelectorAll('.brand-item');
-    const itemWidth = items[0].clientWidth + 20; // Ancho del item más margen
-    const maxIndex = items.length - 7; // Mostrar 7 elementos a la vez
+    const itemWidth = items[0].clientWidth + 20; 
+    const maxIndex = items.length - 6; 
 
     if (currentIndex < maxIndex) {
         currentIndex = Math.min(currentIndex + 1, maxIndex);
@@ -466,10 +450,9 @@ function moveRight() {
     }
 }
 
-// Desplazamiento automático cada 5 segundos
 const autoScroll = setInterval(() => {
     const items = document.querySelectorAll('.brand-item');
-    const maxIndex = items.length - 7; // Mostrar 7 elementos a la vez
+    const maxIndex = items.length - 6; 
 
     if (currentIndex < maxIndex) {
         moveRight();
@@ -483,7 +466,6 @@ const autoScroll = setInterval(() => {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("view-all-products").addEventListener("click", () => {
-        // Redirigir a la página donde se muestra la grilla completa de productos
         window.location.href = "./product_grid.html";
     });
 });

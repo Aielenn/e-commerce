@@ -1,8 +1,8 @@
 
 let currentPage = 1;
 const productsPerPage = 12;
-let allProducts = []; 
-let filteredProducts = []; 
+let allProducts = [];
+let filteredProducts = [];
 
 const categoryFilters = document.querySelectorAll('.filter-category');
 const brandFilters = document.querySelectorAll('.filter-brand');
@@ -11,12 +11,12 @@ const maxPriceInput = document.getElementById('max-price');
 
 function renderProducts(filteredProducts) {
   const productGrid = document.getElementById('product-grid');
-  productGrid.innerHTML = ''; // Limpiar el grid antes de renderizar
+  productGrid.innerHTML = '';
 
   const start = (currentPage - 1) * productsPerPage;
   const end = start + productsPerPage;
 
-  const paginatedProducts = filteredProducts.slice(start, end); 
+  const paginatedProducts = filteredProducts.slice(start, end);
 
   if (filteredProducts.length === 0) {
     productGrid.innerHTML = `<p>No se encontraron productos que coincidan con los filtros seleccionados.</p>`;
@@ -50,7 +50,7 @@ function renderProducts(filteredProducts) {
 
 function setupPaginationControls() {
   const paginationContainer = document.getElementById('pagination-controls');
-  paginationContainer.innerHTML = ''; 
+  paginationContainer.innerHTML = '';
 
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
@@ -193,7 +193,7 @@ function filterProducts() {
   const activeCategory = Object.keys(filterGroups).find(category => filterGroups[category].style.display === 'block');
   filteredProducts = filterProductsByAdvancedFilters(filteredProducts, activeCategory);
 
-  // Ordenar los productos
+
   if (sortOption === 'price-asc') {
     filteredProducts.sort((a, b) => {
       const priceA = a.price - ((a.price * a.discount) / 100);
@@ -213,13 +213,13 @@ function filterProducts() {
   setupPaginationControls();
 }
 
-// Agregar eventos de cambio a los filtros
+
 categoryFilters.forEach(filter => filter.addEventListener('change', filterProducts));
 brandFilters.forEach(filter => filter.addEventListener('change', filterProducts));
 minPriceInput.addEventListener('input', filterProducts);
 maxPriceInput.addEventListener('input', filterProducts);
 
-// Función para obtener el valor de un parámetro de URL
+
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
@@ -228,7 +228,7 @@ function getQueryParam(param) {
 const selectedCategory = getQueryParam('category');
 const selectedBrand = getQueryParam('brand');
 
-// Si hay una categoría seleccionada, filtrar los productos al cargar
+
 if (selectedCategory) {
   fetch('products.json')
     .then(response => response.json())
@@ -236,28 +236,27 @@ if (selectedCategory) {
       if (Array.isArray(data.products)) {
         allProducts = data.products;
         filteredProducts = allProducts.filter(product => product.category.includes(selectedCategory));
-        renderProducts(filteredProducts); 
-        setupPaginationControls(); 
+        renderProducts(filteredProducts);
+        setupPaginationControls();
       } else {
         console.error('Error: Data no es array');
       }
       showAdvancedFilters(selectedCategory);
       filteredProducts = filterProductsByAdvancedFilters(filteredProducts, selectedCategory);
-      renderProducts(filteredProducts); 
+      renderProducts(filteredProducts);
     })
     .catch(error => {
       console.error('Error extrayendo productos:', error);
     });
 } else {
-  // Si no hay categoría seleccionada, cargar todos los productos
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
       if (Array.isArray(data.products)) {
         allProducts = data.products;
         filteredProducts = allProducts;
-        renderProducts(filteredProducts); 
-        setupPaginationControls(); 
+        renderProducts(filteredProducts);
+        setupPaginationControls();
       } else {
         console.error('Error: Data no es array');
       }
@@ -267,7 +266,7 @@ if (selectedCategory) {
     });
 }
 
-// Si hay una marca seleccionada, filtrar los productos por marca al cargar
+
 if (selectedBrand) {
   fetch('products.json')
     .then(response => response.json())
@@ -275,11 +274,10 @@ if (selectedBrand) {
       if (Array.isArray(data.products)) {
         allProducts = data.products;
 
-        // Filtrar por marca seleccionada
         filteredProducts = allProducts.filter(product => product.brand.includes(selectedBrand));
 
-        renderProducts(filteredProducts); 
-        setupPaginationControls(); 
+        renderProducts(filteredProducts);
+        setupPaginationControls();
       } else {
         console.error('Error: Data no es array');
       }
@@ -288,15 +286,14 @@ if (selectedBrand) {
       console.error('Error extrayendo productos:', error);
     });
 } else {
-  // Si no hay marca seleccionada, cargar todos los productos
   fetch('products.json')
     .then(response => response.json())
     .then(data => {
       if (Array.isArray(data.products)) {
         allProducts = data.products;
         filteredProducts = allProducts;
-        renderProducts(filteredProducts); 
-        setupPaginationControls(); 
+        renderProducts(filteredProducts);
+        setupPaginationControls();
       } else {
         console.error('Error: Data no es array');
       }
@@ -316,7 +313,6 @@ const filterGroups = {
   armarTuPC: document.getElementById('filter-arma-tu-pc')
 };
 
-// Función para mostrar solo los filtros avanzados de la categoría activa
 function showAdvancedFilters(category) {
   Object.values(filterGroups).forEach(filterGroup => {
     filterGroup.style.display = 'none';
@@ -327,16 +323,14 @@ function showAdvancedFilters(category) {
   }
 }
 
-// Event listener para la selección de una categoría
 document.querySelectorAll('.category-filter').forEach(categoryButton => {
   categoryButton.addEventListener('click', (event) => {
-    const category = event.target.dataset.category; 
-    showAdvancedFilters(category); 
-    filterProductsByCategory(category); 
+    const category = event.target.dataset.category;
+    showAdvancedFilters(category);
+    filterProductsByCategory(category);
   });
 });
 
-// Event listeners para aplicar filtros avanzados
 document.querySelectorAll('.filter-group select').forEach(selectElement => {
   selectElement.addEventListener('change', () => {
     filterProducts();

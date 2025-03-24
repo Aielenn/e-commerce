@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const maxPriceInput = document.getElementById("search-max-price");
     const applyPriceFilterButton = document.getElementById("search-apply-price-filter");
 
-    // Contenedor de ordenamiento
     const sortContainer = document.createElement("div");
     sortContainer.classList.add("search-product-controls");
     sortContainer.innerHTML = `
@@ -133,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error cargando productos:", error));
 });
 
-// **Función modular para mostrar productos**
+
 function displayProducts(products) {
     return products.map(product => `
         <div class="search-product-card">

@@ -52,7 +52,7 @@
             </div>
         </div>
     </header>
-    <!-- Modal de Ingreso de Usuario -->
+    
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -74,19 +74,20 @@
             </div>
         </div>
     </div>
-    <!-- Modal de Recuperación de Contraseña -->
+    
     <div id="recoverPasswordModal" class="modal">
         <div class="modal-recover">
             <span class="close">&times;</span>
             <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
             <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
             <div class="recover-input">
-                <input type="email" class="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+                <input type="email" class="recoverEmail" placeholder="Correo electrónico"
+                    aria-label="Correo electrónico">
                 <button id="recoverButton" class="btn-recover">Enviar código </button>
             </div>
         </div>
     </div>
-    <!-- Página de Restablecimiento de Contraseña -->
+   
     <div id="resetPasswordPage" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -97,7 +98,7 @@
             <button id="resetButton" class="btn-reset">Restablecer Contraseña</button>
         </div>
     </div>
-    <!-- Modal de Registro -->
+   
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -127,30 +128,33 @@
                         <li>PRODUCTOS QUE PODRIAN INTERESARTE</li>
                     </ul>
                 </div>
-            
+
                 <div class="search-main3">
                     <aside id="search-filters">
                         <h3>Filtros</h3>
+
                         <hr class="divider-block">
-                        <!-- Filtro por marca -->
+                        
                         <div class="search-filter-section">
                             <h4>Marca</h4>
                             <div id="search-brand-filter"></div>
                         </div>
+
                         <hr class="divider-block">
-                        <!-- Filtro por precio -->
+                        
                         <div class="search-filter-price">
                             <h4>Precio</h4>
-                                <div class="price-range-container">
-                                    <div class="price-range-input">
-                                        <input type="number" id="search-min-price" placeholder="Mínimo">
-                                        <input type="number" id="search-max-price" placeholder="Máximo">
-                                        <button id="search-apply-price-filter">Aplicar</button>
-                                    </div>
+                            <div class="price-range-container">
+                                <div class="price-range-input">
+                                    <input type="number" id="search-min-price" placeholder="Mínimo">
+                                    <input type="number" id="search-max-price" placeholder="Máximo">
+                                    <button id="search-apply-price-filter">Aplicar</button>
                                 </div>
+                            </div>
                         </div>
+
                         <hr class="divider-block">
-                        <!-- Filtro por categoría -->
+                       
                         <div class="search-filter-section">
                             <h4>Categoría</h4>
                             <div id="search-category-filter"></div>
@@ -166,65 +170,67 @@
                         </section>
                     </div>
                 </div>
-            
-        
+
+
                 <section class="bank-promotions">
                     <div class="promotion-cards">
                         <div class="promotion-card">
                             <div class="promo-header">
-                            <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO" class="bank-logo">
+                                <img src="images/destacados_semana_LOGOS/modo_logo.png" alt="Logo MODO"
+                                    class="bank-logo">
+                            </div>
+                            <div class="promo-body">
+                                <h3>3 cuotas sin interés</h3>
+                                <p class="days">Miércoles y Viernes</p>
+                            </div>
+                            <div class="promo-footer">
+                                <small>Visa y Mastercard de todos los bancos</small>
+                            </div>
                         </div>
-                        <div class="promo-body">
-                            <h3>3 cuotas sin interés</h3>
-                            <p class="days">Miércoles y Viernes</p>
+                        <div class="promotion-card">
+                            <div class="promo-header">
+                                <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet"
+                                    class="bank-logo">
+                            </div>
+                            <div class="promo-body">
+                                <h3>3 cuotas sin interés</h3>
+                                <p class="days">Jueves</p>
+                            </div>
+                            <div class="promo-footer">
+                                <small>Pagando con Naranja X</small>
+                            </div>
                         </div>
-                        <div class="promo-footer">
-                            <small>Visa y Mastercard de todos los bancos</small>
+                        <div class="promotion-card">
+                            <div class="promo-header">
+                                <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
+                                    class="bank-logo">
+                            </div>
+                            <div class="promo-body">
+                                <h3>12 cuotas fijas</h3>
+                                <p class="days">Todos los días</p>
+                            </div>
+                            <div class="promo-footer">
+                                <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="promotion-card">
-                        <div class="promo-header">
-                            <img src="images/destacados_semana_LOGOS/naranja_logo.png" alt="Logo Getnet" class="bank-logo">
+                        <div class="promotion-card">
+                            <div class="promo-header">
+                                <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
+                                    class="bank-logo">
+                            </div>
+                            <div class="promo-body">
+                                <h3>6 cuotas sin interés</h3>
+                                <p class="days">Lunes y Martes</p>
+                            </div>
+                            <div class="promo-footer">
+                                <small>Pagando con tarjeta Visa Galicia</small>
+                            </div>
                         </div>
-                        <div class="promo-body">
-                            <h3>3 cuotas sin interés</h3>
-                            <p class="days">Jueves</p>
-                        </div>
-                        <div class="promo-footer">
-                            <small>Pagando con Naranja X</small>
-                        </div>
-                    </div>
-                    <div class="promotion-card">
-                        <div class="promo-header">
-                            <img src="images/destacados_semana_LOGOS/cuota_simple_logo.png" alt="Logo Cuota Simple"
-                                class="bank-logo">
-                        </div>
-                        <div class="promo-body">
-                            <h3>12 cuotas fijas</h3>
-                            <p class="days">Todos los días</p>
-                        </div>
-                        <div class="promo-footer">
-                            <small>Tarjetas de crédito Visa o Mastercard bancarias</small>
-                        </div>
-                    </div>
-                    <div class="promotion-card">
-                        <div class="promo-header">
-                            <img src="images/destacados_semana_LOGOS/galicia-logo.png" alt="Logo Otra Promo"
-                                class="bank-logo">
-                        </div>
-                        <div class="promo-body">
-                            <h3>6 cuotas sin interés</h3>
-                            <p class="days">Lunes y Martes</p>
-                        </div>
-                        <div class="promo-footer">
-                            <small>Pagando con tarjeta Visa Galicia</small>
-                        </div>
-                    </div>
                     </div>
                 </section>
             </div>
-    </div>
-</main>
+        </div>
+    </main>
 
     <footer>
         <div class="footer-container">
@@ -282,4 +288,5 @@
     <script src="scripts/codigo.js"></script>
     <script src="scripts/cart.js"></script>
 </body>
+
 </html>

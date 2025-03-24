@@ -52,7 +52,7 @@
             </div>
         </div>
     </header>
-    <!-- Modal de Ingreso de Usuario -->
+    
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -74,19 +74,20 @@
             </div>
         </div>
     </div>
-    <!-- Modal de Recuperación de Contraseña -->
+    
     <div id="recoverPasswordModal" class="modal">
         <div class="modal-recover">
             <span class="close">&times;</span>
             <h2 class="title-recoverPassword">¿Cuál es tu correo?</h2>
             <p>Te vamos a enviar un código para que cambies tu contraseña.</p>
             <div class="recover-input">
-                <input type="email" class="recoverEmail" placeholder="Correo electrónico" aria-label="Correo electrónico">
+                <input type="email" class="recoverEmail" placeholder="Correo electrónico"
+                    aria-label="Correo electrónico">
                 <button id="recoverButton" class="btn-recover">Enviar código </button>
             </div>
         </div>
     </div>
-    <!-- Página de Restablecimiento de Contraseña -->
+    
     <div id="resetPasswordPage" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -97,7 +98,7 @@
             <button id="resetButton" class="btn-reset">Restablecer Contraseña</button>
         </div>
     </div>
-    <!-- Modal de Registro -->
+    
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -113,110 +114,112 @@
         </div>
     </div>
 
-    
-<main class="cart-container">
 
-<div class="cart-detail">
-    <div class="cart-title">
-    <a href="index.html" class="back-button">&#8592;</a>
-    <h1>Carrito de compras</h1>
-    </div>
+    <main class="cart-container">
 
-    <div class="cart-items">
-        <!-- Los productos seleccionados se insertarán dinámicamente aquí -->
-    </div>
-</div>  
-
-    <div class="cart-summary">
-        <h3>Detalle del pedido</h3>
-        <div class="shipping-options">
-            <div class="pickup-option">
-            <label>
-                <input type="radio" name="shipping" id="pickup-option" checked>
-                Retiro en local (Gratis)
-            </label>
-        </div>
-        <div class="delivery-input-container">
-            <label>
-                <input type="radio" name="shipping" id="delivery-option">
-                Envío a domicilio
-            </label>
-            <div class="delivery-input">
-                <img src="images/envio.png" alt="Camión de envío" class="shipping-icon">
-                <input type="text" class="cart-postal-code-input" placeholder="Ingrese su código postal" disabled maxlength="5">
+        <div class="cart-detail">
+            <div class="cart-title">
+                <a href="index.html" class="back-button">&#8592;</a>
+                <h1>Carrito de compras</h1>
             </div>
-            <a href="https://www.correoargentino.com.ar/formularios/cpa" class="no-postal-code">No sé mi código postal</a>
-        </div>
-        </div>
- 
-        <div class="summary-content">
-            <p class="summary-content-1">Subtotal: <span class="cart-subtotal-price">$0.00</span></p>
-            <p class="summary-content-1">Envío: <span class="cart-shipping-cost">A calcular</span></p>
-            <hr class="cart-divider">
-            <p class="summary-content-2">Total: <span class="cart-total-price">$0.00</span></p>
-        </div>
-        <button class="checkout-button">Iniciar compra</button>
-        <button class="continue-shopping">Elegir más productos</button>
-    </div>
 
-</main>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <h2>Tech&Game</h2>
+            <div class="cart-items">
+                <!-- Los productos seleccionados se insertarán dinámicamente aquí -->
+            </div>
         </div>
-        <div class="footer-links">
-            <div class="footer-section">
-                <h3>Enlaces rápidos</h3>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#products">Productos</a></li>
-                    <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+
+        <div class="cart-summary">
+            <h3>Detalle del pedido</h3>
+            <div class="shipping-options">
+                <div class="pickup-option">
+                    <label>
+                        <input type="radio" name="shipping" id="pickup-option" checked>
+                        Retiro en local (Gratis)
+                    </label>
+                </div>
+                <div class="delivery-input-container">
+                    <label>
+                        <input type="radio" name="shipping" id="delivery-option">
+                        Envío a domicilio
+                    </label>
+                    <div class="delivery-input">
+                        <img src="images/envio.png" alt="Camión de envío" class="shipping-icon">
+                        <input type="text" class="cart-postal-code-input" placeholder="Ingrese su código postal"
+                            disabled maxlength="5">
+                    </div>
+                    <a href="https://www.correoargentino.com.ar/formularios/cpa" class="no-postal-code">No sé mi código
+                        postal</a>
+                </div>
+            </div>
+
+            <div class="summary-content">
+                <p class="summary-content-1">Subtotal: <span class="cart-subtotal-price">$0.00</span></p>
+                <p class="summary-content-1">Envío: <span class="cart-shipping-cost">A calcular</span></p>
+                <hr class="cart-divider">
+                <p class="summary-content-2">Total: <span class="cart-total-price">$0.00</span></p>
+            </div>
+            <button class="checkout-button">Iniciar compra</button>
+            <button class="continue-shopping">Elegir más productos</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Tech&Game</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Enlaces rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#support">Soporte</a></li>
+                        <li><a href="#returns">Devoluciones</a></li>
+                        <li><a href="#shipping">Envíos</a></li>
+                        <li><a href="#terms">Términos y Condiciones</a></li>
+                        <li><a href="#privacy">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
+                        <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
+                        <li>Av. Siempre Viva 742, Buenos Aires</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png"
+                                alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png"
+                                alt="YouTube"></a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Ayuda</h3>
-                <ul>
-                    <li><a href="#support">Soporte</a></li>
-                    <li><a href="#returns">Devoluciones</a></li>
-                    <li><a href="#shipping">Envíos</a></li>
-                    <li><a href="#terms">Términos y Condiciones</a></li>
-                    <li><a href="#privacy">Política de Privacidad</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <ul>
-                    <li><a href="tel:+541112345678">+54 11 1234-5678</a></li>
-                    <li><a href="mailto:soporte@techandgame.com">soporte@techandgame.com</a></li>
-                    <li>Av. Siempre Viva 742, Buenos Aires</li>
-                </ul>
-            </div>
         </div>
-        <div class="footer-social">
-            <h3>Síguenos</h3>
-            <ul class="social-icons">
-                <li><a href="https://www.facebook.com/techandgame"><img src="images\footer\facebook.png"
-                            alt="Facebook"></a></li>
-                <li><a href="https://www.instagram.com/techandgame"><img src="images\footer\instagram.png"
-                            alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/techandgame"><img src="images\footer\youtube.png"
-                            alt="YouTube"></a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Tech&Game. Todos los derechos reservados.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="scripts/cart.js"></script>
-<script src="scripts/codigo.js"></script>
-<script src="scripts/products_grid.js"></script>
-<script src="scripts/products_card.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/codigo.js"></script>
+    <script src="scripts/products_grid.js"></script>
+    <script src="scripts/products_card.js"></script>
 </body>
-</html>
 
+</html>
